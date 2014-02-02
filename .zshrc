@@ -195,8 +195,6 @@ export ARCHFLAGS="-arch x86_64"
 export EVENTNOKQUEUE=1
 export EVENT_NOKQUEUE=yes
 export CLICOLOR=1
-export GITHUB_USER='chip'
-export GITHUB_PASSWORD='Hedu0910'
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 
 function encode() { echo -n $@ | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'; }
