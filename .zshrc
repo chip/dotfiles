@@ -88,7 +88,7 @@ alias coma="git checkout master"
 alias branch="git branch"
 alias merge="git merge --no-ff"
 alias remote="git remote"
-alias gitprune="git remote prune origin" # remote branches were already deleted, so need to prune locals
+alias prune="git remote prune origin" # remote branches were already deleted, so need to prune locals
 alias gd="git diff"
 alias gitd="echo 'Use gd instead' && git diff"
 alias gitdc="git diff --cached"
@@ -100,6 +100,7 @@ alias gb="git branch"
 alias stash="git stash"
 alias gtag="git tag -a `date -u \"+UTC_%Y%m%d%H%M%S\"`"
 alias gap="git add -p"
+alias fetch="git fetch"
 alias a="ag"
 alias v="vim"
 
