@@ -169,6 +169,9 @@ nnoremap \ :Ag<SPACE>
 set foldmethod=manual
 nnoremap <Space> za
 
+" http://stackoverflow.com/questions/10964681/enabling-markdown-highlighting-in-vim
+au BufRead,BufNewFile *.md set filetype=markdown
+
 " powerline
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 set laststatus=2 " Always display the statusline in all windows
