@@ -19,6 +19,7 @@ set expandtab                   " use spaces, not tabs (optional)
 "set list                        " Show invisible characters
 set backspace=indent,eol,start  " backspace through everything in insert mode
 autocmd FileType ruby,coffee,js,c,php autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd BufWritePre *.cgi,*.pl,*.html :%s/\s\+$//e
 set tw=72
 set fo+=1
 
