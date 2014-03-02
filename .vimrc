@@ -108,7 +108,8 @@ map <leader>x :wq<CR>
 
 " Terminal Profile: http://noahfrederick.com/blog/2012/hemisu-for-lion-terminal/
 " Font: Monaco 14 pt.
-" Advanced: xterm-16color http://blog.remibergsma.com/2012/03/15/tweak-the-osx-terminal-to-display-colors/
+" Advanced: xterm-16color
+" http://blog.remibergsma.com/2012/03/15/tweak-the-osx-terminal-to-display-colors/
 " Color scheme: http://ethanschoonover.com/solarized
 "set background=dark
 set background=dark
