@@ -185,6 +185,8 @@ alias spec="~/bin/spec.sh"
 alias bi='bundle install --path .bundle/gems --binstubs .bundle/bin'
 alias be='bundle exec'
 
+alias game="export PWD=`pwd` && zip -r ${PWD}.love *"
+
 # Environment
 export GEM_PATH="$GEM_PATH:~/jruby/lib/ruby/gems/1.8/gems/"
 export LD_LIBRARY_PATH="/usr/local/lib"
