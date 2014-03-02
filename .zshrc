@@ -217,7 +217,7 @@ bindkey '^R' history-incremental-search-backward
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
 
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+. /usr/local/lib/python3.3/site-packages/powerline/bindings/zsh/powerline.zsh
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
