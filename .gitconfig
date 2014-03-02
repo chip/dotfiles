@@ -43,5 +43,5 @@
   autoupdate = true
 
 [push]
-  default = simple
+  default = current
 
