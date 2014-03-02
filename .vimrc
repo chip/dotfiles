@@ -185,7 +185,7 @@ map <leader>lm :w\|:!lua missions.lua<CR>
 map <leader>l :w\|:!lua %<CR>
 map <leader>v :w\|:! exec /Applications/love.app/Contents/MacOS/love .<CR>
 map <leader>m :w\|:!moonc %<CR>
-map <leader>b ,w<CR>\|:!busted<CR>
+"map <leader>b ,w<CR>\|:!busted<CR>
 
 " Run specs from Ruby projects
 map <leader>r :w\|:!rspec %<CR>
