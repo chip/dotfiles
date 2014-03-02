@@ -172,6 +172,9 @@ nnoremap <Space> za
 " http://stackoverflow.com/questions/10964681/enabling-markdown-highlighting-in-vim
 au BufRead,BufNewFile *.md set filetype=markdown
 
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
 " powerline
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 set laststatus=2 " Always display the statusline in all windows
