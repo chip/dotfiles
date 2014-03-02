@@ -181,6 +181,8 @@ set laststatus=2 " Always display the statusline in all windows
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 " run lua_missions from within repo - similar to ruby koans
-map <leader>lm ,w<CR>\|:! lua missions.lua<CR>
-map <leader>l ,w<CR>\|:! lua %<CR>
-map <leader>m ,w<CR>\|:!busted<CR>
+map <leader>lm :w\|:!lua missions.lua<CR>
+map <leader>l :w\|:!lua %<CR>
+map <leader>v :w\|:! exec /Applications/love.app/Contents/MacOS/love .<CR>
+map <leader>m :w\|:!moonc %<CR>
+map <leader>b ,w<CR>\|:!busted<CR>
