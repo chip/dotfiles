@@ -40,8 +40,8 @@ set scrolloff=3 " have some context around the current line always on screen
 " Auto-reload buffers when file changed on disk
 set autoread
 
-set backupdir=~/.vim/_backup    " where to put backup files.
-set directory=~/.vim/_temp      " where to put swap files.
+set nobackup
+set noswapfile
 set clipboard=unnamed
 
 let mapleader=","
