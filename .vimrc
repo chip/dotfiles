@@ -188,4 +188,4 @@ map <leader>m :w\|:!moonc %<CR>
 "map <leader>b ,w<CR>\|:!busted<CR>
 
 " Run specs from Ruby projects
-map <leader>r :w\|:!rspec %<CR>
+map <leader>r :w\|:!./bin/rspec %<CR>
