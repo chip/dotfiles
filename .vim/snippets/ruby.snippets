@@ -502,3 +502,14 @@ snippet tas
 	task :${2:task_name => [:dependent, :tasks]} do
 		${3}
 	end
+
+# Skyo project snippets
+snippet spec
+	require "${1:`expand('%:r s/spec\/lib\///')`}"
+
+	module ${2:Skyo}
+		describe ${3:$1} do
+			it "#{4}works" do
+			end
+		end
+	end
