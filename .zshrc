@@ -34,7 +34,7 @@ plugins=()
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=~/phantomjs-1.7.0-macosx/bin:./bin:/usr/X11/bin:/Library/PostgreSQL/8.4/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/bin:/usr/bin:/sbin:/usr/sbin:~/bin:~/ruby/bin:/opt/local/bin:/opt/local/sbin:/usr/local/go/bin:$GOPATH/bin:/Applications/Julia-0.2.0.app/Contents/Resources/julia/bin:~/moai-sdk/bin
+export PATH=~/phantomjs-1.7.0-macosx/bin:./bin:/usr/X11/bin:/Library/PostgreSQL/8.4/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/bin:/usr/bin:/sbin:/usr/sbin:~/bin:~/ruby/bin:/opt/local/bin:/opt/local/sbin:/usr/local/go/bin:/usr/local/share/python:$GOPATH/bin:/Applications/Julia-0.2.0.app/Contents/Resources/julia/bin:~/moai-sdk/bin
 
 # Mail
 alias mi="tail -f /var/log/mail.log"
