@@ -217,8 +217,6 @@ bindkey '^R' history-incremental-search-backward
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
 
-. /usr/local/lib/python3.3/site-packages/powerline/bindings/zsh/powerline.zsh
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
@@ -229,4 +227,7 @@ export PERL5LIB="/Users/chip/perl5/lib/perl5:$PERL5LIB";
 export PATH="/Users/chip/perl5/bin:$PATH";
 
 # powerline
-. /usr/local/lib/python3.3/site-packages/powerline/bindings/zsh/powerline.zsh
+. /usr/local/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
