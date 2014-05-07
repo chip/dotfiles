@@ -31,8 +31,6 @@
 [gist]
 	private = no
   browse = yes
-
-[github]
 	user = chip
 
 [core]
