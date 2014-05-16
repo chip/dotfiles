@@ -144,5 +144,8 @@ map <leader>v :w\|:! exec /Applications/love.app/Contents/MacOS/love .<CR>
 map <leader>mc :w\|:!moonc %<CR>
 "map <leader>b ,w<CR>\|:!busted<CR>
 
+" Javascript tests
+map <leader>m :w\|:!mocha %<CR>
+
 " Run specs from Ruby projects
 map <leader>r :w\|:!./bin/rspec %<CR>
