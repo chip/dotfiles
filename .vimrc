@@ -137,9 +137,7 @@ set rtp+=/usr/local/lib/python3.3/site-packages/powerline/bindings/vim
 set laststatus=2 " Always display the statusline in all windows
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
-" run lua_missions from within repo - similar to ruby koans
-map <leader>lm :w\|:!lua missions.lua<CR>
-map <leader>l :w\|:!lua %<CR>
+map <leader>L :w\|:!lua %<CR>
 map <leader>v :w\|:! exec /Applications/love.app/Contents/MacOS/love .<CR>
 map <leader>mc :w\|:!moonc %<CR>
 "map <leader>b ,w<CR>\|:!busted<CR>
@@ -149,3 +147,6 @@ map <leader>m :w\|:!mocha %<CR>
 
 " Run specs from Ruby projects
 map <leader>r :w\|:!rspec %:.<CR>
+
+set exrc " enable per-directory .vimrc files
+set secure " disable unsafe commands in local .vimrc files
