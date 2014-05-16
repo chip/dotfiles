@@ -148,4 +148,4 @@ map <leader>mc :w\|:!moonc %<CR>
 map <leader>m :w\|:!mocha %<CR>
 
 " Run specs from Ruby projects
-map <leader>r :w\|:!./bin/rspec %<CR>
+map <leader>r :w\|:!rspec %:.<CR>
