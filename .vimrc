@@ -141,7 +141,7 @@ set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusl
 map <leader>lm :w\|:!lua missions.lua<CR>
 map <leader>l :w\|:!lua %<CR>
 map <leader>v :w\|:! exec /Applications/love.app/Contents/MacOS/love .<CR>
-map <leader>m :w\|:!moonc %<CR>
+map <leader>mc :w\|:!moonc %<CR>
 "map <leader>b ,w<CR>\|:!busted<CR>
 
 " Run specs from Ruby projects
