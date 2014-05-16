@@ -56,7 +56,6 @@ map <leader>w :w<CR>
 map <leader>q :q<CR>
 map <leader>x :wq<CR>
 
-" RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
@@ -140,8 +139,14 @@ set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusl
 
 map <leader>L :w\|:!lua %<CR>
 map <leader>v :w\|:! exec /Applications/love.app/Contents/MacOS/love .<CR>
-map <leader>m :w\|:!moonc %<CR>
+map <leader>mc :w\|:!moonc %<CR>
+"map <leader>b ,w<CR>\|:!busted<CR>
+
+" Javascript tests
+map <leader>m :w\|:!mocha %<CR>
+
+" Run specs from Ruby projects
+map <leader>r :w\|:!rspec %:.<CR>
 
 set exrc " enable per-directory .vimrc files
 set secure " disable unsafe commands in local .vimrc files
-
