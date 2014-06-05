@@ -6,7 +6,6 @@ call pathogen#infect()
 syntax enable
 filetype plugin indent on       " load file type plugins + indentation
 
-set shell=/usr/local/bin/zsh
 setlocal spell spelllang=en_us 
 
 "" Whitespace
@@ -33,7 +32,7 @@ set number    " line numbers aren't needed
 set ruler       " show the cursor position all the time
 set cursorline  " highlight the line of the cursor
 set showcmd     " display incomplete commands
-set shell=bash  " avoids munging PATH under zsh
+set shell=/usr/local/bin/zsh
 let g:is_bash=1 " default shell syntax
 set history=200 " remember more Ex commands
 set scrolloff=3 " have some context around the current line always on screen
