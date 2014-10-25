@@ -143,7 +143,3 @@ map <leader>r :w\|:!rescue rspec %:.<CR>
 
 set exrc " enable per-directory .vimrc files
 set secure " disable unsafe commands in local .vimrc files
-
-" folding
-set foldmethod=manual
-nnoremap <Space> za
