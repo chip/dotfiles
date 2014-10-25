@@ -103,6 +103,7 @@ let g:ctrlp_custom_ignore = 'tmp\|log\|public\|vendor/assets\|vendor/bundle\|ven
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_match_window_reversed = 0
 nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>m :CtrlPBufTag<CR>
 
 " The Silver Searcher
 if executable('ag')
