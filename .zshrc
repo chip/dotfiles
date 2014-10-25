@@ -210,6 +210,8 @@ function vgit() { vim `git status -s | cut -d ' ' -f 3` }
 alias topten="history | commands | sort -rn | head"
 alias cores="sysctl -n hw.ncpu"
 
+alias typescript-convert="cat typescript | perl -pe 's/\e([^\[\]]|\[.*?[a-zA-Z]|\].*?\a)//g' | col -b > typescript-processed"
+
 # vim bindings for the command line
 bindkey -v
 bindkey '^R' history-incremental-search-backward
