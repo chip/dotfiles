@@ -219,7 +219,7 @@ bindkey '^R' history-incremental-search-backward
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
 
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 export PERL_LOCAL_LIB_ROOT="/Users/chip/perl5:$PERL_LOCAL_LIB_ROOT";
