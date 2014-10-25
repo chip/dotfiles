@@ -139,7 +139,7 @@ map <leader>v :w\|:! exec /Applications/love.app/Contents/MacOS/love .<CR>
 map <leader>mm :w\|:!mocha %<CR>
 
 " Run specs from Ruby projects
-map <leader>r :w\|:!rspec %:.<CR>
+map <leader>r :w\|:!rescue rspec %:.<CR>
 
 set exrc " enable per-directory .vimrc files
 set secure " disable unsafe commands in local .vimrc files
