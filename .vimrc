@@ -23,10 +23,11 @@ set tw=72
 set fo+=1
 
 "" Searching
-set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
+set hlsearch                    " highlight matches
+:nmap \q :nohlsearch<CR>
 
 set number    " line numbers aren't needed
 set ruler       " show the cursor position all the time
