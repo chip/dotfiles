@@ -132,18 +132,11 @@ au BufRead,BufNewFile *.md set filetype=markdown
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
-" powerline
-set rtp+=/usr/local/lib/python3.3/site-packages/powerline/bindings/vim
-set laststatus=2 " Always display the statusline in all windows
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-
 map <leader>L :w\|:!lua %<CR>
 map <leader>v :w\|:! exec /Applications/love.app/Contents/MacOS/love .<CR>
-map <leader>mc :w\|:!moonc %<CR>
-"map <leader>b ,w<CR>\|:!busted<CR>
 
 " Javascript tests
-map <leader>m :w\|:!mocha %<CR>
+map <leader>mm :w\|:!mocha %<CR>
 
 " Run specs from Ruby projects
 map <leader>r :w\|:!rspec %:.<CR>
