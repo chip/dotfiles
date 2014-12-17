@@ -230,5 +230,8 @@ export PATH="/Users/chip/perl5/bin:$PATH";
 # powerline
 . /usr/local/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
-### Added by the Heroku Toolbelt
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=${JAVA_HOME}/bin:$PATH
+
+## #Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
