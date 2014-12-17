@@ -1,6 +1,7 @@
 " Configuration inspired by http://mislav.uniqpath.com/2011/12/vim-revisited/
 set nocompatible                " choose no compatibility with legacy vi
 set encoding=utf-8
+set fileformat=unix
 call pathogen#infect()
 
 syntax enable
