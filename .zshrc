@@ -153,6 +153,11 @@ alias postgres_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias jdkhome="cd /System/Library/Frameworks/JavaVM.framework/Home"
 
 alias code="cd ~/code"
+alias repo="cd ~/code/repos"
+alias gh="cd ~/code/repos/github"
+alias bb="cd ~/code/repos/bitbucket"
+alias chip="cd ~/code/repos/github/chip"
+alias ccdc="cd ~/code/repos/github/chipcastledotcom"
 
 # invoicethat
 alias rin="cd ~/code/rails_invoice"
