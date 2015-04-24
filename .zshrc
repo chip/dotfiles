@@ -62,10 +62,6 @@ alias mysql_start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.
 alias mysql_stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
 alias fix_mysql="sudo install_name_tool -id /usr/local/mysql/lib/libmysqlclient.18.dylib /usr/local/mysql/lib/libmysqlclient.dylib"
 
-# PostgreSQL
-alias postgres_start="launchctl load -w ~/Library/LaunchAgents/postgres.plist"
-alias postgres_stop="launchctl unload -w ~/Library/LaunchAgents/postgres.plist"
-
 # Git
 alias g="git"
 alias ga="git add ."
@@ -150,9 +146,6 @@ alias nyucal="cd ~/Sites/nyu/public/nyu/calendar"
 alias nyulog="tail -f /var/log/apache2/*log ~/Sites/nyu/log/*"
 
 # Postfix Load on Startup
-alias postfix_start="sudo launchctl load -w /System/Library/LaunchDaemons/org.postfix.master.plist"
-
-# Postgres SQL start
 alias postgres_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias postgres_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
