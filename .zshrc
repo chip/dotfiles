@@ -199,6 +199,10 @@ function commands() {
 
 function vgit() { vim `git status -s | cut -d ' ' -f 3` }
 
+function checkout-pr () {
+  git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1;
+}
+
 alias topten="history | commands | sort -rn | head"
 alias cores="sysctl -n hw.ncpu"
 
