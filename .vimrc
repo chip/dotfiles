@@ -129,6 +129,8 @@ nnoremap <Space> za
 
 " http://stackoverflow.com/questions/10964681/enabling-markdown-highlighting-in-vim
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.js set filetype=javascript
+au BufRead,BufNewFile *.coffee set filetype=coffee
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
