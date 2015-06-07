@@ -144,6 +144,8 @@ map <leader>mm :w\|:!mocha %<CR>
 " Run specs from Ruby projects
 map <leader>r :w\|:!rescue rspec %:.<CR>
 
+map <leader>g :w\|:!./%<CR>
+
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 set exrc " enable per-directory .vimrc files
