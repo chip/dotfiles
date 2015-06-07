@@ -62,10 +62,6 @@ alias mysql_start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.
 alias mysql_stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
 alias fix_mysql="sudo install_name_tool -id /usr/local/mysql/lib/libmysqlclient.18.dylib /usr/local/mysql/lib/libmysqlclient.dylib"
 
-# PostgreSQL
-alias postgres_start="launchctl load -w ~/Library/LaunchAgents/postgres.plist"
-alias postgres_stop="launchctl unload -w ~/Library/LaunchAgents/postgres.plist"
-
 # Git
 alias g="git"
 alias ga="git add ."
@@ -150,9 +146,6 @@ alias nyucal="cd ~/Sites/nyu/public/nyu/calendar"
 alias nyulog="tail -f /var/log/apache2/*log ~/Sites/nyu/log/*"
 
 # Postfix Load on Startup
-alias postfix_start="sudo launchctl load -w /System/Library/LaunchDaemons/org.postfix.master.plist"
-
-# Postgres SQL start
 alias postgres_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias postgres_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
@@ -160,6 +153,11 @@ alias postgres_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias jdkhome="cd /System/Library/Frameworks/JavaVM.framework/Home"
 
 alias code="cd ~/code"
+alias repo="cd ~/code/repos"
+alias gh="cd ~/code/repos/github"
+alias bb="cd ~/code/repos/bitbucket"
+alias chip="cd ~/code/repos/github/chip"
+alias ccdc="cd ~/code/repos/github/chipcastledotcom"
 
 # invoicethat
 alias rin="cd ~/code/rails_invoice"
@@ -205,6 +203,10 @@ function commands() {
 }
 
 function vgit() { vim `git status -s | cut -d ' ' -f 3` }
+
+function checkout-pr () {
+  git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1;
+}
 
 alias topten="history | commands | sort -rn | head"
 alias cores="sysctl -n hw.ncpu"
