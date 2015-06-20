@@ -37,7 +37,7 @@
 	editor = /usr/bin/vim -f
 
 [rerere]
-  enabled = true
+	enabled = true
   autoupdate = true
 
 [push]
