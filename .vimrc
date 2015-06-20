@@ -146,7 +146,14 @@ map <leader>r :w\|:!rescue rspec %:.<CR>
 
 map <leader>g :w\|:!./%<CR>
 
+" clipper
+nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
+
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+
+" Bootstrap autocomplete
+set dictionary+=~/.vim/bundle/bootstrap-snippets/dictionary
+set complete+=k
 
 set exrc " enable per-directory .vimrc files
 set secure " disable unsafe commands in local .vimrc files

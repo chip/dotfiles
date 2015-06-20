@@ -213,6 +213,9 @@ alias cores="sysctl -n hw.ncpu"
 
 alias typescript-convert="cat typescript | perl -pe 's/\e([^\[\]]|\[.*?[a-zA-Z]|\].*?\a)//g' | col -b > typescript-processed"
 
+# clipper
+alias clip="nc localhost 8377"
+
 # vim bindings for the command line
 bindkey -v
 bindkey '^R' history-incremental-search-backward
