@@ -68,7 +68,7 @@ map <Leader>a :call RunAllSpecs()<CR>
 " http://blog.remibergsma.com/2012/03/15/tweak-the-osx-terminal-to-display-colors/
 " Color scheme: http://ethanschoonover.com/solarized
 set background=dark
-colorscheme hemisu
+colorscheme railscasts
 
 " Remapping escape
 inoremap jk <esc>
