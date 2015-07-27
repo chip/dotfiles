@@ -18,7 +18,7 @@ set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 "set list                        " Show invisible characters
 set backspace=indent,eol,start  " backspace through everything in insert mode
-autocmd FileType ruby,coffee,js,c,php autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType ruby,coffee,js,less,c,php autocmd BufWritePre <buffer> :%s/\s\+$//e
 autocmd BufWritePre *.cgi,*.pl,*.html :%s/\s\+$//e
 set tw=72
 set fo+=1
@@ -131,6 +131,8 @@ nnoremap <Space> za
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.js set filetype=javascript
 au BufRead,BufNewFile *.coffee set filetype=coffee
+au BufRead,BufNewFile *.css set filetype=css
+au BufRead,BufNewFile *.less set filetype=css
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
