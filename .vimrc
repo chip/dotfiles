@@ -57,11 +57,6 @@ map <leader>w :w<CR>
 map <leader>q :q<CR>
 map <leader>x :wq<CR>
 
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
 " Terminal Profile: http://noahfrederick.com/blog/2012/hemisu-for-lion-terminal/
 " Font: Monaco 14 pt.
 " Advanced: xterm-16color
@@ -96,6 +91,13 @@ function! JumpBetweenSpecAndCode()
   exec "edit " . foundfile
   endif
 endfunction
+
+" janko-m/vim-test
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
 
 " Ctrl-P mapping is overwritten
 let g:ctrlp_map = '<leader>f'
@@ -136,17 +138,6 @@ au BufRead,BufNewFile *.less set filetype=css
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
-
-map <leader>L :w\|:!lua %<CR>
-map <leader>v :w\|:! exec /Applications/love.app/Contents/MacOS/love .<CR>
-
-" Javascript tests
-map <leader>mm :w\|:!mocha %<CR>
-
-" Run specs from Ruby projects
-map <leader>r :w\|:!rescue rspec %:.<CR>
-
-map <leader>g :w\|:!./%<CR>
 
 " clipper
 nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
