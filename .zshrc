@@ -240,3 +240,8 @@ export PATH=${JAVA_HOME}/bin:$PATH
 
 ## #Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Android for Meteor
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$ANDROID_HOME/tools"
