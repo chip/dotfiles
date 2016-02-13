@@ -140,9 +140,6 @@ au BufRead,BufNewFile *.less set filetype=css
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
-" clipper
-nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
-
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 " Bootstrap autocomplete
@@ -151,3 +148,6 @@ set complete+=k
 
 set exrc " enable per-directory .vimrc files
 set secure " disable unsafe commands in local .vimrc files
+
+" toggle paste in cmd only
+nnoremap <Leader>p :set invpaste<CR>
