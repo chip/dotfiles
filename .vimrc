@@ -98,11 +98,12 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
+let test#strategy = "basic"
 
 " Ctrl-P mapping is overwritten
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_max_height = 30
-let g:ctrlp_custom_ignore = 'tmp\|log\|public\|vendor/assets\|vendor/bundle\|vendor/plugins\|spec/cassett\|\.git\|cassett\|/.git\|/app/assets/image\|/coverage'
+let g:ctrlp_custom_ignore = 'tmp\|log\|public\|vendor/assets\|vendor/bundle\|vendor/plugins\|spec/cassett\|\.git\|cassett\|/.git\|/app/assets/image\|/coverage\|public/*\.js'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_match_window_reversed = 0
 nnoremap <leader>b :CtrlPBuffer<CR>
@@ -138,9 +139,6 @@ au BufRead,BufNewFile *.less set filetype=css
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
-
-" clipper
-nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
 
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 let g:syntastic_javascript_checkers = ['jsxhint']
@@ -192,3 +190,6 @@ function! XTermPasteBegin()
 endfunction
 
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+" toggle paste in cmd only
+"nnoremap <Leader>p :set invpaste<CR>
