@@ -240,3 +240,6 @@ export PATH=${JAVA_HOME}/bin:$PATH
 
 ## #Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# tmuxinator
+export DISABLE_AUTO_TITLE=true
