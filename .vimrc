@@ -143,6 +143,7 @@ match OverLength /\%81v.\+/
 nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
 
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+let g:syntastic_javascript_checkers = ['jsxhint']
 
 " Bootstrap autocomplete
 set dictionary+=~/.vim/bundle/bootstrap-snippets/dictionary
