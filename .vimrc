@@ -14,8 +14,13 @@ set wrap
 set linebreak
 " note trailing space at end of next line
 set showbreak=>\ \ \
-set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
+"set smarttab
+set shiftwidth=2      " a tab is two spaces (or set this to 4)
+set softtabstop=2      " a tab is two spaces (or set this to 4)
+set autoindent
+set smartindent
+"set cindent
 "set list                        " Show invisible characters
 set backspace=indent,eol,start  " backspace through everything in insert mode
 autocmd FileType ruby,coffee,js,less,c,php autocmd BufWritePre <buffer> :%s/\s\+$//e
@@ -133,6 +138,7 @@ nnoremap <Space> za
 " http://stackoverflow.com/questions/10964681/enabling-markdown-highlighting-in-vim
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.js set filetype=javascript
+au BufRead,BufNewFile *.jsx set filetype=javascript
 au BufRead,BufNewFile *.coffee set filetype=coffee
 au BufRead,BufNewFile *.css set filetype=css
 au BufRead,BufNewFile *.less set filetype=css
@@ -151,3 +157,8 @@ set secure " disable unsafe commands in local .vimrc files
 
 " toggle paste in cmd only
 nnoremap <Leader>p :set invpaste<CR>
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
