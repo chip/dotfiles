@@ -50,17 +50,8 @@ alias tm="top -o vsize"
 alias ll="ls -al"
 alias l="ls -al"
 
-# Ssh for 2nd Slicehost server which will run the new NYU scheduler, chipcastle.com, acclaimplaza.com.
-alias nyud="ssh -P 30000 deploy@nyudemo"
-
 # Dito with hosts
 alias hosts='sudo vi /etc/hosts'
-
-# MySQL
-alias mydb="mysql -udeploy -pMysqlFreak invoice_development"
-alias mysql_start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
-alias mysql_stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
-alias fix_mysql="sudo install_name_tool -id /usr/local/mysql/lib/libmysqlclient.18.dylib /usr/local/mysql/lib/libmysqlclient.dylib"
 
 # Git
 alias g="git"
@@ -70,9 +61,7 @@ alias gs="git status"
 alias gst="echo 'Use s or gs instead' && git status"
 alias pull="git pull origin"
 alias pullm='git pull --rebase origin master'
-alias pullr="git pull"
 alias push="git push origin"
-alias pushr="git push"
 alias c="git commit -m "
 alias ca="git commit -a -m "
 alias commita="echo 'Use ca instead' && git commit -a -m "
@@ -100,51 +89,6 @@ alias fetch="git fetch"
 alias a="ag"
 alias v="vim"
 
-# Woody's books
-#
-# buyingbot.com (aka staging_development)
-alias stagingwb='ssh wbrent@10.180.82.250'
-alias staging='ssh staging'
-
-# coopersbooks.com (aka live_development)
-alias deployqa='cap qa deploy:migrations'
-alias qawb='ssh wbrent@10.180.76.56'
-alias qa='ssh qa'
-
-# rentbooks.com (aka production) 
-alias coprod="co production"
-alias pullprod='pull production'
-alias pushprod='push production'
-alias deployprod='cap production_all deploy:migrations'
-alias prodwb='ssh wbrent@10.181.237.243'
-alias prod2wb='ssh wbrent@10.181.229.243'
-alias prod3wb='ssh wbrent@10.181.225.242'
-alias prod4wb='ssh wbrent@10.181.230.22'
-alias prod5wb='ssh wbrent@10.181.230.111'
-alias prod='ssh prod'
-alias prod2='ssh prod2'
-alias prod3='ssh prod3'
-alias prod4='ssh prod4'
-alias prod5='ssh prod5'
-alias prod-db-backup='ssh prod-db-backup'
-
-alias solr1='ssh root@10.181.229.77'
-alias solr2='ssh root@10.181.236.22'
-alias solr3='ssh root@10.181.228.99'
-
-alias port3000='curl https://raw.github.com/gist/46c61e6977fcb4db7abf/20e862928e863c7610157e4d9e80b976247f5e0d/gistfile1 | patch -p0'
-
-export HUBOT_CAMPFIRE_TOKEN="5c1b73a535c803ede9a097838b5a0e05eb6c0f50"
-export HUBOT_CAMPFIRE_ROOMS="142016"
-export HUBOT_CAMPFIRE_ACCOUNT="ccdc"
-export HUBOT_JENKINS_URL="http://10.180.82.250:8080"
-
-
-# NYU Department of Radiology
-alias nyu="cd ~/Sites/nyu/public"
-alias nyucal="cd ~/Sites/nyu/public/nyu/calendar"
-alias nyulog="tail -f /var/log/apache2/*log ~/Sites/nyu/log/*"
-
 # Postfix Load on Startup
 alias postgres_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias postgres_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
@@ -153,22 +97,11 @@ alias postgres_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias jdkhome="cd /System/Library/Frameworks/JavaVM.framework/Home"
 
 alias code="cd ~/code"
-alias repo="cd ~/code/repos"
-alias gh="cd ~/code/repos/github"
-alias bb="cd ~/code/repos/bitbucket"
-alias chip="cd ~/code/repos/github/chip"
-alias ccdc="cd ~/code/repos/github/chipcastledotcom"
-
-# invoicethat
-alias rin="cd ~/code/rails_invoice"
-alias rinstart='passenger start --socket /tmp/invoicethat.local.socket -d'
 
 alias stuck="ps ax | sed '1p;/ [U] /!d'"
 
-alias snowgem='env ARCHFLAGS="-arch x86_64" gem '
 alias mysqlgem='env ARCHFLAGS="-arch x86_64" gem install mysql2 --config-file bundler_config.yml'
 
-alias wobo="cd ~/code/woboinc/rentwb"
 alias chrome="open /Applications/Google\ Chrome.app/"
 alias firefox="open /Applications/Firefox.app/"
 alias safari="open /Applications/Safari.app/"
@@ -179,8 +112,6 @@ alias ctags="`brew --prefix`/bin/ctags"
 
 alias tree="tree -C"
 
-alias spec="~/bin/spec.sh"
-alias bi='bundle install --path .bundle/gems --binstubs .bundle/bin'
 alias be='bundle exec'
 
 alias game="export PWD=`pwd` && zip -r ${PWD}.love *"
@@ -212,9 +143,6 @@ alias topten="history | commands | sort -rn | head"
 alias cores="sysctl -n hw.ncpu"
 
 alias typescript-convert="cat typescript | perl -pe 's/\e([^\[\]]|\[.*?[a-zA-Z]|\].*?\a)//g' | col -b > typescript-processed"
-
-# clipper
-alias clip="nc localhost 8377"
 
 # vim bindings for the command line
 bindkey -v
