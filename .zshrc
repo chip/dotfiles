@@ -176,3 +176,4 @@ export PATH="$PATH:$ANDROID_HOME/tools"
 
 # tmuxinator
 export DISABLE_AUTO_TITLE=true
+source ~/.bin/tmuxinator.zsh
