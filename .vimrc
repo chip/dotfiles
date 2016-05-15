@@ -196,3 +196,16 @@ function! XTermPasteBegin()
 endfunction
 
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'ggreer/the_silver_searcher'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'airblade/vim-gitgutter'
+Plug 'honza/vim-snippets'
+Plug 'janko-m/vim-test'
+
+" Add plugins to &runtimepath
+call plug#end()
