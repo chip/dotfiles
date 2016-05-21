@@ -219,3 +219,6 @@ Plug 'tpope/vim-surround'
 
 " Add plugins to &runtimepath
 call plug#end()
+
+" For use with neocomplete
+autocmd FileType javascript setlocal omnifunc=jspc#omni
