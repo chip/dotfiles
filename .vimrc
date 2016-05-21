@@ -81,6 +81,13 @@ nnoremap <leader>th :e ~/.oh-my-zsh/themes/chip.zsh-theme<cr>
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+" Powerline
+set rtp+=/usr/local/lib/python/site-packages/powerline/bindings/vim
+" Always display the statusline in all windows
+set laststatus=2
+" Always display the tabline, even if there is only one tab
+set showtabline=2
+
 map <leader>j :call JumpBetweenSpecAndCode()<cr>
 
 function! JumpBetweenSpecAndCode()
