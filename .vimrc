@@ -212,6 +212,10 @@ Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'honza/vim-snippets'
 Plug 'janko-m/vim-test'
+Plug 'Shougo/neocomplete.vim'
+Plug 'othree/jspc.vim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'tpope/vim-surround'
 
 " Add plugins to &runtimepath
 call plug#end()
