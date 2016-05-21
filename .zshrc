@@ -160,9 +160,6 @@ export PERL_MM_OPT="INSTALL_BASE=/Users/chip/perl5";
 export PERL5LIB="/Users/chip/perl5/lib/perl5:$PERL5LIB";
 export PATH="/Users/chip/perl5/bin:$PATH";
 
-# powerline
-. /usr/local/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
-
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=${JAVA_HOME}/bin:$PATH
 
