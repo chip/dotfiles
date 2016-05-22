@@ -81,8 +81,6 @@ nnoremap <leader>th :e ~/.oh-my-zsh/themes/chip.zsh-theme<cr>
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-" Powerline
-set rtp+=/usr/local/lib/python/site-packages/powerline/bindings/vim
 " Always display the statusline in all windows
 set laststatus=2
 " Always display the tabline, even if there is only one tab
@@ -216,9 +214,14 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'othree/jspc.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Add plugins to &runtimepath
 call plug#end()
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " For use with neocomplete
 autocmd FileType javascript setlocal omnifunc=jspc#omni
