@@ -40,7 +40,6 @@ set noswapfile
 set clipboard=unnamed
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set laststatus=2  " Always display the statusline in all windows
-set showtabline=2 " Always display the tabline, even if there is only one tab
 set dictionary+=~/.vim/bundle/bootstrap-snippets/dictionary " Bootstrap autocomplete
 set complete+=k
 set exrc " enable per-directory .vimrc files
