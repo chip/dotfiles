@@ -3,6 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 
 BULLETTRAIN_PROMPT_ADD_NEWLINE=false
 BULLETTRAIN_TIME_SHOW=false
+BULLETTRAIN_RUBY_SHOW=false
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
