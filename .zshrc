@@ -1,8 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-BULLETTRAIN_CONTEXT_SHOW=true
 BULLETTRAIN_PROMPT_ADD_NEWLINE=false
+BULLETTRAIN_TIME_SHOW=false
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
