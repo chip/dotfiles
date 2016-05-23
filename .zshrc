@@ -120,6 +120,8 @@ alias be='bundle exec'
 alias game="export PWD=`pwd` && zip -r ${PWD}.love *"
 
 # Environment
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 export LD_LIBRARY_PATH="/usr/local/lib"
 export GOPATH="/Users/chip/code/go"
 export EDITOR="/usr/bin/vim -f"
