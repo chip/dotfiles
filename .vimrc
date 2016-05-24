@@ -2,7 +2,6 @@
 set nocompatible                " choose no compatibility with legacy vi
 set encoding=utf-8
 set fileformat=unix
-call pathogen#infect()
 
 syntax enable
 filetype plugin indent on " load file type plugins + indentation
