@@ -65,10 +65,11 @@ nnoremap <leader>sv :w\|:source $MYVIMRC<cr>
 nnoremap <leader>zsh :e ~/.zshrc<cr>
 
 " Remove unnecessary spaces before writing files
-autocmd FileType js,html,css,less,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType js,coffee,html,css,less,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.js set filetype=javascript
+au BufRead,BufNewFile *.coffee set filetype=coffee
 au BufRead,BufNewFile *.jsx set filetype=javascript
 au BufRead,BufNewFile *.css set filetype=css
 au BufRead,BufNewFile *.less set filetype=css
@@ -133,6 +134,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'kchmck/vim-coffee-script'
 
 " Add plugins to &runtimepath
 call plug#end()
