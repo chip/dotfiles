@@ -113,9 +113,6 @@ nnoremap <leader>a :Ag<SPACE>
 set foldmethod=manual
 nnoremap <Space> za
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
-
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 let g:syntastic_javascript_checkers = ['jsxhint']
 
