@@ -117,6 +117,7 @@ match OverLength /\%81v.\+/
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 let g:syntastic_javascript_checkers = ['jsxhint']
 
+" https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
 Plug 'ggreer/the_silver_searcher'
