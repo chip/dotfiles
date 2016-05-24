@@ -91,6 +91,7 @@ let g:ctrlp_match_window_reversed = 0
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>m :CtrlPBufTag<CR>
 
+" https://robots.thoughtbot.com/faster-grepping-in-vim
 " The Silver Searcher
 if executable('ag')
   " Use ag over grep
