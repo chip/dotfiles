@@ -119,11 +119,11 @@ nnoremap <Space> za
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 let g:syntastic_javascript_checkers = ['jsxhint']
 
-if !empty(globpath(&rtp, "plugged/neocomplete.vim/plugin/neocomplete.vim"))
+if !empty(globpath(&rtp, "~/.vim/plugged/neocomplete.vim/plugin/neocomplete.vim"))
   source neocomplete.vim
 endif
 
-if !empty(globpath(&rtp, "plugged/neosnippet/plugin/neosnippet.vim"))
+if !empty(globpath(&rtp, "~/.vim/plugged/neosnippet/plugin/neosnippet.vim"))
   source neosnippet.vim
 endif
 
