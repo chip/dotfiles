@@ -116,6 +116,14 @@ nnoremap <Space> za
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 let g:syntastic_javascript_checkers = ['jsxhint']
 
+if !empty(globpath(&rtp, "plugged/neocomplete.vim/plugin/neocomplete.vim"))
+  source neocomplete.vim
+endif
+
+if !empty(globpath(&rtp, "plugged/neosnippet/plugin/neosnippet.vim"))
+  source neosnippet.vim
+endif
+
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
@@ -124,10 +132,10 @@ Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
-Plug 'honza/vim-snippets'
 Plug 'janko-m/vim-test'
 Plug 'Shougo/neocomplete.vim'
-Plug 'othree/jspc.vim'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
@@ -140,6 +148,3 @@ call plug#end()
 " Status bar
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-
-" For use with neocomplete
-autocmd FileType javascript setlocal omnifunc=jspc#omni
