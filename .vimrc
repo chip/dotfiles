@@ -38,6 +38,7 @@ set nobackup
 set noswapfile
 set clipboard=unnamed
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/.vim/bundle/ag
 set laststatus=2  " Always display the statusline in all windows
 set dictionary+=~/.vim/bundle/bootstrap-snippets/dictionary " Bootstrap autocomplete
 set complete+=k
@@ -104,6 +105,8 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+let g:ag_prg="/usr/local/bin/ag --vimgrep"
+
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
@@ -127,7 +130,7 @@ endif
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'ggreer/the_silver_searcher'
+Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
