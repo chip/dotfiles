@@ -116,15 +116,37 @@ nnoremap <leader>a :Ag<SPACE>
 set foldmethod=manual
 nnoremap <Space> za
 
-let syntastic_mode_map = { 'passive_filetypes': ['html'] }
-let g:syntastic_javascript_checkers = ['jsxhint']
-
 if !empty(globpath(&rtp, "~/.vim/plugged/neocomplete.vim/plugin/neocomplete.vim"))
   source neocomplete.vim
 endif
 
 if !empty(globpath(&rtp, "~/.vim/plugged/neosnippet/plugin/neosnippet.vim"))
   source neosnippet.vim
+endif
+
+" Syntastic
+if !empty(globpath(&rtp, "./plugin/syntastic.vim"))
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_loc_list_height = 5
+  let g:syntastic_auto_loc_list = 0
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 1
+  echo "setting javascript checkers"
+  let g:syntastic_javascript_checkers = ['eslint', 'gjshint', 'jshint']
+
+  let g:syntastic_error_symbol = '❌'
+  let g:syntastic_style_error_symbol = '⁉️'
+  let g:syntastic_warning_symbol = '⚠️'
+  let g:syntastic_style_warning_symbol = '💩'
+
+  highlight link SyntasticErrorSign SignColumn
+  highlight link SyntasticWarningSign SignColumn
+  highlight link SyntasticStyleErrorSign SignColumn
+  highlight link SyntasticStyleWarningSign SignColumn
 endif
 
 " https://github.com/junegunn/vim-plug
