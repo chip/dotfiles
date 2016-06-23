@@ -137,7 +137,6 @@ if !empty(globpath(&rtp, "./plugin/syntastic.vim"))
   let g:syntastic_auto_loc_list = 0
   let g:syntastic_check_on_open = 1
   let g:syntastic_check_on_wq = 1
-  echo "setting javascript checkers"
   let g:syntastic_javascript_checkers = ['eslint', 'gjshint', 'jshint']
 
   let g:syntastic_error_symbol = '❌'
