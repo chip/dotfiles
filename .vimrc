@@ -44,6 +44,8 @@ set dictionary+=~/.vim/bundle/bootstrap-snippets/dictionary " Bootstrap autocomp
 set complete+=k
 set exrc " enable per-directory .vimrc files
 set secure " disable unsafe commands in local .vimrc files
+set wildmenu
+set wildmode=longest:list,full
 set background=dark
 
 colorscheme railscasts
