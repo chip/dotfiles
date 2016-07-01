@@ -4,8 +4,6 @@ set encoding=utf-8
 set fileformat=unix
 
 syntax enable
-filetype plugin indent on " load file type plugins + indentation
-
 setlocal spell spelllang=en_us 
 
 " Whitespace
@@ -142,26 +140,26 @@ if !empty(globpath(&rtp, "./plugin/syntastic.vim"))
   highlight link SyntasticStyleWarningSign SignColumn
 endif
 
-" https://github.com/junegunn/vim-plug
-call plug#begin('~/.vim/plugged')
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Plug 'rking/ag.vim'
-Plug 'kien/ctrlp.vim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/syntastic'
-Plug 'airblade/vim-gitgutter'
-Plug 'janko-m/vim-test'
-Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'kchmck/vim-coffee-script'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'janko-m/vim-test'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'kchmck/vim-coffee-script'
 
-" Add plugins to &runtimepath
-call plug#end()
+filetype plugin indent on
+call vundle#end()
 
 " Status bar
 let g:airline_powerline_fonts = 1
