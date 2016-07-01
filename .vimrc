@@ -118,14 +118,6 @@ nnoremap <leader>a :Ag<SPACE>
 set foldmethod=manual
 nnoremap <Space> za
 
-if !empty(globpath(&rtp, "~/.vim/plugged/neocomplete.vim/plugin/neocomplete.vim"))
-  source neocomplete.vim
-endif
-
-if !empty(globpath(&rtp, "~/.vim/plugged/neosnippet/plugin/neosnippet.vim"))
-  source neosnippet.vim
-endif
-
 " Syntastic
 if !empty(globpath(&rtp, "./plugin/syntastic.vim"))
   set statusline+=%#warningmsg#
