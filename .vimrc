@@ -37,7 +37,7 @@ set noswapfile
 set clipboard=unnamed
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/ag
-set laststatus=2  " Always display the statusline in all windows
+set laststatus=1
 set dictionary+=~/.vim/bundle/bootstrap-snippets/dictionary " Bootstrap autocomplete
 set complete+=k
 set exrc " enable per-directory .vimrc files
