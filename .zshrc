@@ -176,3 +176,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export PATH="$PATH:$ANDROID_HOME/tools"
+
+export NVM_DIR="/Users/chip/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
