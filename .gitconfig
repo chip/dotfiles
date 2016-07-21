@@ -35,6 +35,7 @@
 
 [core]
 	editor = /usr/bin/vim -f
+	excludesfile = /Users/chip/.global_ignore
 
 [rerere]
 	enabled = true
