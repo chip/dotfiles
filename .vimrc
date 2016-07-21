@@ -83,6 +83,12 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 let test#strategy = "basic"
 
+" Remap buffer navigation per tip #35 of Practical Vim
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
+
 " Ctrl-P mapping is overwritten
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_max_height = 40
