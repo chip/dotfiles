@@ -1,5 +1,9 @@
 " Configuration inspired by http://mislav.uniqpath.com/2011/12/vim-revisited/
-set nocompatible                " choose no compatibility with legacy vi
+
+" choose no compatibility with legacy vi
+set nocompatible
+
+" Vundle settings
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -28,45 +32,62 @@ setlocal spell spelllang=en_us
 " Whitespace
 set wrap
 set linebreak
-set showbreak=>\ \ \  " note trailing space at end of next line
-set expandtab         " use spaces, not tabs (optional)
+" note trailing space at end of next line
+set showbreak=>\ \ \
+" use spaces, not tabs (optional)
+set expandtab
 set tabstop=2
-set shiftwidth=2      " a tab is two spaces (or set this to 4)
-set softtabstop=2     " a tab is two spaces (or set this to 4)
+" a tab is two spaces (or set this to 4)
+set shiftwidth=2
+set softtabstop=2
 set autoindent
 set smartindent
-set backspace=indent,eol,start  " backspace through everything in insert mode
+" backspace through everything in insert mode
+set backspace=indent,eol,start
 set tw=72
 set fo+=1
 "" Searching
-set incsearch  " incremental searching
-set ignorecase " searches are case insensitive...
-set smartcase  " ... unless they contain at least one capital letter
-set hlsearch   " highlight matches
-set number      " show line numbers
-set ruler       " show the cursor position all the time
-set cursorline  " highlight the line of the cursor
-set showcmd     " display incomplete commands
+set incsearch
+" searches are case insensitive...
+set ignorecase
+" ... unless they contain at least one capital letter
+set smartcase
+" highlight matches
+set hlsearch
+" show line numbers
+set number
+" show the cursor position all the time
+set ruler
+" highlight the line of the cursor
+set cursorline
+" display incomplete commands
+set showcmd
 set shell=/usr/local/bin/zsh
-set history=200 " remember more Ex commands
-set scrolloff=2 " have some context around the current line always on screen
-set autoread    " Auto-reload buffers when file changed on disk
+" remember more Ex commands
+set history=200
+" have some context around the current line always on screen
+set scrolloff=2
+" Auto-reload buffers when file changed on disk
+set autoread
 set nobackup
 set noswapfile
 set clipboard=unnamed
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/ag
 set laststatus=1
-set dictionary+=~/.vim/bundle/bootstrap-snippets/dictionary " Bootstrap autocomplete
+" Bootstrap autocomplete
+set dictionary+=~/.vim/bundle/bootstrap-snippets/dictionary
 set complete+=k
-set exrc " enable per-directory .vimrc files
-set secure " disable unsafe commands in local .vimrc files
+" enable per-directory .vimrc files
+set exrc
+" disable unsafe commands in local .vimrc files
+set secure
 set wildmenu
 set wildmode=longest:list,full
 set background=dark
 colorscheme railscasts
 
-"set suffixesadd+=.js,.rb
+set suffixesadd+=.js,.rb
 
 let mapleader=","
 
