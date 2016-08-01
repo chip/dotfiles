@@ -65,8 +65,9 @@ set secure " disable unsafe commands in local .vimrc files
 set wildmenu
 set wildmode=longest:list,full
 set background=dark
-
 colorscheme railscasts
+
+"set suffixesadd+=.js,.rb
 
 let mapleader=","
 
