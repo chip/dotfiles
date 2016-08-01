@@ -29,86 +29,138 @@ set fileformat=unix
 syntax enable
 setlocal spell spelllang=en_us 
 
-" Whitespace
+" wrap lines
 set wrap
+
+" display with line break, but don't change formatting
 set linebreak
+
 " note trailing space at end of next line
 set showbreak=>\ \ \
+
 " use spaces, not tabs (optional)
 set expandtab
-set tabstop=2
+
 " a tab is two spaces (or set this to 4)
+set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set autoindent
 set smartindent
+
 " backspace through everything in insert mode
 set backspace=indent,eol,start
+
+" text width
 set tw=72
+
+" format options
 set fo+=1
-"" Searching
+
+" searching
 set incsearch
+
 " searches are case insensitive...
 set ignorecase
-" ... unless they contain at least one capital letter
+
+" ...unless they contain at least one capital letter
 set smartcase
+
 " highlight matches
 set hlsearch
+
 " show line numbers
 set number
+
 " show the cursor position all the time
 set ruler
+
 " highlight the line of the cursor
 set cursorline
+
 " display incomplete commands
 set showcmd
+
+" use zsh
 set shell=/usr/local/bin/zsh
+
 " remember more Ex commands
 set history=200
+
 " have some context around the current line always on screen
 set scrolloff=2
-" Auto-reload buffers when file changed on disk
+
+" auto-reload buffers when file changed on disk
 set autoread
 set nobackup
 set noswapfile
+
 set clipboard=unnamed
+
+" runtimepath for plugins
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/ag
+
+" only if there are at least 2 windows
 set laststatus=1
+
 " Bootstrap autocomplete
 set dictionary+=~/.vim/bundle/bootstrap-snippets/dictionary
+
+" autocompletion should use keywords from dictionary
 set complete+=k
+
 " enable per-directory .vimrc files
 set exrc
+
 " disable unsafe commands in local .vimrc files
 set secure
+
+" menu for autocompletion
 set wildmenu
 set wildmode=longest:list,full
+
+" set buffer background
 set background=dark
+
+" set buffer colorscheme
 colorscheme railscasts
 
+" file suffixes to search when using gf to find a file
 set suffixesadd+=.js,.rb
 
+" map the leader key to a comma instead of a backslash
 let mapleader=","
 
+" go back to the previous buffer
 nnoremap <leader><leader> <c-^>
 
+" shortcut for saving a file
 map <leader>w :w<CR>
+
+" shortcut for quitting a file
 map <leader>q :q<CR>
+
+" shortcut for saving and quitting a file
 map <leader>x :wq<CR>
 
-" Remapping escape
+" remapping escape
 inoremap jk <esc>
 inoremap <esc> <nop>
 
-" .vimrc
+" edit .vimrc
 nnoremap <leader>ev :e $MYVIMRC<cr>
+
+" save .vimrc and source it
 nnoremap <leader>sv :w\|:source $MYVIMRC<cr>
+
+" edit .zshrc
 nnoremap <leader>zsh :e ~/.zshrc<cr>
 
-" Remove unnecessary spaces before writing files
+" remove unnecessary spaces before writing files
 autocmd FileType js,coffee,html,css,less,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
 
+" set file types when opening or creating a file
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.js set filetype=javascript
 au BufRead,BufNewFile *.coffee set filetype=coffee
@@ -124,7 +176,7 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 let test#strategy = "basic"
 
-" Remap buffer navigation per tip #35 of Practical Vim
+" remap buffer navigation per tip #35 of Practical Vim
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
@@ -157,6 +209,7 @@ let g:ag_prg="/usr/local/bin/ag --vimgrep"
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
+" map for running Ag plugin
 nnoremap <leader>a :Ag<SPACE>
 
 " folding
