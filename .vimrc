@@ -43,7 +43,6 @@ set incsearch  " incremental searching
 set ignorecase " searches are case insensitive...
 set smartcase  " ... unless they contain at least one capital letter
 set hlsearch   " highlight matches
-:nmap \q :nohlsearch<CR>
 set number      " show line numbers
 set ruler       " show the cursor position all the time
 set cursorline  " highlight the line of the cursor
