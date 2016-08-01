@@ -50,7 +50,7 @@ set cursorline  " highlight the line of the cursor
 set showcmd     " display incomplete commands
 set shell=/usr/local/bin/zsh
 set history=200 " remember more Ex commands
-set scrolloff=3 " have some context around the current line always on screen
+set scrolloff=2 " have some context around the current line always on screen
 set autoread    " Auto-reload buffers when file changed on disk
 set nobackup
 set noswapfile
