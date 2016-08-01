@@ -30,6 +30,7 @@ set wrap
 set linebreak
 set showbreak=>\ \ \  " note trailing space at end of next line
 set expandtab         " use spaces, not tabs (optional)
+set tabstop=2
 set shiftwidth=2      " a tab is two spaces (or set this to 4)
 set softtabstop=2     " a tab is two spaces (or set this to 4)
 set autoindent
