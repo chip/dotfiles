@@ -95,6 +95,9 @@ set autoread
 set nobackup
 set noswapfile
 
+" Use the quotestar register for all yank, delete, change and put
+" operations that have no register explicitly specified:
+" http://vimcasts.org/episodes/accessing-the-system-clipboard-from-vim/
 set clipboard=unnamed
 
 " runtimepath for plugins
