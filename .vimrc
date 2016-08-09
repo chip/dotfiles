@@ -216,7 +216,7 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap <leader>a :Ag<SPACE>
 
 " folding
-set foldmethod=manual
+set foldmethod=expr
 nnoremap <Space> za
 
 " Syntastic
