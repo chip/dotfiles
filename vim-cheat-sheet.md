@@ -372,6 +372,12 @@ g,
 
 gi
 
+## Operate on regions of text that match the current search pattern
+
+http://vimcasts.org/episodes/operating-on-search-matches-using-gn/
+
+:h gn
+
 # Jump list
 
 :jumps
@@ -566,3 +572,15 @@ http://vimcasts.org/episodes/accessing-the-system-clipboard-from-vim/
 # Map examples
 
 :h map-examples
+
+# External filter
+
+http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/
+
+:h filter
+
+:h range
+
+# Snippets
+
+http://vimcasts.org/episodes/meet-ultisnips/
