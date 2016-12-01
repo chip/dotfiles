@@ -1,0 +1,7 @@
+{
+  "extends": "airbnb"
+  "rules": {
+    "semi": [2, "never"], // require or disallow use of semicolons instead of ASI
+    "no-unexpected-multiline": 2, // Prevent edge cases caused by excluding semicolons.
+  }
+}
