@@ -189,12 +189,6 @@ nnoremap <silent> ]B :blast<CR>
 " Ctrl-P mapping is overwritten
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_max_height = 40
-let g:ctrlp_user_command = {
-  \ 'types': {
-    \ 1: ['.git', 'cd %s && git ls-files --exclude-standard --others'],
-    \ },
-  \ 'fallback': 'find %s -type f'
-  \ }
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_open_new_file = 'v'
 nnoremap <leader>b :CtrlPBuffer<CR>
