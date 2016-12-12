@@ -178,6 +178,7 @@ nmap <silent> <leader>A :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 let test#strategy = "basic"
+let test#javascript#jasmine#executable = 'node_modules/.bin/babel-node node_modules/.bin/jasmine'
 
 " remap buffer navigation per tip #35 of Practical Vim
 nnoremap <silent> [b :bprevious<CR>
