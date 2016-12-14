@@ -161,13 +161,14 @@ nnoremap <leader>sv :w\|:source $MYVIMRC<cr>
 nnoremap <leader>zsh :e ~/.zshrc<cr>
 
 " remove unnecessary spaces before writing files
-autocmd FileType js,coffee,html,css,less,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType javascript,coffee,html,css,less,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " set file types when opening or creating a file
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.js set filetype=javascript
-au BufRead,BufNewFile *.coffee set filetype=coffee
+au BufRead,BufNewFile *.es6 set filetype=javascript
 au BufRead,BufNewFile *.jsx set filetype=javascript
+au BufRead,BufNewFile *.coffee set filetype=coffee
 au BufRead,BufNewFile *.css set filetype=css
 au BufRead,BufNewFile *.less set filetype=css
 
