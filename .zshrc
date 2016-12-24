@@ -179,3 +179,5 @@ export PATH="$PATH:$ANDROID_HOME/tools"
 NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
