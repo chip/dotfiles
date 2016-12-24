@@ -1,1 +1,9 @@
 dotfiles for osx
+
+Currently using the following:
+
+* terminal is Hyper `.hyper.js`
+* shell is zsh with oh-my-zsh `.zshrc`
+* oh-my-zsh theme is `pure`
+* npm packages are globally installed per `.npmrc`
+* eslint config uses airbnb style guide
