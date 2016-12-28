@@ -94,9 +94,7 @@ module.exports = {
   plugins: [
     'hyper-color-theme-tomorrow-eighties',
     'hyperfull',
-    'hyperterm-paste',
     'hyper-font-smoothing',
-    "hyperminimal"
   ],
 
   // in development, you can create a directory under
