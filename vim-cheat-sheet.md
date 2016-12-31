@@ -584,3 +584,28 @@ http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/
 # Snippets
 
 http://vimcasts.org/episodes/meet-ultisnips/
+
+# Quit vim and write file if changes have been made
+#
+# https://vimgifs.com/ex-x/
+
+:x
+
+(better than :wq)
+
+
+# View all sourced scripts when you load vim
+#
+# https://vimgifs.com/ex-scriptnames/
+
+:scriptnames
+:scr
+
+# Show an exhaustive list of ex commands
+#
+# https://vimgifs.com/ex-exusage/
+
+:exu
+:exusage
+
+# Note: I've reviewed 1st 3 rows of commands on vimgifs.com
