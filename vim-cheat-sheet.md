@@ -617,4 +617,14 @@ http://vimcasts.org/episodes/meet-ultisnips/
 :exu
 :exusage
 
-# Note: I've reviewed 1st 3 rows of commands on vimgifs.com
+# Jump to the matching (, [, or {.
+
+%
+
+# Show exhaustive list of ex commands
+
+:h holy-grail
+
+###### Next vimgif
+https://vimgifs.com/i_CTRL-W/
+
