@@ -340,9 +340,18 @@ http://vimcasts.org/episodes/meet-the-arglist/
 
 :args
 
-## Repeat last substitute command (see :h substitute)
+## Repeat last substitute command without flags (see :h substitute)
 
-&
+:&
+
+## Repeat last substitute globally
+
+:&g
+
+## Repeat last substitute with flags
+
+:&&
+
 
 ## Matches at any position, and sets the start of the match there
 
