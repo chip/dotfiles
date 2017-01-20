@@ -1,10 +1,10 @@
 # Updates to environment
 
   * Using Vundle for vim plugin mgt
-  * Using bullet-train theme for zsh
-  * Using Tomorrow Night Eighties theme for Terminal
-  * Change Terminal cursor to vertical bar
-  * Change Terminal font to Source Code Powerline 24 pt
+  * Using pure theme for zsh
+  * Using Hyper instead of Terminal
+  * Using Tomorrow Night Eighties theme for Hyper
+  * Change Terminal font to Incosolata 24 pt
   * Stopped using tmuxinator due to lag in loading shell prompt
   * Updating dotfiles frequently (need to pull them down on macbook)
   * Stopped using powerline in zsh and tmux
