@@ -47,6 +47,7 @@ C
 cl
 
 ## Change line, remove character under cursor first (shorthand)
+# https://vimgifs.com/s://vimgifs.com/s/
 
 s
 
@@ -54,6 +55,7 @@ s
 ^C
 
 ## Change until the end of the line, but move to beginning of text first (shorthand)
+# https://vimgifs.com/s://vimgifs.com/s/
 
 S
 
@@ -360,6 +362,7 @@ http://vimcasts.org/episodes/project-wide-find-and-replace/
 :help /\zs
 
 # Replace mode
+# https://vimgifs.com/r/
 
 R
 
@@ -625,6 +628,14 @@ http://vimcasts.org/episodes/meet-ultisnips/
 
 :h holy-grail
 
-###### Next vimgif
+# Delete word under cursor while in insert mode
 https://vimgifs.com/i_CTRL-W/
 
+# Delete from beginning of line to the cursor while in insert mode
+https://vimgifs.com/i_CTRL-U/
+
+# Wrap list with tags
+https://vimgifs.com/wrap-list/
+
+# Align text
+https://vimgifs.com/alignment/
