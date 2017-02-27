@@ -139,13 +139,13 @@ let mapleader=","
 nnoremap <leader><leader> <c-^>
 
 " shortcut for saving a file
-map <leader>w :w<CR>
+noremap <leader>w :w<CR>
 
 " shortcut for quitting a file
-map <leader>q :q<CR>
+noremap <leader>q :q<CR>
 
 " shortcut for saving and quitting a file
-map <leader>x :wq<CR>
+noremap <leader>x :wq<CR>
 
 " remapping escape
 inoremap jk <esc>
@@ -173,11 +173,11 @@ au BufRead,BufNewFile *.css set filetype=css
 au BufRead,BufNewFile *.less set filetype=css
 
 " janko-m/vim-test
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>A :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
+nnoremap <silent> <leader>t :TestNearest<CR>
+nnoremap <silent> <leader>T :TestFile<CR>
+nnoremap <silent> <leader>A :TestSuite<CR>
+nnoremap <silent> <leader>l :TestLast<CR>
+nnoremap <silent> <leader>g :TestVisit<CR>
 let test#strategy = "basic"
 let test#javascript#jasmine#executable = 'node_modules/.bin/babel-node node_modules/.bin/jasmine'
 
