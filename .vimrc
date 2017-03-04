@@ -255,3 +255,8 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
 let NERDSpaceDelims=1
+
+iabbrev @@ chip@chipcastle.com
+iabbrev wweb http://chipcastle.com
+iabbrev ssig --<cr>Chip Castle<cr>chip@chipcastle.com
+iabbrev ccopy Copyright 2017 Chip Castle Dot Com, Inc., All rights reserved. 
