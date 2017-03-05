@@ -161,16 +161,63 @@ nnoremap <leader>sv :w\|:source $MYVIMRC<cr>
 nnoremap <leader>zsh :e ~/.zshrc<cr>
 
 " remove unnecessary spaces before writing files
-autocmd FileType javascript,coffee,html,css,less,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
+augroup remove_spaces
+  au!
+  au FileType javascript,coffee,html,css,less,ruby au BufWritePre <buffer> :%s/\s\+$//e
+augroup END
 
-" set file types when opening or creating a file
-au BufRead,BufNewFile *.md set filetype=markdown
-au BufRead,BufNewFile *.js set filetype=javascript
-au BufRead,BufNewFile *.es6 set filetype=javascript
-au BufRead,BufNewFile *.jsx set filetype=javascript
-au BufRead,BufNewFile *.coffee set filetype=coffee
-au BufRead,BufNewFile *.css set filetype=css
-au BufRead,BufNewFile *.less set filetype=css
+augroup set_markdown
+  au!
+  au BufRead,BufNewFile *.md set filetype=markdown
+  au FileType markdown setlocal omnifunc=htmlcomplete#CompleteTags
+augroup END
+
+augroup set_html
+  au!
+  au BufRead,BufNewFile *.html set filetype=html
+  au FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+augroup END
+
+augroup set_javascript
+  au!
+  au BufRead,BufNewFile *.js set filetype=javascript
+  au BufRead,BufNewFile *.es6 set filetype=javascript
+  au BufRead,BufNewFile *.jsx set filetype=javascript
+  au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+augroup END
+
+augroup set_coffee
+  au!
+  au BufRead,BufNewFile *.coffee set filetype=coffee
+augroup END
+
+augroup set_css
+  au!
+  au BufRead,BufNewFile *.css set filetype=css
+  au BufRead,BufNewFile *.less set filetype=css
+  au FileType css setlocal omnifunc=csscomplete#CompleteCSS
+augroup END
+
+augroup set_ruby
+  au!
+  au BufRead,BufNewFile *.rb set filetype=ruby
+  au FileType ruby set omnifunc=rubycomplete#Complete
+  au FileType ruby let g:rubycomplete_buffer_loading = 1
+  au FileType ruby let g:rubycomplete_rails = 1
+  au FileType ruby let g:rubycomplete_classes_in_global = 1
+augroup END
+
+" autocompletion
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" snippets
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 " janko-m/vim-test
 nnoremap <silent> <leader>t :TestNearest<CR>
@@ -244,27 +291,6 @@ if !empty(globpath(&rtp, "./plugin/syntastic.vim"))
   highlight link SyntasticStyleErrorSign SignColumn
   highlight link SyntasticStyleWarningSign SignColumn
 endif
-
-" For autocompletion
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-
-" Neocomplete
-let g:neocomplete#enable_at_startup = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" neosnippet
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" neosnippet
-let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 let NERDSpaceDelims=1
 
