@@ -289,6 +289,7 @@ nnoremap <leader>a :Ag<SPACE>
 
 " Fold settings ---------------------- {{{
 set foldmethod=expr
+set foldlevelstart=0
 nnoremap <Space> za
 " }}}
 
