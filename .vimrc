@@ -105,7 +105,14 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/ag
 
 " only if there are at least 2 windows
-set laststatus=1
+set laststatus=2
+
+" set status line
+set statusline=%.50F      " Path to the file
+set statusline+=%=        " Switch to the right side
+set statusline+=%l        " Current line
+set statusline+=/         " Separator
+set statusline+=%L        " Total lines
 
 " Bootstrap autocomplete
 set dictionary+=~/.vim/bundle/bootstrap-snippets/dictionary
