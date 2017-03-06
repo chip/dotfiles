@@ -1,9 +1,9 @@
-" Configuration inspired by http://mislav.uniqpath.com/2011/12/vim-revisited/
-
+" Not compatible with vi ---------------------- {{{
 " choose no compatibility with legacy vi
 set nocompatible
+" }}}
 
-" Vundle settings
+" Vundle settings ---------------------- {{{
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -23,7 +23,9 @@ Plugin 'tpope/vim-surround'
 
 filetype plugin indent on
 call vundle#end()
+" }}}
 
+" Basic settings ---------------------- {{{
 set encoding=utf-8
 set fileformat=unix
 syntax enable
@@ -138,7 +140,9 @@ colorscheme railscasts
 
 " file suffixes to search when using gf to find a file
 set suffixesadd+=.js,.rb
+" }}}
 
+" Mappings  ---------------------- {{{
 " map the leader key to a comma instead of a backslash
 let mapleader=","
 
@@ -166,8 +170,14 @@ nnoremap <leader>sv :w\|:source $MYVIMRC<cr>
 
 " edit .zshrc
 nnoremap <leader>zsh :e ~/.zshrc<cr>
+" }}}
 
-" remove unnecessary spaces before writing files
+" FileType settings ---------------------- {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
 augroup remove_spaces
   au!
   au FileType javascript,coffee,html,css,less,ruby au BufWritePre <buffer> :%s/\s\+$//e
@@ -213,8 +223,9 @@ augroup set_ruby
   au FileType ruby let g:rubycomplete_rails = 1
   au FileType ruby let g:rubycomplete_classes_in_global = 1
 augroup END
+" }}}
 
-" autocompletion
+" Autocompletion & Snippets ---------------------- {{{
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -225,8 +236,9 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+" }}}
 
-" janko-m/vim-test
+" Testing shortcuts ---------------------- {{{
 nnoremap <silent> <leader>t :TestNearest<CR>
 nnoremap <silent> <leader>T :TestFile<CR>
 nnoremap <silent> <leader>A :TestSuite<CR>
@@ -234,23 +246,27 @@ nnoremap <silent> <leader>l :TestLast<CR>
 nnoremap <silent> <leader>g :TestVisit<CR>
 let test#strategy = "basic"
 let test#javascript#jasmine#executable = 'node_modules/.bin/babel-node node_modules/.bin/jasmine'
+" }}}
 
+" Buffer navigation ---------------------- {{{
 " remap buffer navigation per tip #35 of Practical Vim
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
+" }}}
 
-" Ctrl-P mapping is overwritten
+" Ctrl-P ---------------------- {{{
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_max_height = 40
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_open_new_file = 'v'
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>m :CtrlPBufTag<CR>
+" }}}
 
+" The Silver Searcher ---------------------- {{{
 " https://robots.thoughtbot.com/faster-grepping-in-vim
-" The Silver Searcher
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
@@ -269,12 +285,14 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " map for running Ag plugin
 nnoremap <leader>a :Ag<SPACE>
+" }}}
 
-" folding
+" Fold settings ---------------------- {{{
 set foldmethod=expr
 nnoremap <Space> za
+" }}}
 
-" Syntastic
+" Syntastic ---------------------- {{{
 if !empty(globpath(&rtp, "./plugin/syntastic.vim"))
   set statusline+=%#warningmsg#
   set statusline+=%{SyntasticStatuslineFlag()}
@@ -299,10 +317,15 @@ if !empty(globpath(&rtp, "./plugin/syntastic.vim"))
   highlight link SyntasticStyleErrorSign SignColumn
   highlight link SyntasticStyleWarningSign SignColumn
 endif
+" }}}
 
+" Comment settings ---------------------- {{{
 let NERDSpaceDelims=1
+" }}}
 
+" Abbreviations ---------------------- {{{
 iabbrev @@ chip@chipcastle.com
 iabbrev wweb http://chipcastle.com
 iabbrev ssig --<cr>Chip Castle<cr>chip@chipcastle.com
 iabbrev ccopy Copyright 2017 Chip Castle Dot Com, Inc., All rights reserved. 
+" }}}
