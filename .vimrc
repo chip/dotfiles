@@ -5,7 +5,7 @@ set nocompatible
 
 " Vundle settings ---------------------- {{{
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -54,10 +54,10 @@ set smartindent
 set backspace=indent,eol,start
 
 " text width
-set tw=72
+set textwidth=72
 
 " format options
-set fo+=1
+set formatoptions+=1
 
 " searching
 set incsearch
@@ -179,49 +179,49 @@ augroup filetype_vim
 augroup END
 
 augroup remove_spaces
-  au!
-  au FileType javascript,coffee,html,css,less,ruby au BufWritePre <buffer> :%s/\s\+$//e
+    autocmd!
+    autocmd FileType javascript,coffee,html,css,less,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
 augroup END
 
 augroup set_markdown
-  au!
-  au BufRead,BufNewFile *.md set filetype=markdown
-  au FileType markdown setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd!
+    autocmd BufRead,BufNewFile *.md set filetype=markdown
+    autocmd FileType markdown setlocal omnifunc=htmlcomplete#CompleteTags
 augroup END
 
 augroup set_html
-  au!
-  au BufRead,BufNewFile *.html set filetype=html
-  au FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd!
+    autocmd BufRead,BufNewFile *.html set filetype=html
+    autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
 augroup END
 
 augroup set_javascript
-  au!
-  au BufRead,BufNewFile *.js set filetype=javascript
-  au BufRead,BufNewFile *.es6 set filetype=javascript
-  au BufRead,BufNewFile *.jsx set filetype=javascript
-  au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+    autocmd!
+    autocmd BufRead,BufNewFile *.js set filetype=javascript
+    autocmd BufRead,BufNewFile *.es6 set filetype=javascript
+    autocmd BufRead,BufNewFile *.jsx set filetype=javascript
+    autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 augroup END
 
 augroup set_coffee
-  au!
-  au BufRead,BufNewFile *.coffee set filetype=coffee
+    autocmd!
+    autocmd BufRead,BufNewFile *.coffee set filetype=coffee
 augroup END
 
 augroup set_css
-  au!
-  au BufRead,BufNewFile *.css set filetype=css
-  au BufRead,BufNewFile *.less set filetype=css
-  au FileType css setlocal omnifunc=csscomplete#CompleteCSS
+    autocmd!
+    autocmd BufRead,BufNewFile *.css set filetype=css
+    autocmd BufRead,BufNewFile *.less set filetype=css
+    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 augroup END
 
 augroup set_ruby
-  au!
-  au BufRead,BufNewFile *.rb set filetype=ruby
-  au FileType ruby set omnifunc=rubycomplete#Complete
-  au FileType ruby let g:rubycomplete_buffer_loading = 1
-  au FileType ruby let g:rubycomplete_rails = 1
-  au FileType ruby let g:rubycomplete_classes_in_global = 1
+    autocmd!
+    autocmd BufRead,BufNewFile *.rb set filetype=ruby
+    autocmd FileType ruby set omnifunc=rubycomplete#Complete
+    autocmd FileType ruby let g:rubycomplete_buffer_loading = 1
+    autocmd FileType ruby let g:rubycomplete_rails = 1
+    autocmd FileType ruby let g:rubycomplete_classes_in_global = 1
 augroup END
 " }}}
 
@@ -268,14 +268,14 @@ nnoremap <leader>m :CtrlPBufTag<CR>
 " The Silver Searcher ---------------------- {{{
 " https://robots.thoughtbot.com/faster-grepping-in-vim
 if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+    " Use ag over grep
+    set grepprg=ag\ --nogroup\ --nocolor
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
 endif
 
 let g:ag_prg="/usr/local/bin/ag --vimgrep"
@@ -295,28 +295,28 @@ nnoremap <Space> za
 
 " Syntastic ---------------------- {{{
 if !empty(globpath(&rtp, "./plugin/syntastic.vim"))
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
 
-  let g:syntastic_always_populate_loc_list = 1
-  let g:syntastic_loc_list_height = 5
-  let g:syntastic_auto_loc_list = 1
-  let g:syntastic_check_on_open = 1
-  let g:syntastic_check_on_wq = 1
-  let g:syntastic_javascript_checkers = ['eslint']
-  let g:syntastic_javascript_eslint_exec = '~/.npm-packages/bin/eslint'
-  let g:syntastic_debug = 0
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_loc_list_height = 5
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 1
+    let g:syntastic_javascript_checkers = ['eslint']
+    let g:syntastic_javascript_eslint_exec = '~/.npm-packages/bin/eslint'
+    let g:syntastic_debug = 0
 
-  let g:syntastic_error_symbol = '❌'
-  let g:syntastic_style_error_symbol = '⁉️'
-  let g:syntastic_warning_symbol = '⚠️'
-  let g:syntastic_style_warning_symbol = '💩'
+    let g:syntastic_error_symbol = '❌'
+    let g:syntastic_style_error_symbol = '⁉️'
+    let g:syntastic_warning_symbol = '⚠️'
+    let g:syntastic_style_warning_symbol = '💩'
 
-  highlight link SyntasticErrorSign SignColumn
-  highlight link SyntasticWarningSign SignColumn
-  highlight link SyntasticStyleErrorSign SignColumn
-  highlight link SyntasticStyleWarningSign SignColumn
+    highlight link SyntasticErrorSign SignColumn
+    highlight link SyntasticWarningSign SignColumn
+    highlight link SyntasticStyleErrorSign SignColumn
+    highlight link SyntasticStyleWarningSign SignColumn
 endif
 " }}}
 
