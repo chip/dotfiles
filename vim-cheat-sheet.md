@@ -1,5 +1,6 @@
 # Updates to environment
 
+  * Installed neocomplete/neosnippets after removing YCM, Ultisnips
   * Using Vundle for vim plugin mgt
   * Using pure theme for zsh
   * Using Hyper instead of Terminal
@@ -11,8 +12,6 @@
   * Removed status from tmux
   * Removed blank line from top of bullet-train theme
   * Removed airline plugins for vim
-  * Evaluating YCM plugin
-  * Will attempt to integrate Supertab, Ultisnips and Honza snippets
 
 # Help
 
