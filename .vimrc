@@ -252,9 +252,16 @@ nnoremap <silent> <leader>T :TestFile<CR>
 nnoremap <silent> <leader>A :TestSuite<CR>
 nnoremap <silent> <leader>l :TestLast<CR>
 nnoremap <silent> <leader>g :TestVisit<CR>
-let test#strategy = "basic"
 let test#javascript#jasmine#executable = 'node_modules/.bin/babel-node node_modules/.bin/jasmine'
-" }}}
+" For testing es6
+function! NpmTest(cmd)
+  execute "!npm test"
+  " execute "!./node_modules/.bin/mocha --compilers js:babel-core/register"
+endfunction
+
+let g:test#custom_strategies = {'npmTest': function('NpmTest')}
+let g:test#strategy = 'npmTest'
+}}}
 
 " Buffer navigation ---------------------- {{{
 " remap buffer navigation per tip #35 of Practical Vim
@@ -313,7 +320,7 @@ if !empty(globpath(&rtp, "./plugin/syntastic.vim"))
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 1
     let g:syntastic_javascript_checkers = ['eslint']
-    let g:syntastic_javascript_eslint_exec = '~/.npm-packages/bin/eslint'
+    let g:syntastic_javascript_eslint_exec = 'eslint_d'
     let g:syntastic_debug = 0
 
     let g:syntastic_error_symbol = '❌'
