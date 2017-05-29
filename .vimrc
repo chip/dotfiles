@@ -20,6 +20,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'janko-m/vim-test'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'tpope/vim-surround'
+Plugin 'posva/vim-vue'
 
 filetype plugin indent on
 call vundle#end()
@@ -180,7 +181,7 @@ augroup END
 
 augroup remove_spaces
     autocmd!
-    autocmd FileType javascript,coffee,html,css,less,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
+    autocmd FileType javascript,vue,coffee,html,css,less,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
 augroup END
 
 augroup set_markdown
@@ -201,6 +202,13 @@ augroup set_javascript
     autocmd BufRead,BufNewFile *.es6 set filetype=javascript
     autocmd BufRead,BufNewFile *.jsx set filetype=javascript
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+augroup END
+
+augroup set_vue
+    autocmd!
+    autocmd BufRead,BufNewFile *.vue set filetype=vue
+    autocmd FileType vue set omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType vue syntax sync fromstart
 augroup END
 
 augroup set_coffee
