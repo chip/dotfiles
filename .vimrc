@@ -21,6 +21,7 @@ Plugin 'janko-m/vim-test'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'tpope/vim-surround'
 Plugin 'posva/vim-vue'
+Plugin 'kristijanhusak/vim-hybrid-material'
 
 filetype plugin indent on
 call vundle#end()
@@ -136,8 +137,8 @@ set wildmode=longest:list,full
 " set buffer background
 set background=dark
 
-" set buffer colorscheme
-colorscheme railscasts
+colorscheme hybrid_material
+let g:enable_bold_font = 1
 
 " file suffixes to search when using gf to find a file
 set suffixesadd+=.js,.rb
@@ -261,7 +262,7 @@ endfunction
 
 let g:test#custom_strategies = {'npmTest': function('NpmTest')}
 let g:test#strategy = 'npmTest'
-}}}
+" }}}
 
 " Buffer navigation ---------------------- {{{
 " remap buffer navigation per tip #35 of Practical Vim

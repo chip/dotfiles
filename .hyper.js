@@ -13,6 +13,9 @@ module.exports = {
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'BLOCK',
 
+    // set to true for blinking cursor
+    cursorBlink: false,
+
     // color of the text
     foregroundColor: '#fff',
 
@@ -75,7 +78,7 @@ module.exports = {
     env: {},
 
     // set to false for no bell
-    bell: 'SOUND',
+    bell: false,
 
     // if true, selected text will automatically be copied to the clipboard
     copyOnSelect: true
@@ -93,7 +96,7 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    'hyper-color-theme-tomorrow-eighties',
+    'hyper-materialshell',
     'hyperfull',
     'hyper-font-smoothing',
   ],
