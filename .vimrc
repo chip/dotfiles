@@ -271,6 +271,8 @@ nnoremap <silent> P :bprevious<CR>
 nnoremap <silent> N :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
+" close current buffer
+nnoremap <leader>q :bd<CR>
 " }}}
 
 " Ctrl-P ---------------------- {{{
