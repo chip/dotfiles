@@ -265,9 +265,10 @@ let g:test#strategy = 'npmTest'
 " }}}
 
 " Buffer navigation ---------------------- {{{
-" remap buffer navigation per tip #35 of Practical Vim
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
+" remap buffer navigation per tip #35 of Practical Vim.
+" (:bprevious & :bnext use custom mappings, though)
+nnoremap <silent> P :bprevious<CR>
+nnoremap <silent> N :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 " }}}
