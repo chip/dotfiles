@@ -1,7 +1,9 @@
 begin
   require 'awesome_print' 
-  Pry.config.print = proc { |output, value|
-  Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai(indent: 2)}", output) }
+  ## If you want awesome_print without automatic pagination, use below:
+  Pry.config.print = proc { |output, value| output.puts value.ai }
+  Pry.pager = false
+
 rescue LoadError => err
   puts "no awesome_print :("
 end
