@@ -195,6 +195,7 @@ augroup set_html
     autocmd!
     autocmd BufRead,BufNewFile *.html set filetype=html
     autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType html setlocal foldmethod=indent
 augroup END
 
 augroup set_javascript
@@ -203,6 +204,7 @@ augroup set_javascript
     autocmd BufRead,BufNewFile *.es6 set filetype=javascript
     autocmd BufRead,BufNewFile *.jsx set filetype=javascript
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType javascript setlocal foldmethod=indent
 augroup END
 
 augroup set_vue
@@ -210,6 +212,7 @@ augroup set_vue
     autocmd BufRead,BufNewFile *.vue set filetype=vue
     autocmd FileType vue set omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType vue syntax sync fromstart
+    autocmd FileType vue setlocal foldmethod=indent
 augroup END
 
 augroup set_coffee
