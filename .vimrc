@@ -3,29 +3,9 @@
 set nocompatible
 " }}}
 
-" Vundle settings ---------------------- {{{
-filetype off
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
-Plugin 'rking/ag.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'w0rp/ale'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'janko-m/vim-test'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
-Plugin 'tpope/vim-surround'
-Plugin 'posva/vim-vue'
-Plugin 'kristijanhusak/vim-hybrid-material'
-
-filetype plugin indent on
-call vundle#end()
-" }}}
+" Plugins ---------------------- {{{
+" See ~/.vim/pack/bundle/start for current list
+" Install, update or remove plugins using basic unix commands from there
 
 " Basic settings ---------------------- {{{
 set encoding=utf-8
