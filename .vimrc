@@ -12,6 +12,7 @@ set encoding=utf-8
 set fileformat=unix
 syntax enable
 setlocal spell spelllang=en_us 
+filetype plugin on
 
 " wrap lines
 set wrap
