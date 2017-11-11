@@ -199,6 +199,8 @@ augroup END
 augroup set_coffee
     autocmd!
     autocmd BufRead,BufNewFile *.coffee set filetype=coffee
+    autocmd FileType coffee set omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType coffee setlocal foldmethod=indent
 augroup END
 
 augroup set_css
