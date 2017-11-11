@@ -310,3 +310,9 @@ iabbrev wweb http://chipcastle.com
 iabbrev ssig --<cr>Chip Castle<cr>chip@chipcastle.com
 iabbrev ccopy Copyright 2017 Chip Castle Dot Com, Inc., All rights reserved. 
 " }}}
+
+" Linting ---------------------------- {{{
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" }}}
