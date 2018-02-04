@@ -184,6 +184,7 @@ augroup set_javascript
     autocmd BufRead,BufNewFile *.js set filetype=javascript
     autocmd BufRead,BufNewFile *.es6 set filetype=javascript
     autocmd BufRead,BufNewFile *.jsx set filetype=javascript
+    autocmd BufWritePost *.js,*.jsx call prettier#run(1)
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType javascript setlocal foldmethod=indent
 augroup END
