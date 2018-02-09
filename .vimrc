@@ -183,10 +183,19 @@ augroup set_javascript
     autocmd!
     autocmd BufRead,BufNewFile *.js set filetype=javascript
     autocmd BufRead,BufNewFile *.es6 set filetype=javascript
-    autocmd BufRead,BufNewFile *.jsx set filetype=javascript
-    autocmd BufWritePost *.js,*.jsx call prettier#run(1)
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType javascript setlocal foldmethod=indent
+augroup END
+
+augroup set_jsx
+    autocmd!
+    autocmd BufRead,BufNewFile *.jsx set filetype=javascript
+    autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType javascript setlocal foldmethod=indent
+    " https://github.com/mattn/emmet-vim
+    " Trigger with <C-y>,
+    " let g:user_emmet_leader_key='<C-Y>'
+    let g:user_emmet_settings = { 'javascript.jsx' : { 'extends' : 'jsx' } }
 augroup END
 
 augroup set_vue
