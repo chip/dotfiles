@@ -87,7 +87,6 @@ set clipboard=unnamed
 
 " runtimepath for plugins
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set runtimepath^=~/.vim/bundle/ag
 
 " only if there are at least 2 windows
 set laststatus=2
@@ -282,26 +281,22 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>m :CtrlPBufTag<CR>
 " }}}
 
-" The Silver Searcher ---------------------- {{{
-" https://robots.thoughtbot.com/faster-grepping-in-vim
-if executable('ag')
-    " Use ag over grep
-    set grepprg=ag\ --nogroup\ --nocolor
+" bind K to grep word under cursor
+nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
-    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+if executable('ack')
+  set grepprg=ack\ -s\ -H\ --nogroup\ --nocolor\ --column
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
 
-    " ag is fast enough that CtrlP doesn't need to cache
-    let g:ctrlp_use_caching = 0
+  let g:ctrlp_user_command = 'ack %s --nocolor -f'
+  let g:ctrlp_use_caching = 0
+  let g:ctrlp_working_path_mode = 'ra'
+  let g:ctrlp_switch_buffer = 'et'
 endif
 
-let g:ag_prg="/usr/local/bin/ag --vimgrep"
-
-" bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
-" map for running Ag plugin
-nnoremap <leader>a :Ag<SPACE>
+" map for running Ack plugin
+cnoreabbrev Ack Ack!
+nnoremap <leader>a :Ack!<SPACE>
 " }}}
 
 " Fold settings ---------------------- {{{

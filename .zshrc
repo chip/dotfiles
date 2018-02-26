@@ -86,7 +86,7 @@ alias stash="git stash"
 alias gtag="git tag -a `date -u \"+UTC_%Y%m%d%H%M%S\"`"
 alias gap="git add -p"
 alias fetch="git fetch"
-alias a="ag"
+alias a="ack"
 alias v="vim"
 
 # Postfix Load on Startup
