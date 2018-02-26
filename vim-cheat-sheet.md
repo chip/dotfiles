@@ -1,17 +1,10 @@
 # Updates to environment
 
-  * Installed neocomplete/neosnippets after removing YCM, Ultisnips
-  * Using Vundle for vim plugin mgt
-  * Using pure theme for zsh
-  * Using Hyper instead of Terminal
-  * Using Tomorrow Night Eighties theme for Hyper
-  * Change Terminal font to Incosolata 24 pt
-  * Stopped using tmuxinator due to lag in loading shell prompt
-  * Updating dotfiles frequently (need to pull them down on macbook)
-  * Stopped using powerline in zsh and tmux
-  * Removed status from tmux
-  * Removed blank line from top of bullet-train theme
-  * Removed airline plugins for vim
+  * Using no plugin manager after upgrade to Vim 8
+    See ~/.vim/pack/bundle/start for list of plugins
+  * Using materialshell theme for zsh
+  * Using materialshell-dark theme for Terminal
+  * Change Terminal font to Fira Mono 24 pt
 
 # Help
 
