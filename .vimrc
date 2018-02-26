@@ -149,6 +149,9 @@ nnoremap <leader>sv :w\|:source $MYVIMRC<cr>
 
 " edit .zshrc
 nnoremap <leader>zsh :e ~/.zshrc<cr>
+
+" numbertoggle
+let g:NumberToggleTrigger="<F2>"
 " }}}
 
 " FileType settings ---------------------- {{{
