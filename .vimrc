@@ -307,7 +307,7 @@ let NERDSpaceDelims=1
 iabbrev @@ chip@chipcastle.com
 iabbrev wweb http://chipcastle.com
 iabbrev ssig --<cr>Chip Castle<cr>chip@chipcastle.com
-iabbrev ccopy Copyright 2017 Chip Castle Dot Com, Inc., All rights reserved. 
+iabbrev ccopy Copyright 2018 Chip Castle Dot Com, Inc., All rights reserved.
 " }}}
 
 " Linting ---------------------------- {{{
