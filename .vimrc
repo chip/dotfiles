@@ -98,9 +98,6 @@ set statusline+=%l        " Current line
 set statusline+=/         " Separator
 set statusline+=%L        " Total lines
 
-" Bootstrap autocomplete
-set dictionary+=~/.vim/bundle/bootstrap-snippets/dictionary
-
 " autocompletion should use keywords from dictionary
 set complete+=k
 
@@ -235,13 +232,6 @@ augroup END
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" snippets
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 " }}}
 
 " Testing shortcuts ---------------------- {{{
