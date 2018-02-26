@@ -203,6 +203,7 @@ augroup set_vue
     autocmd FileType vue set omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType vue syntax sync fromstart
     autocmd FileType vue setlocal foldmethod=indent
+    let g:user_emmet_settings = { 'javascript.vue' : { 'extends' : 'vue' } }
 augroup END
 
 augroup set_coffee
