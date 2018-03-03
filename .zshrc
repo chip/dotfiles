@@ -57,20 +57,14 @@ alias hosts='sudo vi /etc/hosts'
 alias g="git"
 alias ga="git add ."
 alias s="git status"
-alias gs="git status"
-alias gst="echo 'Use s or gs instead' && git status"
 alias pull="git pull origin"
 alias pullm='git pull --rebase origin master'
 alias push="git push origin"
 alias c="git commit -m "
 alias ca="git commit -a -m "
-alias commita="echo 'Use ca instead' && git commit -a -m "
-alias commit="echo 'Use c instead' && git commit -m"
 alias undo="git reset --soft HEAD^"
-alias status="git status"
 alias co="git checkout"
 alias coma="git checkout master"
-alias branch="git branch"
 alias merge="git merge --no-ff"
 alias remote="git remote"
 alias prune="git remote prune origin" # remote branches were already deleted, so need to prune locals
@@ -88,33 +82,18 @@ alias gap="git add -p"
 alias fetch="git fetch"
 alias a="ack"
 alias v="vim"
-
 # Postfix Load on Startup
 alias postgres_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias postgres_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-
 # JDK home
 alias jdkhome="cd /System/Library/Frameworks/JavaVM.framework/Home"
-
-alias code="cd ~/code"
-
 alias stuck="ps ax | sed '1p;/ [U] /!d'"
-
 alias mysqlgem='env ARCHFLAGS="-arch x86_64" gem install mysql2 --config-file bundler_config.yml'
-
-alias chrome="open /Applications/Google\ Chrome.app/"
-alias firefox="open /Applications/Firefox.app/"
-alias safari="open /Applications/Safari.app/"
-
-alias spn="rake spec:no_rails"
-
-alias ctags="`brew --prefix`/bin/ctags"
-
 alias tree="tree -C"
-
 alias be='bundle exec'
-
-alias game="export PWD=`pwd` && zip -r ${PWD}.love *"
+alias topten="history | commands | sort -rn | head"
+alias cores="sysctl -n hw.ncpu"
+alias typescript-convert="cat typescript | perl -pe 's/\e([^\[\]]|\[.*?[a-zA-Z]|\].*?\a)//g' | col -b > typescript-processed"
 
 # Environment
 export LANG="en_US.UTF-8"
@@ -141,11 +120,6 @@ function checkout-pr () {
   git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1;
 }
 
-alias topten="history | commands | sort -rn | head"
-alias cores="sysctl -n hw.ncpu"
-
-alias typescript-convert="cat typescript | perl -pe 's/\e([^\[\]]|\[.*?[a-zA-Z]|\].*?\a)//g' | col -b > typescript-processed"
-
 # vim bindings for the command line
 bindkey -v
 bindkey '^R' history-incremental-search-backward
@@ -154,8 +128,6 @@ fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
 
 export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 export PERL_LOCAL_LIB_ROOT="/Users/chip/perl5:$PERL_LOCAL_LIB_ROOT";
 export PERL_MB_OPT="--install_base "/Users/chip/perl5"";
 export PERL_MM_OPT="INSTALL_BASE=/Users/chip/perl5";
@@ -173,95 +145,19 @@ export ANDROID_HOME=~/Library/Android/sdk
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export PATH="$PATH:$ANDROID_HOME/tools"
 
+eval "$(rbenv init -)"
+
 # Use n for managing node versions: https://github.com/tj/n
 
 # npm
 NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-###-begin-pm2-completion-###
-### credits to npm for the completion file model
-#
-# Installation: pm2 completion >> ~/.bashrc  (or ~/.zshrc)
-#
-
-COMP_WORDBREAKS=${COMP_WORDBREAKS/=/}
-COMP_WORDBREAKS=${COMP_WORDBREAKS/@/}
-export COMP_WORDBREAKS
-
-if type complete &>/dev/null; then
-  _pm2_completion () {
-    local si="$IFS"
-    IFS=$'\n' COMPREPLY=($(COMP_CWORD="$COMP_CWORD" \
-                           COMP_LINE="$COMP_LINE" \
-                           COMP_POINT="$COMP_POINT" \
-                           pm2 completion -- "${COMP_WORDS[@]}" \
-                           2>/dev/null)) || return $?
-    IFS="$si"
-  }
-  complete -o default -F _pm2_completion pm2
-elif type compctl &>/dev/null; then
-  _pm2_completion () {
-    local cword line point words si
-    read -Ac words
-    read -cn cword
-    let cword-=1
-    read -l line
-    read -ln point
-    si="$IFS"
-    IFS=$'\n' reply=($(COMP_CWORD="$cword" \
-                       COMP_LINE="$line" \
-                       COMP_POINT="$point" \
-                       pm2 completion -- "${words[@]}" \
-                       2>/dev/null)) || return $?
-    IFS="$si"
-  }
-  compctl -K _pm2_completion + -f + pm2
-fi
-###-end-pm2-completion-###
-###-begin-pm2-completion-###
-### credits to npm for the completion file model
-#
-# Installation: pm2 completion >> ~/.bashrc  (or ~/.zshrc)
-#
-
-COMP_WORDBREAKS=${COMP_WORDBREAKS/=/}
-COMP_WORDBREAKS=${COMP_WORDBREAKS/@/}
-export COMP_WORDBREAKS
-
-if type complete &>/dev/null; then
-  _pm2_completion () {
-    local si="$IFS"
-    IFS=$'\n' COMPREPLY=($(COMP_CWORD="$COMP_CWORD" \
-                           COMP_LINE="$COMP_LINE" \
-                           COMP_POINT="$COMP_POINT" \
-                           pm2 completion -- "${COMP_WORDS[@]}" \
-                           2>/dev/null)) || return $?
-    IFS="$si"
-  }
-  complete -o default -F _pm2_completion pm2
-elif type compctl &>/dev/null; then
-  _pm2_completion () {
-    local cword line point words si
-    read -Ac words
-    read -cn cword
-    let cword-=1
-    read -l line
-    read -ln point
-    si="$IFS"
-    IFS=$'\n' reply=($(COMP_CWORD="$cword" \
-                       COMP_LINE="$line" \
-                       COMP_POINT="$point" \
-                       pm2 completion -- "${words[@]}" \
-                       2>/dev/null)) || return $?
-    IFS="$si"
-  }
-  compctl -K _pm2_completion + -f + pm2
-fi
-###-end-pm2-completion-###
-
 export NVM_DIR="/Users/chip/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" #--no-use  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
