@@ -86,7 +86,7 @@ set noswapfile
 set clipboard=unnamed
 
 " runtimepath for plugins
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set rtp+=/usr/local/opt/fzf
 
 " only if there are at least 2 windows
 set laststatus=2
@@ -266,14 +266,13 @@ nnoremap <silent> ]B :blast<CR>
 nnoremap Q :bd<CR>
 " }}}
 
-" Ctrl-P ---------------------- {{{
-let g:ctrlp_map = '<leader>f'
-let g:ctrlp_max_height = 40
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_open_new_file = 'v'
-nnoremap <leader>b :CtrlPBuffer<CR>
-nnoremap <leader>m :CtrlPBufTag<CR>
-" }}}
+" fzf key mappings
+" search files in git repo
+noremap <leader>f :GFiles<CR>
+" search all files
+noremap <leader>fa :Files<CR>
+" search buffers
+noremap <leader>b :Buffers<CR>
 
 " bind K to grep word under cursor
 nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
@@ -281,11 +280,6 @@ nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
 if executable('ack')
   set grepprg=ack\ -s\ -H\ --nogroup\ --nocolor\ --column
   set grepformat=%f:%l:%c:%m,%f:%l:%m
-
-  let g:ctrlp_user_command = 'ack %s --nocolor -f'
-  let g:ctrlp_use_caching = 0
-  let g:ctrlp_working_path_mode = 'ra'
-  let g:ctrlp_switch_buffer = 'et'
 endif
 
 " map for running Ack plugin
