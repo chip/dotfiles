@@ -143,6 +143,9 @@ nnoremap <leader>sv :w\|:source $MYVIMRC<cr>
 " edit .zshrc
 nnoremap <leader>zsh :e ~/.zshrc<cr>
 
+" remove search highlighting
+noremap <leader>nh :nohl<CR>
+
 " numbertoggle
 let g:NumberToggleTrigger="<F2>"
 " }}}
