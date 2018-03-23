@@ -154,6 +154,12 @@ noremap <leader>f :Files<CR>
 " search buffers
 noremap <leader>b :Buffers<CR>
 
+" signify
+let g:signify_vcs_list = ['git']
+highlight DiffAdd           cterm=bold ctermbg=none ctermfg=119
+highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
+highlight DiffChange        cterm=bold ctermbg=none ctermfg=227
+
 " numbertoggle
 let g:NumberToggleTrigger="<F2>"
 " }}}
