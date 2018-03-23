@@ -295,10 +295,6 @@ set foldlevelstart=99
 nnoremap <Space> za
 " }}}
 
-" Comment settings ---------------------- {{{
-let NERDSpaceDelims=1
-" }}}
-
 " Abbreviations ---------------------- {{{
 iabbrev @@ chip@chipcastle.com
 iabbrev wweb http://chipcastle.com
