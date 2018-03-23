@@ -6,6 +6,7 @@ set nocompatible
 " Plugins ---------------------- {{{
 " See ~/.vim/pack/bundle/start for current list
 " Install, update or remove plugins using basic unix commands from there
+" }}}
 
 " Basic settings ---------------------- {{{
 set encoding=utf-8
@@ -142,25 +143,29 @@ nnoremap <leader>sv :w\|:source $MYVIMRC<cr>
 
 " edit .zshrc
 nnoremap <leader>zsh :e ~/.zshrc<cr>
+" }}}
 
-" remove search highlighting
+" remove search highlighting ---------------------- {{{
 noremap <leader>nh :nohl<CR>
+" }}}
 
-" fzf key mappings
+" fzf key settings ---------------------- {{{
 " search files in git repo
 noremap <leader>gf :GFiles<CR>
 " search all files
 noremap <leader>f :Files<CR>
 " search buffers
 noremap <leader>b :Buffers<CR>
+" }}}
 
-" signify
+" signify settings ---------------------- {{{
 let g:signify_vcs_list = ['git']
 highlight DiffAdd           cterm=bold ctermbg=none ctermfg=119
 highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
 highlight DiffChange        cterm=bold ctermbg=none ctermfg=227
+" }}}
 
-" numbertoggle
+" numbertoggle settings ---------------------- {{{
 let g:NumberToggleTrigger="<F2>"
 " }}}
 
@@ -276,9 +281,11 @@ nnoremap <silent> ]B :blast<CR>
 nnoremap Q :bd<CR>
 " }}}
 
-" bind K to grep word under cursor
+" bind K to grep word under cursor ---------------------- {{{
 nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" }}}
 
+" ack configuration ---------------------- {{{
 if executable('ack')
   set grepprg=ack\ -s\ -H\ --nogroup\ --nocolor\ --column
   set grepformat=%f:%l:%c:%m,%f:%l:%m
