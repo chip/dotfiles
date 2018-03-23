@@ -156,6 +156,8 @@ export NVM_DIR="/Users/chip/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
