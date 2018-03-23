@@ -125,9 +125,6 @@ function checkout-pr () {
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
-fpath=($HOME/.zsh/func $fpath)
-typeset -U fpath
-
 export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 export PERL_LOCAL_LIB_ROOT="/Users/chip/perl5:$PERL_LOCAL_LIB_ROOT";
 export PERL_MB_OPT="--install_base "/Users/chip/perl5"";
