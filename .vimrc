@@ -146,6 +146,14 @@ nnoremap <leader>zsh :e ~/.zshrc<cr>
 " remove search highlighting
 noremap <leader>nh :nohl<CR>
 
+" fzf key mappings
+" search files in git repo
+noremap <leader>gf :GFiles<CR>
+" search all files
+noremap <leader>f :Files<CR>
+" search buffers
+noremap <leader>b :Buffers<CR>
+
 " numbertoggle
 let g:NumberToggleTrigger="<F2>"
 " }}}
@@ -261,14 +269,6 @@ nnoremap <silent> ]B :blast<CR>
 " close current buffer
 nnoremap Q :bd<CR>
 " }}}
-
-" fzf key mappings
-" search files in git repo
-noremap <leader>f :GFiles<CR>
-" search all files
-noremap <leader>fa :Files<CR>
-" search buffers
-noremap <leader>b :Buffers<CR>
 
 " bind K to grep word under cursor
 nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
