@@ -258,7 +258,7 @@ let test#javascript#jasmine#executable = 'node_modules/.bin/babel-node node_modu
 " For testing es6
 function! NpmTest(cmd)
   execute "!npm test"
-  " execute "!./node_modules/.bin/mocha --compilers js:babel-core/register"
+  " execute "!./node_modules/.bin/mocha --compilers js:babel-core/register --inline-diffs"
 endfunction
 
 let g:test#custom_strategies = {'npmTest': function('NpmTest')}
