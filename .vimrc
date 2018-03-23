@@ -88,15 +88,8 @@ set clipboard=unnamed
 " runtimepath for plugins
 set rtp+=/usr/local/opt/fzf
 
-" only if there are at least 2 windows
-set laststatus=2
-
-" set status line
-set statusline=%.50F      " Path to the file
-set statusline+=%=        " Switch to the right side
-set statusline+=%l        " Current line
-set statusline+=/         " Separator
-set statusline+=%L        " Total lines
+" no status
+set laststatus=0
 
 " autocompletion should use keywords from dictionary
 set complete+=k
