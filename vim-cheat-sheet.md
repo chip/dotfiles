@@ -2,9 +2,14 @@
 
   * Using no plugin manager after upgrade to Vim 8
     See ~/.vim/pack/bundle/start for list of plugins
-  * Using materialshell theme for zsh
+  * Using materialshell-chip theme for zsh with prompt modifications
   * Using materialshell-dark theme for Terminal
-  * Change Terminal font to Fira Mono 24 pt
+  * Change Terminal font to Roberto Mono Medium for Powerline 20 pt
+  * Use vim-commentary for code comments
+  * Use vim-fzf for fuzzy finding files
+  * Use vim-signify for git changes
+  * Remove tmux status line
+  * Use default vim status line
 
 # Help
 
