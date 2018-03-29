@@ -171,6 +171,9 @@ let g:NumberToggleTrigger="<F2>"
 " spell check ---------------------- {{{
 setlocal spell spelllang=en_us
 
+nnoremap <leader>sp :set spell<cr>
+nnoremap <leader>nsp :set nospell<cr>
+
 function! SpellHighlight(source)
   " echo "SpellHighlight " . a:source
   " See xterm colors: https://jonasjacek.github.io/colors/
