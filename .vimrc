@@ -12,7 +12,6 @@ set nocompatible
 set encoding=utf-8
 set fileformat=unix
 syntax enable
-setlocal spell spelllang=en_us 
 filetype plugin on
 
 " wrap lines
@@ -160,19 +159,33 @@ noremap <leader>b :Buffers<CR>
 
 " signify settings ---------------------- {{{
 let g:signify_vcs_list = ['git']
-highlight DiffAdd           cterm=bold ctermbg=none ctermfg=119
-highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
-highlight DiffChange        cterm=bold ctermbg=none ctermfg=227
+highlight DiffAdd           cterm=none ctermbg=none ctermfg=119
+highlight DiffDelete        cterm=none ctermbg=none ctermfg=167
+highlight DiffChange        cterm=none ctermbg=none ctermfg=227
 " }}}
 
 " numbertoggle settings ---------------------- {{{
 let g:NumberToggleTrigger="<F2>"
 " }}}
 
+" spell check ---------------------- {{{
+setlocal spell spelllang=en_us
+
+function! SpellHighlight(source)
+  " echo "SpellHighlight " . a:source
+  " See xterm colors: https://jonasjacek.github.io/colors/
+  highlight SpellBad   cterm=none ctermfg=210 ctermbg=none
+  highlight SpellCap   cterm=none ctermfg=210 ctermbg=none
+  highlight SpellRare  cterm=none ctermfg=210 ctermbg=none
+  highlight SpellLocal cterm=none ctermfg=210 ctermbg=none
+endfunction
+" }}}
+
 " FileType settings ---------------------- {{{
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
+    autocmd FileType vim :call SpellHighlight("filetype_vim")
 augroup END
 
 augroup remove_spaces
@@ -199,6 +212,8 @@ augroup set_javascript
     autocmd BufRead,BufNewFile *.es6 set filetype=javascript
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType javascript setlocal foldmethod=indent
+    " autocmd FileType javascript setlocal nospell
+    autocmd FileType javascript :call SpellHighlight("filetype_javascript")
 augroup END
 
 augroup set_jsx
