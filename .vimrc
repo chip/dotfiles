@@ -136,13 +136,13 @@ inoremap jk <esc>
 inoremap <esc> <nop>
 
 " edit .vimrc
-nnoremap <leader>ev :e $MYVIMRC<cr>
+nnoremap <leader>v :e $MYVIMRC<cr>
 
 " save .vimrc and source it
 nnoremap <leader>sv :w\|:source $MYVIMRC<cr>
 
 " edit .zshrc
-nnoremap <leader>zsh :e ~/.zshrc<cr>
+nnoremap <leader>z :e ~/.zshrc<cr>
 " }}}
 
 " remove search highlighting ---------------------- {{{
@@ -151,9 +151,9 @@ noremap <leader>nh :nohl<CR>
 
 " fzf key settings ---------------------- {{{
 " search files in git repo
-noremap <leader>gf :GFiles<CR>
+noremap <leader>f :GFiles<CR>
 " search all files
-noremap <leader>f :Files<CR>
+noremap <leader>i :Files<CR>
 " search buffers
 noremap <leader>b :Buffers<CR>
 " }}}
