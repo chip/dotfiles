@@ -1,0 +1,28 @@
+--recurse=yes
+--append
+
+--langmap=javascript:.js
+--regex-javascript=/([A-Za-z0-9._$]+)[ \t]*[:=][ \t]*[\(]function[
+\t]*\(/\1/f,function,functions/
+--regex-javascript=/^[ \t]*[\(]function[
+\t]*([A-Za-z0-9._$]+)/\1/f,function,functions/
+--regex-javascript=/([A-Za-z0-9._$]+)[ \t]*=[
+\t]*\{/\1/o,object,objects/
+--regex-javascript=/^[ \t]*([A-Za-z0-9._$]+)[ \t]*[:][
+\t]*[^\{]/\1/p,property,properties/
+--regex-javascript=/^[ \t]+var[ \t]*([A-Za-z0-9._$]+)[ \t]*=[
+\t]*[\d"'\[]/\1/v,variable,variables/
+--regex-javascript=/\/\/[ \t]*(TODO)[ \t]*\:*(.*)/\1/i,TODO/
+--regex-javascript=/\/\/[ \t]*(FIXME)[ \t]*\:*(.*)/\1/i,FIXME/
+
+--exclude=.git
+--exclude=.meteor
+--exclude=.meteor/*
+--exclude=.meteor/local
+--exclude=.meteor/local/build
+--exclude=.meteor/local/build/programs/web.browser/packages
+--exclude=.meteor/local/build/programs/server/packages
+--exclude=.meteor/local/build/programs/server/npm/node_modules
+--exclude=node_modules
+--exclude=resources
+--exclude=packages
