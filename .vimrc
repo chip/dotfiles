@@ -318,13 +318,6 @@ set foldlevelstart=99
 nnoremap <Space> za
 " }}}
 
-" Abbreviations ---------------------- {{{
-iabbrev @@ chip@chipcastle.com
-iabbrev wweb http://chipcastle.com
-iabbrev ssig --<cr>Chip Castle<cr>chip@chipcastle.com
-iabbrev ccopy Copyright 2018 Chip Castle Dot Com, Inc., All rights reserved.
-" }}}
-
 " Linting ---------------------------- {{{
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_fixers = {'javascript': ['eslint']}
