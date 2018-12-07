@@ -127,6 +127,9 @@ let mapleader=","
 " go back to the previous buffer
 nnoremap <leader><leader> <c-^>
 
+" Per https://github.com/mhartington/dotfiles/blob/master/config/nvim/init.vim
+nnoremap ; :
+
 " shortcut for saving a file
 noremap <leader>w :w<CR>
 
