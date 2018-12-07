@@ -98,9 +98,9 @@ set exrc
 " disable unsafe commands in local .vimrc files
 set secure
 
-" menu for autocompletion
-set wildmenu
-set wildmode=longest:list,full
+" file suffixes to search when using gf to find a file
+set suffixesadd+=.js,.rb
+" }}}
 
 " set buffer background
 set background=dark
