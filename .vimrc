@@ -143,6 +143,10 @@ noremap <leader>x :wq<CR>
 inoremap jk <esc>
 inoremap <esc> <nop>
 
+" remove search highlighting ---------------------- {{{
+nnoremap <esc> :noh<CR>
+" }}}
+
 " edit .vimrc
 nnoremap <leader>v :e $MYVIMRC<cr>
 
@@ -151,10 +155,6 @@ nnoremap <leader>sv :w\|:source $MYVIMRC<cr>
 
 " edit .zshrc
 nnoremap <leader>z :e ~/.zshrc<cr>
-" }}}
-
-" remove search highlighting ---------------------- {{{
-noremap <leader>nh :nohl<CR>
 " }}}
 
 " fzf key settings ---------------------- {{{
