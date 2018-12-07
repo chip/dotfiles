@@ -232,10 +232,6 @@ augroup set_jsx
     autocmd BufRead,BufNewFile *.jsx set filetype=javascript
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType javascript setlocal foldmethod=indent
-    " https://github.com/mattn/emmet-vim
-    " Trigger with <C-y>,
-    " let g:user_emmet_leader_key='<C-Y>'
-    let g:user_emmet_settings = { 'javascript.jsx' : { 'extends' : 'jsx' } }
 augroup END
 
 augroup set_vue
@@ -244,7 +240,6 @@ augroup set_vue
     autocmd FileType vue set omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType vue syntax sync fromstart
     autocmd FileType vue setlocal foldmethod=indent
-    let g:user_emmet_settings = { 'javascript.vue' : { 'extends' : 'vue' } }
 augroup END
 
 augroup set_coffee
