@@ -4,8 +4,7 @@ set nocompatible
 " }}}
 
 " Plugins ---------------------- {{{
-" See ~/.vim/pack/bundle/start for current list
-" Install, update or remove plugins using basic unix commands from there
+" Use 'pack' command to manage plugins
 " }}}
 
 " Basic settings ---------------------- {{{
