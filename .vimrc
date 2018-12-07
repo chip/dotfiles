@@ -102,11 +102,10 @@ set secure
 set suffixesadd+=.js,.rb
 " }}}
 
-" set buffer background
+" Colors ---------------------- {{{
 set background=dark
-
 colorscheme hybrid_material
-let g:enable_bold_font = 1
+" }}}
 
 " file suffixes to search when using gf to find a file
 set suffixesadd+=.js,.rb
