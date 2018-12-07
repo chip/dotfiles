@@ -140,6 +140,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Android for Meteor
 export ANDROID_HOME=~/Library/Android/sdk
+export ANDROID_ROOT=${ANDROID_HOME}
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export PATH="$PATH:$ANDROID_HOME/tools"
 
@@ -150,9 +151,11 @@ eval "$(rbenv init -)"
 # npm
 NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"
+
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 export NVM_DIR="/Users/chip/.nvm"
+
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
