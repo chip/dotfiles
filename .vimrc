@@ -224,7 +224,6 @@ augroup set_javascript
     autocmd BufRead,BufNewFile *.es6 set filetype=javascript
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType javascript setlocal foldmethod=indent
-    " autocmd FileType javascript setlocal nospell
     autocmd FileType javascript :call SpellHighlight("filetype_javascript")
 augroup END
 
