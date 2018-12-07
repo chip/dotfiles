@@ -164,3 +164,5 @@ export NVM_DIR="/Users/chip/.nvm"
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
+
+eval "$(pyenv init -)"
