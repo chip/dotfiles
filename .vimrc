@@ -107,8 +107,17 @@ set background=dark
 colorscheme hybrid_material
 " }}}
 
-" file suffixes to search when using gf to find a file
-set suffixesadd+=.js,.rb
+" Snippets & Autocompletion ---------------------- {{{
+let g:UltiSnipsExpandTrigger = "<c-k>"        " Do not use <tab>
+
+" autocompletion should use keywords from dictionary
+set complete+=k
+
+set completeopt+=menuone
+set completeopt+=noselect
+let g:mucomplete#enable_auto_at_startup = 1
+let g:mucomplete#chains = {}
+let g:mucomplete#chains.default = ['path', 'ulti', 'keyn']
 " }}}
 
 " Mappings  ---------------------- {{{
@@ -259,13 +268,8 @@ augroup set_ruby
     autocmd FileType ruby let g:rubycomplete_classes_in_global = 1
     autocmd FileType ruby let g:test#strategy = 'basic'
     autocmd FileType ruby setlocal foldmethod=syntax
+    let g:syntastic_ruby_checkers = []
 augroup END
-" }}}
-
-" Autocompletion & Snippets ---------------------- {{{
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " }}}
 
 " Testing shortcuts ---------------------- {{{
