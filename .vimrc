@@ -319,7 +319,7 @@ nnoremap <Space> za
 " }}}
 
 " Linting ---------------------------- {{{
-let g:ale_linters = {'javascript': ['eslint'], 'ruby': ['rubocop']}
+let g:ale_linters = {'javascript': ['eslint'], 'ruby': []}
 let g:ale_fixers = {'javascript': ['eslint'], 'ruby': []}
 let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 let g:ale_lint_on_save = 1
