@@ -334,4 +334,13 @@ let g:ale_sign_warning = '.'
 
 nmap <silent> <C-p> <Plug>(ale_previous_wrap)
 nmap <silent> <C-n> <Plug>(ale_next_wrap)
+
+" }}}
+
+" Prettier ---------------------------- {{{
+let g:prettier#exec_cmd_path = "/Users/chip/.nvm/versions/node/v8.9.0/bin/prettier"
+let g:prettier#quickfix_enabled = 0
+let g:prettier#quickfix_auto_focus = 0
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 " }}}
