@@ -209,6 +209,7 @@ augroup END
 augroup set_html
     autocmd!
     autocmd BufRead,BufNewFile *.html set filetype=html
+    autocmd BufRead,BufNewFile *.ejs set filetype=html
     autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
     autocmd FileType html setlocal foldmethod=indent
 augroup END
