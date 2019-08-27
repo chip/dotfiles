@@ -137,7 +137,6 @@ noremap <leader>x :wq<CR>
 
 " remapping escape
 inoremap jk <esc>
-inoremap <esc> <nop>
 
 " remove search highlighting ---------------------- {{{
 nnoremap <esc> :noh<CR>
