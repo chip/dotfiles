@@ -104,7 +104,10 @@ colorscheme hybrid_material
 " }}}
 
 " Snippets & Autocompletion ---------------------- {{{
-let g:UltiSnipsExpandTrigger = "<c-k>"        " Do not use <tab>
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " autocompletion should use keywords from dictionary
 set complete+=k
