@@ -87,11 +87,6 @@ set clipboard=unnamed
 " runtimepath for plugins
 set rtp+=/usr/local/opt/fzf
 
-" https://github.com/itchyny/lightline.vim
-set laststatus=2
-set noshowmode
-let g:lightline = { 'colorscheme': 'wombat' }
-
 " enable per-directory .vimrc files
 set exrc
 
