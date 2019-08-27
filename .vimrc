@@ -328,8 +328,8 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
 let g:ale_sign_warning = '.'
 
-nmap <silent> <C-p> <Plug>(ale_previous_wrap)
-nmap <silent> <C-n> <Plug>(ale_next_wrap)
+nnoremap <silent> <C-p> <Plug>(ale_previous_wrap)
+nnoremap <silent> <C-n> <Plug>(ale_next_wrap)
 
 " }}}
 
