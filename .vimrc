@@ -86,6 +86,7 @@ set clipboard=unnamed
 
 " runtimepath for plugins
 set rtp+=/usr/local/opt/fzf
+set rtp+=~/.vim/pack/default/start/tabnine-vim
 
 " enable per-directory .vimrc files
 set exrc
