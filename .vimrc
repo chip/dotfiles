@@ -340,3 +340,8 @@ let g:prettier#quickfix_auto_focus = 0
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 " }}}
+
+" Miscellaneous ----------------------- {{{
+" Uppercase word while in insert mode
+inoremap <c-u> <esc>mqviwU`qa
+" }}}
