@@ -269,6 +269,8 @@ augroup set_ruby
     autocmd FileType ruby let g:rubycomplete_rails = 1
     autocmd FileType ruby let g:rubycomplete_classes_in_global = 1
     autocmd FileType ruby let g:test#strategy = 'basic'
+    autocmd FileType ruby let test#ruby#rspec#executable = 'spring rspec'
+
     autocmd FileType ruby setlocal foldmethod=syntax
     let g:syntastic_ruby_checkers = []
 augroup END
