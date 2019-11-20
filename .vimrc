@@ -59,9 +59,6 @@ set number
 " show the cursor position all the time
 set ruler
 
-" highlight the line of the cursor
-set cursorline
-
 " display incomplete commands
 set showcmd
 
@@ -100,9 +97,21 @@ set suffixesadd+=.js,.rb
 
 " Colors ---------------------- {{{
 set background=dark
-colorscheme hybrid_material
+" colorscheme hybrid_material
+" colorscheme afterglow
+" let g:afterglow_inherit_background=1
+colorscheme apprentice
 " }}}
 
+" Highlighting defaults ---------------------- {{{
+" The following settings for Cursor, CursorLine can be found in the 'if' block "$TERM =~ '256'
+" of the apprentice colorscheme ~/.vim/colors/apprentice.vim
+" hi Cursor ctermbg=214 ctermfg=NONE cterm=NONE guibg=#6c6c6c guifg=NONE gui=NONE
+" hi CursorLine ctermbg=160 ctermfg=lightgray cterm=NONE guibg=#303030 guifg=NONE gui=NONE
+" highlight the line of the cursor
+set cursorline
+" }}}
+ 
 " Snippets & Autocompletion ---------------------- {{{
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-k>"
