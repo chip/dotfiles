@@ -2,12 +2,11 @@ dotfiles for osx
 
 Currently using the following:
 
-* terminal is Hyper `.hyper.js`
-* Hyper theme is 'hyper-materialshell' (per config)
+* terminal is osx default Terminal
+* Terminal theme is Material shell
+* Font is Fira Code
 * shell is zsh with oh-my-zsh `.zshrc`
-* oh-my-zsh theme is https://github.com/carloscuesta/materialshell
+* oh-my-zsh theme is spaceship
+* vim colorscheme is apprentice
 * npm packages are globally installed per `.npmrc`
 * eslint config uses airbnb style guide
-* vim colorscheme is hybrid_material (via plugin: kristijanhusak/vim-hybrid-material)
-* OSX Terminal theme is https://github.com/carloscuesta/materialshell
-* OSX Terminal is only used if Hyper is unavailable
