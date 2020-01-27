@@ -243,7 +243,6 @@ augroup set_vue
     autocmd!
     autocmd BufRead,BufNewFile *.vue set filetype=vue
     autocmd FileType vue set omnifunc=javascriptcomplete#CompleteJS
-    autocmd FileType vue syntax sync fromstart
     autocmd FileType vue setlocal foldmethod=indent
 augroup END
 
