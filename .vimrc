@@ -51,7 +51,7 @@ set ignorecase
 set smartcase
 
 " highlight matches
-set hlsearch
+set nohlsearch
 
 " show line numbers
 set number
