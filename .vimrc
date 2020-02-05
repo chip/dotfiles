@@ -281,15 +281,8 @@ nnoremap <silent> <leader>T :TestFile<CR>
 nnoremap <silent> <leader>A :TestSuite<CR>
 nnoremap <silent> <leader>l :TestLast<CR>
 nnoremap <silent> <leader>g :TestVisit<CR>
-let test#javascript#jasmine#executable = 'node_modules/.bin/babel-node node_modules/.bin/jasmine'
-" For testing es6
-function! NpmTest(cmd)
-  execute "!npm test"
-  " execute "!./node_modules/.bin/mocha --compilers js:babel-core/register --inline-diffs"
-endfunction
-
-let g:test#custom_strategies = {'npmTest': function('NpmTest')}
-let g:test#strategy = 'npmTest'
+let test#vim#term_position = 'vert'
+let g:test#strategy = 'vimterminal'
 " }}}
 
 " Buffer navigation ---------------------- {{{
