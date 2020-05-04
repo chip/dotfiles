@@ -66,6 +66,7 @@ nnoremap Q :bd<CR> " close current buffer
 " }}}
 
 " search configuration ---------------------- {{{
+nnoremap K :Rg<SPACE><CR>
 nnoremap <leader>a :Rg<SPACE>
 " }}}
 
