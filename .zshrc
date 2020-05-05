@@ -84,7 +84,7 @@ alias gtag="git tag -a `date -u \"+UTC_%Y%m%d%H%M%S\"`"
 alias gap="git add -p"
 alias fetch="git fetch"
 alias a="ack"
-alias v="vim"
+alias v="/usr/local/Cellar/vim/8.2.0654/bin/vim"
 # Postfix Load on Startup
 alias postgres_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias postgres_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
@@ -177,3 +177,4 @@ export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
