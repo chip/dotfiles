@@ -1,27 +1,32 @@
 syntax enable
 filetype plugin on
 set viminfo='20,<50,s10 " Improve startup time
-set clipboard=exclude:.*
+set clipboard=unnamed
 set nowrap
-set expandtab " use spaces, not tabs (optional)
-set tabstop=2 " a tab is two spaces (or set this to 4)
+set expandtab
+set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set autoindent
 set smartindent
 set backspace=indent,eol,start " backspace through everything in insert mode
-set incsearch " searching
+set incsearch
 set smartcase
-set nohlsearch " highlight matches
-set number relativenumber " show line numbers
-set ruler " show the cursor position all the time
+set nohlsearch
+set number relativenumber
+set ruler
 set autoread " auto-reload buffers when file changed on disk
 set updatetime=50
 set nobackup
 set noswapfile
-set foldmethod=indent " Fold settings
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
 set rtp+=/usr/local/opt/fzf " runtimepath for plugins
 set rtp+=~/.vim/pack/default/start/tabnine-vim
+let g:python_host_prog = "/usr/local/bin/python2"
+let g:python3_host_prog = "/usr/local/bin/python3"
 set background=dark
 colorscheme apprentice
 let mapleader=","
