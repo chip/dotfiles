@@ -4,13 +4,16 @@
     See ~/.vim/pack/bundle/start for list of plugins
   * Using materialshell-chip theme for zsh with prompt modifications
   * Using materialshell-dark theme for Terminal
-  * Change Terminal to Monaco font, 22 pt, using 1.2 line spacing to
+  * Using apprentive colorscheme
+  * Change Terminal to Fira Code Medium font, 18 pt, using 1.2 line spacing to
     prevent blank line at bottom of screen.
-  * Use vim-commentary for code comments
   * Use vim-fzf for fuzzy finding files
-  * Use vim-signify for git changes
-  * Remove tmux status line
-  * Use default vim status line
+  * Use tabnine-vim for autocompletion
+  * Use vim-commentary for code comments
+  * Use vim-dirvish to replace netrw
+  * Use vim-numbertoggle to show relative numbers
+  * Use vim-ripgrep to search files
+  * Use vim-test for testing node and rails projects
 
 # Help
 
