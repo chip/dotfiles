@@ -178,3 +178,7 @@ export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+
+export PYENV="/Users/chip/.pyenv"
