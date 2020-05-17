@@ -37,7 +37,7 @@ noremap <leader>w :w<CR>
 noremap <leader>q :q<CR>
 noremap <leader>x :wq<CR>
 inoremap jk <esc>
-nnoremap <esc> :noh<CR>
+nnoremap <leader>/ :noh<CR>
 noremap <leader>f :GFiles<CR>
 noremap <leader>i :Files<CR>
 noremap <leader>b :Buffers<CR>
