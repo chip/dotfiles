@@ -12,7 +12,7 @@ set smartindent
 set backspace=indent,eol,start " backspace through everything in insert mode
 set incsearch
 set smartcase
-set nohlsearch
+set hlsearch
 set number relativenumber
 set ruler
 set autoread " auto-reload buffers when file changed on disk
