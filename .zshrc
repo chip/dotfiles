@@ -1,40 +1,16 @@
-# start zsh profiling
-# zmodload zsh/zprof
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# Change directories without cd
+setopt autocd
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="materialshell-chip" 
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# plugins=(zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
+# Load plugins from:
+# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+source ~/.zsh_plugins.sh
 
 # Customize to your needs...
 export PATH=~/phantomjs-1.7.0-macosx/bin:./bin:/usr/X11/bin:/Library/PostgreSQL/8.4/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/bin:/usr/bin:/sbin:/usr/sbin:~/bin:~/ruby/bin:/opt/local/bin:/opt/local/sbin:/usr/local/go/bin:$GOPATH/bin:/Applications/Julia-0.2.0.app/Contents/Resources/julia/bin:~/moai-sdk/bin
@@ -42,19 +18,9 @@ export PATH=~/phantomjs-1.7.0-macosx/bin:./bin:/usr/X11/bin:/Library/PostgreSQL/
 # Mail
 alias mi="tail -f /var/log/mail.log"
 
-# dmg to iso conversion
-alias dmg2iso="hdiutil convert filename.dmg -format UDTO -o savefile.iso"
-
-# Processes
-alias tu="top -o cpu"
-alias tm="top -o vsize"
-
 # List files
 alias ll="ls -al"
 alias l="ls -al"
-
-# Dito with hosts
-alias hosts='sudo vi /etc/hosts'
 
 # Git
 alias g="git"
@@ -72,8 +38,6 @@ alias merge="git merge --no-ff"
 alias remote="git remote"
 alias prune="git remote prune origin" # remote branches were already deleted, so need to prune locals
 alias gd="git diff"
-alias gitd="echo 'Use gd instead' && git diff"
-alias gitdc="git diff --cached"
 alias gdc="git diff --cached"
 alias oneline="git log --pretty=oneline"
 alias ptags='git push --tags'
@@ -96,7 +60,6 @@ alias tree="tree -C"
 alias be='bundle exec'
 alias topten="history | commands | sort -rn | head"
 alias cores="sysctl -n hw.ncpu"
-alias typescript-convert="cat typescript | perl -pe 's/\e([^\[\]]|\[.*?[a-zA-Z]|\].*?\a)//g' | col -b > typescript-processed"
 alias vp="cd ~/.vim/pack/bundle/start"
 
 # Environment
@@ -105,24 +68,12 @@ export LC_ALL="en_US.UTF-8"
 export LD_LIBRARY_PATH="/usr/local/lib"
 export GOPATH="/Users/chip/code/go"
 export EDITOR="/usr/local/bin/vim"
-export SVN_EDITOR=${EDITOR}
 export GIT_EDITOR=${EDITOR}
 export ARCHFLAGS="-arch x86_64"
 export EVENTNOKQUEUE=1
 export EVENT_NOKQUEUE=yes
 export CLICOLOR=1
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
-
-function encode() { echo -n $@ | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'; }
-function commands() {
-  awk '{a[$2]++}END{for(i in a){print a[i] " " i}}'
-}
-
-function vgit() { vim `git status -s | cut -d ' ' -f 3` }
-
-function checkout-pr () {
-  git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1;
-}
 
 # vim bindings for the command line
 bindkey -v
@@ -134,9 +85,6 @@ export PERL_MB_OPT="--install_base "/Users/chip/perl5"";
 export PERL_MM_OPT="INSTALL_BASE=/Users/chip/perl5";
 export PERL5LIB="/Users/chip/perl5/lib/perl5:$PERL5LIB";
 export PATH="/Users/chip/perl5/bin:$PATH";
-
-export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=${JAVA_HOME}/bin:$PATH
 
 ## #Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -155,24 +103,17 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-export NVM_DIR="/Users/chip/.nvm"
 
-# eval "$(rbenv init -)"
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
-alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
+# For use with zsh plugin lukechilds/zsh-nvm
+export NVM_DIR="$HOME/.nvm"
+export NVM_COMPLETION=true
+export NVM_AUTO_USE=true
 
 # fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
-
-# eval "$(pyenv init -)"
-
-# end zsh profiling
-# zprof
-# zmodload -u zsh/zprof
 
 # tabtab source for packages
 # uninstall by removing these lines
@@ -182,3 +123,6 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 export PYENV="/Users/chip/.pyenv"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
