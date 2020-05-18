@@ -1,19 +1,9 @@
 lukechilds/zsh-nvm
-
 caarlos0/jvm
 djui/alias-tips
-# comments are supported like this
 caarlos0/zsh-mkc
-zsh-users/zsh-completions
-# caarlos0/zsh-open-github-pr
-
-# empty lines are skipped
-
-# annotations are also allowed:
-# robbyrussell/oh-my-zsh path:plugins/aws
-
+Aloxaf/fzf-tab
 zsh-users/zsh-syntax-highlighting
-# zsh-users/zsh-history-substring-search
 romkatv/powerlevel10k
 desyncr/auto-ls
 torifat/nnvm
