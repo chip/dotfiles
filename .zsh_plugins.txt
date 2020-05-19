@@ -1,10 +1,8 @@
-lukechilds/zsh-nvm
 caarlos0/jvm
 djui/alias-tips
 caarlos0/zsh-mkc
 zsh-users/zsh-syntax-highlighting
-# zsh-users/zsh-autosuggestions
 romkatv/powerlevel10k
 desyncr/auto-ls
-torifat/nnvm
+# torifat/nnvm
 Meroje/zsh-rbenv
