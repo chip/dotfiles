@@ -8,7 +8,7 @@
   * Change Terminal to Fira Code Medium font, 18 pt, using 1.2 line spacing to
     prevent blank line at bottom of screen.
   * Use vim-fzf for fuzzy finding files
-  * Use tabnine-vim for autocompletion
+  * Use supertab for autocompletion
   * Use vim-commentary for code comments
   * Use vim-dirvish to replace netrw
   * Use vim-numbertoggle to show relative numbers
