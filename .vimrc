@@ -24,7 +24,6 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 set rtp+=/usr/local/opt/fzf " runtimepath for plugins
-set rtp+=~/.vim/pack/default/start/tabnine-vim
 let g:python_host_prog = "/usr/local/bin/python2"
 let g:python3_host_prog = "/usr/local/bin/python3"
 set background=dark
@@ -49,3 +48,11 @@ nnoremap <leader>a :Rg<SPACE>
 " Move selected text
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<Tab>" : coc#refresh()
+" Use <cr> for selecting snippet
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
