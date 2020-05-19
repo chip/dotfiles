@@ -63,7 +63,7 @@ alias tree="tree -C"
 alias be='bundle exec'
 alias topten="history | commands | sort -rn | head"
 alias cores="sysctl -n hw.ncpu"
-alias vp="cd ~/.vim/pack/bundle/start"
+alias vp="cd ~/.vim/pack/default/start"
 
 # Environment
 export LANG="en_US.UTF-8"
