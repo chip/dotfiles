@@ -2,18 +2,20 @@
 
   * Using no plugin manager after upgrade to Vim 8
     See ~/.vim/pack/bundle/start for list of plugins
-  * Using materialshell-chip theme for zsh with prompt modifications
+      * Use vim-fzf for fuzzy finding files
+      * Use vim-commentary for code comments
+      * Use vim-dirvish to replace netrw
+      * Use vim-numbertoggle to show relative numbers
+      * Use vim-ripgrep to search files
+      * Use vim-test for testing node and rails projects
+      * Use coc for autocompletion
+      * Use vim-snippets for code snippets
+  * Using antibody (https://getantibody.github.io/) for zsh with plugins (see .zsh_plugins.txt)
+  * Using powerlevel10k for zsh with prompt modifications
   * Using materialshell-dark theme for Terminal
-  * Using apprentive colorscheme
-  * Change Terminal to Fira Code Medium font, 18 pt, using 1.2 line spacing to
-    prevent blank line at bottom of screen.
-  * Use vim-fzf for fuzzy finding files
-  * Use supertab for autocompletion
-  * Use vim-commentary for code comments
-  * Use vim-dirvish to replace netrw
-  * Use vim-numbertoggle to show relative numbers
-  * Use vim-ripgrep to search files
-  * Use vim-test for testing node and rails projects
+  * Using apprentice colorscheme
+  * Change Terminal to MesloLGS NF Regular font, 12 pt
+
 
 # Help
 
@@ -114,11 +116,11 @@ t
 
 ### Holy crap there are uppercase counterparts, yes!
 
-## Same as f, but searches backwards son!
+## Same as f, but searches backwards, son!
 
 F
 
-## Same as t, but searches backwards son!
+## Same as t, but searches backwards, son!
 
 T
 
