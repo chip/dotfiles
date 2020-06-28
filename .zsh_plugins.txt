@@ -1,8 +1,8 @@
-caarlos0/jvm
-djui/alias-tips
-caarlos0/zsh-mkc
-zsh-users/zsh-syntax-highlighting
+# djui/alias-tips
+# caarlos0/jvm
+# caarlos0/zsh-mkc
+# zsh-users/zsh-syntax-highlighting
 romkatv/powerlevel10k
 desyncr/auto-ls
 # torifat/nnvm
-Meroje/zsh-rbenv
+# Meroje/zsh-rbenv
