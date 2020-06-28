@@ -4,9 +4,10 @@ Currently using the following:
 
 * terminal is osx default Terminal
 * Terminal theme is Material shell
-* Font is Fira Code
-* shell is zsh with oh-my-zsh `.zshrc`
-* oh-my-zsh theme is spaceship
+* Font is MesloLGS NG Regular Font 12 pt
+* shell is zsh `.zshrc`
+* shell plugins managed with antibody (~/.zsh_plugins.txt)
+* shell prompt is powerlevel10k
 * vim colorscheme is apprentice
 * npm packages are globally installed per `.npmrc`
 * eslint config uses airbnb style guide
