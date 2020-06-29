@@ -32,6 +32,7 @@ let mapleader=","
 let g:test#strategy = 'vimterminal'
 " go back to the previous buffer
 nnoremap <leader><leader> <c-^>
+nnoremap - :e.<CR>
 noremap <leader>w :w<CR>
 noremap <leader>q :q<CR>
 noremap <leader>x :wq<CR>

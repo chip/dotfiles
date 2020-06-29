@@ -4,7 +4,6 @@
     See ~/.vim/pack/bundle/start for list of plugins
       * Use vim-fzf for fuzzy finding files
       * Use vim-commentary for code comments
-      * Use vim-dirvish to replace netrw
       * Use vim-numbertoggle to show relative numbers
       * Use vim-ripgrep to search files
       * Use vim-test for testing node and rails projects
