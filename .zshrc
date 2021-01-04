@@ -18,67 +18,24 @@ setopt autocd
 source ~/.zsh_plugins.sh
 
 # Customize to your needs...
-export PATH=~/phantomjs-1.7.0-macosx/bin:./bin:/usr/X11/bin:/Library/PostgreSQL/8.4/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/bin:/usr/bin:/sbin:/usr/sbin:~/bin:~/ruby/bin:/opt/local/bin:/opt/local/sbin:/usr/local/go/bin:$GOPATH/bin:/Applications/Julia-0.2.0.app/Contents/Resources/julia/bin:~/moai-sdk/bin
-
-# Mail
-alias mi="tail -f /var/log/mail.log"
-
-# List files
-alias ll="ls -al"
-alias l="ls -al"
-
-# Git
-alias g="git"
-alias ga="git add ."
-alias s="git status"
-alias pull="git pull origin"
-alias pullm='git pull --rebase origin master'
-alias push="git push origin"
-alias c="git commit -m "
-alias ca="git commit -a -m "
-alias undo="git reset --soft HEAD^"
-alias co="git checkout"
-alias coma="git checkout master"
-alias merge="git merge --no-ff"
-alias remote="git remote"
-alias prune="git remote prune origin" # remote branches were already deleted, so need to prune locals
-alias gd="git diff"
-alias gdc="git diff --cached"
-alias oneline="git log --pretty=oneline"
-alias ptags='git push --tags'
-alias tags='git tag -n'
-alias gb="git branch"
-alias stash="git stash"
-alias gtag="git tag -a `date -u \"+UTC_%Y%m%d%H%M%S\"`"
-alias gap="git add -p"
-alias fetch="git fetch"
-alias a="ack"
-alias v="/usr/local/Cellar/vim/8.2.0654/bin/vim"
-# Postfix Load on Startup
-alias postgres_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias postgres_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-# JDK home
-alias jdkhome="cd /System/Library/Frameworks/JavaVM.framework/Home"
-alias stuck="ps ax | sed '1p;/ [U] /!d'"
-alias mysqlgem='env ARCHFLAGS="-arch x86_64" gem install mysql2 --config-file bundler_config.yml'
-alias tree="tree -C"
-alias be='bundle exec'
-alias topten="history | commands | sort -rn | head"
-alias cores="sysctl -n hw.ncpu"
-alias vp="cd ~/.vim/pack/default/start"
+export PATH=~/phantomjs-1.7.0-macosx/bin:./bin:/usr/X11/bin:/Library/PostgreSQL/8.4/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/bin:/usr/bin:/sbin:/usr/sbin:~/bin:/usr/local/opt/ruby/bin:~/.gem/ruby/2.6.0/cache:/opt/local/bin:/opt/local/sbin:/usr/local/go/bin:$GOPATH/bin
 
 # Environment
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LD_LIBRARY_PATH="/usr/local/lib"
 export GOPATH="/Users/chip/code/go"
-export EDITOR="/usr/local/bin/vim"
+export EDITOR="/usr/local/bin/nvim"
 export GIT_EDITOR=${EDITOR}
 export ARCHFLAGS="-arch x86_64"
 export EVENTNOKQUEUE=1
 export EVENT_NOKQUEUE=yes
 export CLICOLOR=1
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+export GEM_HOME="~/.gem"
+export GEM_PATH="~/.gem"
 
 # vim bindings for the command line
 bindkey -v
@@ -127,8 +84,7 @@ export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PR
 
 # Use nvm for managing node versions
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # --no-use" # This loads nvm lazily
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source $(brew --prefix nvm)/nvm.sh
 
 # place this after nvm initialization!
 autoload -U add-zsh-hook
@@ -151,4 +107,55 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
 # zprof
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+
+# Aliases
+
+# Mail
+alias mi="tail -f /var/log/mail.log"
+
+# List files
+alias ll="ls -al"
+alias l="ls -al"
+
+# Git
+alias g="git"
+alias ga="git add ."
+alias s="git status"
+alias pull="git pull origin"
+alias pullm='git pull --rebase origin master'
+alias push="git push origin"
+alias c="git commit -m "
+alias ca="git commit -a -m "
+alias undo="git reset --soft HEAD^"
+alias co="git checkout"
+alias coma="git checkout master"
+alias merge="git merge --no-ff"
+alias remote="git remote"
+alias prune="git remote prune origin" # remote branches were already deleted, so need to prune locals
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias oneline="git log --pretty=oneline"
+alias ptags='git push --tags'
+alias tags='git tag -n'
+alias gb="git branch"
+alias stash="git stash"
+alias gtag="git tag -a `date -u \"+UTC_%Y%m%d%H%M%S\"`"
+alias gap="git add -p"
+alias fetch="git fetch"
+alias a="ack"
+alias v=$EDITOR
+# Postfix Load on Startup
+alias postgres_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias postgres_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+# JDK home
+alias jdkhome="cd /System/Library/Frameworks/JavaVM.framework/Home"
+alias stuck="ps ax | sed '1p;/ [U] /!d'"
+alias mysqlgem='env ARCHFLAGS="-arch x86_64" gem install mysql2 --config-file bundler_config.yml'
+alias tree="tree -C"
+alias be='bundle exec'
+alias topten="history | commands | sort -rn | head"
+alias cores="sysctl -n hw.ncpu"
+alias vp="cd ~/.vim/pack/default/start"
