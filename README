@@ -3,11 +3,11 @@ dotfiles for osx
 Currently using the following:
 
 * terminal is osx default Terminal
-* Terminal theme is Material shell
-* Font is MesloLGS NG Regular Font 12 pt
+* Terminal theme is Material shell: https://materialshell.carloscuesta.me/
+* Font is MesloLGS NG Regular Font (12pt laptop, 24pt iMac): https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
 * shell is zsh `.zshrc`
-* shell plugins managed with antibody (~/.zsh_plugins.txt)
-* shell prompt is powerlevel10k
-* vim colorscheme is apprentice
-* npm packages are globally installed per `.npmrc`
+* shell plugins managed with antibody (~/.zsh_plugins.txt): https://getantibody.github.io/install/
+* shell prompt is powerlevel10k (see zsh_plugins.txt and .zshrc reference to powerlevel10k. https://github.com/romkatv/powerlevel10k#antibody)
+* vim colorscheme is apprentice: https://github.com/romainl/Apprentice
+* npm packages are globally installed per `.npmrc`: https://jamesauble.medium.com/install-nvm-on-mac-with-brew-adb921fb92cc
 * eslint config uses airbnb style guide
