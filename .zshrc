@@ -158,4 +158,4 @@ alias tree="tree -C"
 alias be='bundle exec'
 alias topten="history | commands | sort -rn | head"
 alias cores="sysctl -n hw.ncpu"
-alias vp="cd ~/.vim/pack/default/start"
+alias vp="cd ~/.local/share/nvim/site/pack"
