@@ -1,33 +1,23 @@
-syntax enable
-filetype plugin on
-set viminfo='20,<50,s10 " Improve startup time
-set clipboard=unnamed
-set nowrap
+colorscheme apprentice
+set clipboard+=unnamedplus
 set expandtab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set autoindent
-set smartindent
-set backspace=indent,eol,start " backspace through everything in insert mode
-set incsearch
-set smartcase
-set hlsearch
-set number relativenumber
-set ruler
-set autoread " auto-reload buffers when file changed on disk
-set updatetime=50
-set nobackup
-set noswapfile
+set foldlevel=2
 set foldmethod=indent
 set foldnestmax=10
-set nofoldenable
-set foldlevel=2
+set nowrap
+set nobackup
+set noswapfile
+set number
+set relativenumber
 set rtp+=/usr/local/opt/fzf " runtimepath for plugins
+set shiftwidth=2
+set smartcase
+set smartindent
+set softtabstop=2
+set tabstop=2
+set updatetime=50
 let g:python_host_prog = "/usr/bin/python"
 let g:python3_host_prog = "/usr/local/bin/python3"
-set background=dark
-colorscheme apprentice
 let mapleader=","
 let g:test#strategy = 'vimterminal'
 " go back to the previous buffer
@@ -46,9 +36,6 @@ nnoremap <silent> N :bnext<CR>
 nnoremap Q :bd<CR>
 nnoremap K :Rg<SPACE><CR>
 nnoremap <leader>a :Rg<SPACE>
-" Move selected text
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
