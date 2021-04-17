@@ -1,9 +1,9 @@
 colorscheme apprentice
 set clipboard+=unnamedplus
 set expandtab
-set foldlevel=2
+set foldlevel=99
 set foldmethod=indent
-set foldnestmax=10
+set foldcolumn=1
 set nowrap
 set nobackup
 set noswapfile
