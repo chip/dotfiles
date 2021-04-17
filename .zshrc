@@ -166,3 +166,7 @@ alias vp="cd ~/.local/share/nvim/site/pack"
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/chip/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+# Prevent mongodb error
+ulimit -n 65536
+ulimit -u 2048
