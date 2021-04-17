@@ -163,3 +163,6 @@ alias be='bundle exec'
 alias topten="history | commands | sort -rn | head"
 alias cores="sysctl -n hw.ncpu"
 alias vp="cd ~/.local/share/nvim/site/pack"
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/chip/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
