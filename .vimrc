@@ -19,16 +19,7 @@ set updatetime=50
 let g:python_host_prog = "/usr/bin/python"
 let g:python3_host_prog = "/usr/local/bin/python3"
 let mapleader=","
-" Pro: can easily close
-" Drawback: no colors
-" Drawback: no ability to search
-" Drawback: can only navigate up/down
-nnoremap <leader>8 :bel !npm run test<CR>
-" Pro: colors
-" Pro: ability to search
-" Pro: can navigate as usual
-" Drawback: Must close with :bd!
-nnoremap <leader>9 :vnew term://npm run test<CR>
+nnoremap <leader>t :vnew term://npm run test<CR>
 let g:ale_disable_lsp = 0
 let g:ale_sign_column_always = 1
 let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
