@@ -19,8 +19,21 @@ set updatetime=50
 let g:python_host_prog = "/usr/bin/python"
 let g:python3_host_prog = "/usr/local/bin/python3"
 let mapleader=","
-let g:test#strategy = 'vimterminal'
-" go back to the previous buffer
+" Pro: can easily close
+" Drawback: no colors
+" Drawback: no ability to search
+" Drawback: can only navigate up/down
+nnoremap <leader>8 :bel !npm run test<CR>
+" Pro: colors
+" Pro: ability to search
+" Pro: can navigate as usual
+" Drawback: Must close with :bd!
+nnoremap <leader>9 :vnew term://npm run test<CR>
+let g:ale_disable_lsp = 0
+let g:ale_sign_column_always = 1
+let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_fix_on_save = 1
+" " go back to the previous buffer
 nnoremap <leader><leader> <c-^>
 nnoremap - :e.<CR>
 noremap <leader>w :w<CR>
@@ -33,7 +46,7 @@ noremap <leader>i :Files<CR>
 noremap <leader>b :Buffers<CR>
 nnoremap <silent> P :bprevious<CR>
 nnoremap <silent> N :bnext<CR>
-nnoremap Q :bd<CR>
+nnoremap Q :bd!<CR>
 nnoremap K :Rg<SPACE><CR>
 nnoremap <leader>a :Rg<SPACE>
 " use <tab> for trigger completion and navigate to the next complete item
