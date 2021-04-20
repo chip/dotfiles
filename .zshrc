@@ -134,6 +134,7 @@ alias prune="git remote prune origin" # remote branches were already deleted, so
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias oneline="git log --pretty=oneline"
+alias ol="git log --pretty=oneline"
 alias ptags='git push --tags'
 alias tags='git tag -n'
 alias gb="git branch"
