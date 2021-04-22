@@ -7,19 +7,11 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+autoload -U promptinit; promptinit
+prompt pure
 
 # Change directories without cd
-setopt autocd
-
-# Load plugins from:
-# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
-source ~/.zsh_plugins.sh
+setopt autocd autopushd
 
 # Customize to your needs...
 export PATH=/usr/local/opt/mongodb-community@4.0/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:./bin:/usr/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/bin:/usr/bin:/sbin:/usr/sbin:~/bin:/usr/local/opt/ruby/bin:~/.gem/ruby/2.6.0/cache:/opt/local/bin:/opt/local/sbin
@@ -142,6 +134,7 @@ alias prune="git remote prune origin" # remote branches were already deleted, so
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias oneline="git log --pretty=oneline"
+alias ol="git log --pretty=oneline"
 alias ptags='git push --tags'
 alias tags='git tag -n'
 alias gb="git branch"

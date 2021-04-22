@@ -1,4 +1,4 @@
-colorscheme apprentice
+colorscheme simple-dark
 set clipboard+=unnamedplus
 set expandtab
 set foldlevel=99
