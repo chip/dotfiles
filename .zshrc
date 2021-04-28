@@ -68,9 +68,6 @@ export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 export PYENV="/Users/chip/.pyenv"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # npm
 NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"
