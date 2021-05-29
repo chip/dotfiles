@@ -164,3 +164,10 @@ HEROKU_AC_ZSH_SETUP_PATH=/Users/chip/Library/Caches/heroku/autocomplete/zsh_setu
 # Prevent mongodb error
 ulimit -n 65536
 ulimit -u 2048
+
+alias luamake=/Users/chip/.config/nvim/lua-language-server/3rd/luamake/luamake
+
+# lua 5.3
+export PATH="/usr/local/opt/lua@5.3/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/lua@5.3/lib:$LDFLAGS"
+export CPPFLAGS="-I/usr/local/opt/lua@5.3/include:$CPPFLAGS"
