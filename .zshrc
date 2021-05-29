@@ -155,7 +155,10 @@ alias tree="tree -C"
 alias be='bundle exec'
 alias topten="history | commands | sort -rn | head"
 alias cores="sysctl -n hw.ncpu"
-alias vp="cd ~/.local/share/nvim/site/pack"
+# Vim plugins directory (original)
+alias vpp="cd ~/.local/share/nvim/site/pack/chips-plugins/start"
+# Vim plugins directory using vim-plug
+alias vp="cd ~/.local/share/nvim/plugged"
 alias vc="cd ~/.config/nvim"
 
 # heroku autocomplete setup
