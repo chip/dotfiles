@@ -1,5 +1,5 @@
 " - stdpath is ~/.local/share/nvim
-call plug#begin('~/code/lsp-config/.local/share/nvim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'hrsh7th/nvim-compe'
