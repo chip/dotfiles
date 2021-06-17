@@ -12,5 +12,4 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'norcalli/snippets.nvim'
 Plug 'honza/vim-snippets'
-Plug 'folke/lsp-colors.nvim'
 call plug#end()
