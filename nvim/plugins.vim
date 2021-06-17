@@ -9,4 +9,5 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'tpope/vim-commentary'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'honza/vim-snippets'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
