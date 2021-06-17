@@ -6,7 +6,6 @@ set rtp+=~/.local/share/nvim/plugged
 let &packpath = &rtp
 
 let mapleader=","
-colorscheme simple-dark
 
 " Load all the plugins
 source ~/.config/nvim/plugins.vim

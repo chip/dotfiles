@@ -1,3 +1,4 @@
+colorscheme nord
 set clipboard+=unnamedplus
 set expandtab
 set foldlevel=99
