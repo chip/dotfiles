@@ -1,8 +1,4 @@
-set rtp=~/.config/nvim
-" set rtp+=/Users/chip/code/nvim-osx64/share/nvim/runtime
-" set rtp+=/Users/chip/code/nvim-osx64/lib/nvim
-set rtp+=~/.local/share/nvim/site
-set rtp+=~/.local/share/nvim/plugged
+set rtp+=~/.config/nvim,~/.local/share/nvim/site,~/.local/share/nvim/plugged
 let &packpath = &rtp
 
 let mapleader=","
