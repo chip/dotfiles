@@ -1,0 +1,4 @@
+.vim/bundle/
+.vim/_temp/
+.ssh/config
+.vim/plugged/

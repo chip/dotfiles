@@ -1,0 +1,12 @@
+dotfiles for osx
+
+Currently using the following:
+
+* iTerm2 terminal
+* Terminal theme: Profiles->Colors->Color Presets...-> srcery_iterm
+* Font: MesloLGS NF Regular Font (18pt laptop, 24pt iMac). Profiles->Text->Font
+* Shell is zsh `.zshrc`
+* Shell plugins are not used
+* shell prompt is pure (sindresorhus)
+* Using nvim HEAD
+* nvim colorscheme is srcery

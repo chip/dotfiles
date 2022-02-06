@@ -1,0 +1,14 @@
+require "user.options"
+require "user.mappings"
+require "user.plugins"
+require "user.vimspector"
+require "user.treesitter"
+require "user.comments"
+require "user.autocomplete"
+-- vim.lsp.set_log_level("debug")
+require "user.lsp"
+require "user.luapad"
+require "user.telescope"
+vim.cmd('source $HOME/.config/nvim/lua/user/startify.vim')
+require "user.lualine"
+require "user.colorscheme"
