@@ -169,8 +169,8 @@ heroku-setup() {
 ulimit -n 65536
 ulimit -u 2048
 
-export LUA_PATH='/usr/local/Cellar/luarocks/3.8.0/share/lua/5.4/?.lua;/usr/local/share/lua/5.4/?.lua;/usr/local/share/lua/5.4/?/init.lua;/usr/local/lib/lua/5.4/?.lua;/usr/local/lib/lua/5.4/?/init.lua;./?.lua;./?/init.lua;/Users/chip/.luarocks/share/lua/5.4/?.lua;/Users/chip/.luarocks/share/lua/5.4/?/init.lua'
-export LUA_CPATH='/usr/local/lib/lua/5.4/?.so;/usr/local/lib/lua/5.4/loadall.so;./?.so;/Users/chip/.luarocks/lib/lua/5.4/?.so'
+LUA_CPATH="/usr/local/lib/lua/5.1/?.so;./?.so;/Users/chip/.luarocks/lib/lua/5.1/?.so;"
+LUA_PATH="/usr/local/Cellar/luarocks/3.8.0/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?/init.lua;/usr/local/lib/lua/5.1/?.lua;/usr/local/lib/lua/5.1/?/init.lua;./?.lua;./?/init.lua;/Users/chip/.luarocks/share/lua/5.1/?.lua;/Users/chip/.luarocks/share/lua/5.1/?/init.lua;"
 export PATH='/Users/chip/.luarocks/bin:/Users/chip/perl5/bin:/Users/chip/.npm-packages/bin:/usr/local/opt/python@3.8/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/opt/qt@5.5/bin:/usr/local/opt/openssl/bin:/usr/local/heroku/bin:/Users/chip/.rbenv/shims:/Users/chip/.rbenv/bin:/usr/local/opt/mongodb-community@4.0/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:./bin:/usr/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/bin:/usr/bin:/sbin:/usr/sbin:/Users/chip/bin:/usr/local/opt/ruby/bin:/Users/chip/.gem/ruby/2.6.0/cache:/opt/local/bin:/opt/local/sbin:/Users/chip/code/go/bin:/Users/chip/Library/Android/sdk/platform-tools:/Users/chip/Library/Android/sdk/tools:/usr/local/opt/fzf/bin:/Users/chip/n/bin'
 
 function load_nvm {
