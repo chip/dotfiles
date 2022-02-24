@@ -1,4 +1,0 @@
--- print(vim.fn.stdpath('data'))
--- ~/.local/share/nvim/
--- install_path
--- ~/.local/share/nvim/site/pack/packer/start/
