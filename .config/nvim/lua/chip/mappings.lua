@@ -1,9 +1,10 @@
-local utils = require("user.utils")
+local utils = require("chip.utils")
 
 vim.g.mapleader = ',' -- change the <leader> key to be comma
 
 utils.map('n', '<leader>tt', ':new term://npm run test<CR>')
 utils.map('n', '-', ':e.<CR>')
+utils.map('n', '<leader><leader>', ':e #<CR>')
 utils.map('n', '<leader>q', ':bd!<CR>')
 utils.map('n', '<leader>w', ':w<CR>')
 utils.map('n', '<leader>R', ':Nredir <c-f>A')
@@ -22,6 +23,8 @@ utils.map('n', '<leader>dbcl',
 utils.map('n', '<leader>dbdl',
           ":lua require('mongo-nvim.telescope.pickers').document_picker()<cr>")
 
+utils.map('n', '<leader>c', ":Telescope neoclip star<CR>")
+utils.map('n', '<leader>cf', ":Telescope telescope-code-fence find<cr>")
 -- vim.g.vimspector_enable_mappings = 'HUMAN'
 -- mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
 -- for normal mode - the word under the cursor

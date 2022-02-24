@@ -47,7 +47,7 @@ end
 
 require'lspconfig'.clojure_lsp.setup {
   on_attach = on_attach,
-  flags = {debounce_text_changes = 150}
+  flags = {debounce_text_changes = 500}
 }
 
 -- local sumneko_binary_path = vim.fn.exepath('lua-language-server')

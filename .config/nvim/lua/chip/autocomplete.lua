@@ -4,7 +4,8 @@ vim.opt.completeopt = "menu,menuone,noselect"
 -- lspkind
 local lspkind = require "lspkind"
 lspkind.init {
-  with_text = true,
+  mode = 'symbol_text',
+  -- with_text = true,
   symbol_map = {
     Text = "",
     Method = "ƒ",
