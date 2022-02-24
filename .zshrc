@@ -139,6 +139,21 @@ alias gap="git add -p"
 alias gaf="git add -f"
 alias gapf="git add -fp"
 alias gf="git fetch"
+# yadm aliases
+alias y="yadm"
+alias ya="yadm add ."
+alias ys="yadm status"
+alias ypull="yadm pull origin"
+alias ypullm='yadm pull --rebase origin master'
+alias ypush="yadm push origin"
+alias yc="yadm commit -m "
+alias yca="yadm commit -a -m "
+alias yundo="yadm reset --soft HEAD^"
+alias yd="yadm diff"
+alias ydc="yadm diff --cached"
+alias yol="yadm log --pretty=oneline"
+alias yr="yadm restore --staged"
+alias yap="yadm add -p"
 alias a="ack"
 alias v=$EDITOR
 # Postfix Load on Startup
