@@ -152,10 +152,8 @@ alias tree="tree -C"
 alias be='bundle exec'
 alias topten="history | commands | sort -rn | head"
 alias cores="sysctl -n hw.ncpu"
-# Vim plugins directory (original)
-alias vpp="cd ~/.local/share/nvim/site/pack/packer/start"
-# Vim plugins directory using vim-plug
-alias vp="cd ~/.local/share/nvim/plugged"
+# Vim plugins directory
+alias vp="cd ~/.local/share/nvim/site/pack/paqs/start"
 alias vc="cd ~/.config/nvim"
 alias vcl="cd ~/.config/nvim/lua"
 alias lr="luarocks --lua-dir=$(brew --prefix)/opt/lua@5.1 --lua-version=5.1 --local "
