@@ -181,3 +181,6 @@ function load_nvm {
 
 eval "$(zoxide init zsh)"
 
+[ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
+# Fix luaver install-luajit 2.1.0-beta3
+export MACOSX_DEPLOYMENT_TARGET=11.6.1
