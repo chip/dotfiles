@@ -35,3 +35,4 @@ require "paq" {
   "hkupty/impromptu.nvim";
 }
 vim.opt.runtimepath:append("~/code/telescope-code-fence.nvim")
+vim.opt.runtimepath:append("~/code/telescope-software-licenses.nvim")
