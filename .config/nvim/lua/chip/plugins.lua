@@ -16,7 +16,7 @@ require "paq" {
   "onsails/lspkind-nvim";
   "numToStr/Comment.nvim"; -- For code comments
   "srcery-colors/srcery-vim"; -- Colorscheme
-  -- {"Olical/conjure"; tag = "v4.21.0"}; -- REPL for Clojure and other LISP"s
+  -- {"Olical/conjure", tag = "v4.21.0"}; -- REPL for Clojure and other LISP"s
   "Olical/conjure";
   "tpope/vim-dispatch";
   "clojure-vim/vim-jack-in";
