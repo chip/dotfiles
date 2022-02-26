@@ -173,6 +173,7 @@ alias vc="cd ~/.config/nvim"
 alias vcl="cd ~/.config/nvim/lua"
 alias lr="luarocks --lua-dir=$(brew --prefix)/opt/lua@5.1 --lua-version=5.1 --local "
 alias ppath="echo \$PATH | sed 's/:/\n/g'"
+alias nlua="/usr/local/bin/rlwrap /usr/local/bin/luajit"
 
 # WARNING - THIS IS SLOW - CALL THIS MANUALLY IF YOU NEED IT
 # heroku autocomplete setup
