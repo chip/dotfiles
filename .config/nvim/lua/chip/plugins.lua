@@ -8,7 +8,7 @@ require "paq" {
   "hrsh7th/nvim-cmp";
   "hrsh7th/cmp-vsnip"; -- For vsnip users.
   "hrsh7th/vim-vsnip";
-  "kabouzeid/nvim-lspinstall";
+  "williamboman/nvim-lsp-installer";
   "nvim-lua/plenary.nvim"; -- For navigating files with nvim-telescope
   "nvim-telescope/telescope.nvim";
   {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}; -- Optional plugins for nvim-telescope

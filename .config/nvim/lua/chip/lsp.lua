@@ -1,4 +1,4 @@
-local nvim_lsp = require('lspconfig')
+require('lspconfig')
 
 -- <OLD CONFIG>
 -- require "lspconfig".clojure_lsp.setup {}
@@ -7,7 +7,7 @@ local nvim_lsp = require('lspconfig')
 --
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -97,3 +97,5 @@ require"lspconfig".efm.setup {
     }
   }
 }
+
+require'lspconfig'.bashls.setup {}
