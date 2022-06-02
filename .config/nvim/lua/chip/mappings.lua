@@ -22,3 +22,4 @@ utils.map('n', '<leader>dbcl',
 utils.map('n', '<leader>dbdl',
           ":lua require('mongo-nvim.telescope.pickers').document_picker()<cr>")
 
+utils.map('n', '<leader>bd', ':up | %bd | e#<CR>')
