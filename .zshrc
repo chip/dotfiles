@@ -174,6 +174,11 @@ alias vcl="cd ~/.config/nvim/lua"
 alias lr="luarocks --lua-dir=$(brew --prefix)/opt/lua@5.1 --lua-version=5.1 --local "
 alias ppath="echo \$PATH | sed 's/:/\n/g'"
 alias nlua="/usr/local/bin/rlwrap /usr/local/bin/luajit"
+alias mongo_start="brew services start mongodb/brew/mongodb-community"
+alias mongo_stop="brew services stop mongodb/brew/mongodb-community"
+alias mongo_log="cd /usr/local/var/log/mongodb"
+alias mongo_config="nvim /usr/local/etc/mongod.conf"
+alias mongo_plist="nvim ~/Library/LaunchAgents/homebrew.mxcl.mongodb-community.plist"
 
 # WARNING - THIS IS SLOW - CALL THIS MANUALLY IF YOU NEED IT
 # heroku autocomplete setup
