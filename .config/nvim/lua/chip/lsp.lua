@@ -1,4 +1,4 @@
-require('lspconfig')
+local lspconfig = require 'lspconfig'
 
 -- <OLD CONFIG>
 -- require "lspconfig".clojure_lsp.setup {}
@@ -99,3 +99,7 @@ require"lspconfig".efm.setup {
 }
 
 require'lspconfig'.bashls.setup {}
+require'lspconfig'.vuels.setup {}
+require'lspconfig'.tailwindcss.setup {}
+require'lspconfig'.eslint.setup {}
+require'lspconfig'.tsserver.setup {}
