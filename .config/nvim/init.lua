@@ -9,4 +9,3 @@ require "chip.luapad"
 require "chip.telescope"
 require "chip.lualine"
 require "chip.colorscheme"
--- vim.cmd('source $HOME/.config/nvim/lua/chip/startify.vim')
