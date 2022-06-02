@@ -21,20 +21,4 @@ utils.map('n', '<leader>dbcl',
           ":lua require('mongo-nvim.telescope.pickers').collection_picker()<cr>")
 utils.map('n', '<leader>dbdl',
           ":lua require('mongo-nvim.telescope.pickers').document_picker()<cr>")
--- vim.g.vimspector_enable_mappings = 'HUMAN'
--- mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
--- for normal mode - the word under the cursor
 
--- utils.map('n', '<leader>dl', '<Plug>VimspectorLaunch')
--- utils.map('n', '<leader>dc', '<Plug>VimspectorContinue')
--- utils.map('n', '<leader>dq', '<Plug>VimspectorStop')
--- utils.map('n', '<leader>dr', '<Plug>VimspectorRestart')
--- utils.map('n', '<leader>db', '<Plug>VimspectorToggleBreakpoint')
--- utils.map('n', '<leader>de', '<Plug>VimspectorBalloonEval')
--- utils.map('n', '<leader>dr', '<Plug>VimspectorRunToCursor')
--- utils.map('n', '<leader>do', '<Plug>VimspectorStepOver')
--- utils.map('n', '<leader>di', '<Plug>VimspectorStepInto')
--- for visual mode, the visually selected text
--- utils.map('x', '<leader>de', '<Plug>VimspectorBalloonEval')
--- utils.map('n', '<localleader><F11>', '<Plug>VimspectorUpFrame')
--- utils.map('n', '<localleader><F12>', '<Plug>VimspectorDownFrame')
