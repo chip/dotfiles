@@ -54,9 +54,6 @@ cmp.setup({
     ['<CR>'] = cmp.mapping.confirm({select = true})
   },
   experimental = {ghost_text = true},
-  documentation = {
-    border = {"╭", "─", "╮", "│", "╯", "─", "╰", "│"}
-  },
   sources = {
     -- 'crates' is lazy loaded
     {name = "nvim_lsp"},
