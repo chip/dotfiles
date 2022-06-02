@@ -54,17 +54,17 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export GEM_HOME="~/.gem"
 export GEM_PATH="~/.gem"
 
-export PATH=/usr/local/opt/mongodb-community@4.0/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:./bin:/usr/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/bin:/usr/bin:/sbin:/usr/sbin:~/bin:/usr/local/opt/ruby/bin:~/.gem/ruby/2.6.0/cache:/opt/local/bin:/opt/local/sbin:$GOPATH
-
 # vim bindings for the command line
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
-export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 export PERL_LOCAL_LIB_ROOT="/Users/chip/perl5:$PERL_LOCAL_LIB_ROOT";
 export PERL_MB_OPT="--install_base "/Users/chip/perl5"";
 export PERL_MM_OPT="INSTALL_BASE=/Users/chip/perl5";
 export PERL5LIB="/Users/chip/perl5/lib/perl5:$PERL5LIB";
+
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:./bin:/usr/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/bin:/usr/bin:/sbin:/usr/sbin:~/bin:/usr/local/opt/ruby/bin:~/.gem/ruby/2.6.0/cache:/opt/local/bin:/opt/local/sbin:$GOPATH
+export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 export PATH="/Users/chip/perl5/bin:$PATH";
 
 ## #Added by the Heroku Toolbelt
@@ -187,7 +187,7 @@ ulimit -u 2048
 
 LUA_CPATH="/usr/local/lib/lua/5.1/?.so;./?.so;/Users/chip/.luarocks/lib/lua/5.1/?.so;"
 LUA_PATH="/usr/local/Cellar/luarocks/3.8.0/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?/init.lua;/usr/local/lib/lua/5.1/?.lua;/usr/local/lib/lua/5.1/?/init.lua;./?.lua;./?/init.lua;/Users/chip/.luarocks/share/lua/5.1/?.lua;/Users/chip/.luarocks/share/lua/5.1/?/init.lua;"
-export PATH='/Users/chip/.luarocks/bin:/Users/chip/perl5/bin:/Users/chip/.npm-packages/bin:/usr/local/opt/python@3.8/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/opt/qt@5.5/bin:/usr/local/opt/openssl/bin:/usr/local/heroku/bin:/Users/chip/.rbenv/shims:/Users/chip/.rbenv/bin:/usr/local/opt/mongodb-community@4.0/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:./bin:/usr/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/bin:/usr/bin:/sbin:/usr/sbin:/Users/chip/bin:/usr/local/opt/ruby/bin:/Users/chip/.gem/ruby/2.6.0/cache:/opt/local/bin:/opt/local/sbin:/Users/chip/code/go/bin:/Users/chip/Library/Android/sdk/platform-tools:/Users/chip/Library/Android/sdk/tools:/usr/local/opt/fzf/bin:/Users/chip/n/bin'
+export PATH="/Users/chip/.luarocks/bin:/Users/chip/perl5/bin:/Users/chip/.npm-packages/bin:/usr/local/opt/python@3.8/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/opt/qt@5.5/bin:/usr/local/opt/openssl/bin:/usr/local/heroku/bin:/Users/chip/.rbenv/shims:/Users/chip/.rbenv/bin:/usr/local/opt//Applications/Postgres.app/Contents/Versions/latest/bin:./bin:/usr/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/bin:/usr/bin:/sbin:/usr/sbin:/Users/chip/bin:/usr/local/opt/ruby/bin:/Users/chip/.gem/ruby/2.6.0/cache:/opt/local/bin:/opt/local/sbin:/Users/chip/code/go/bin:/Users/chip/Library/Android/sdk/platform-tools:/Users/chip/Library/Android/sdk/tools:/usr/local/opt/fzf/bin:/Users/chip/n/bin:$PATH"
 
 function load_nvm {
   export NVM_DIR="$HOME/.nvm"
