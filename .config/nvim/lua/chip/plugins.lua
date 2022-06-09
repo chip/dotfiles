@@ -15,7 +15,6 @@ require "paq" {
   "kyazdani42/nvim-web-devicons", -- If you want to have icons in your statusline choose one of these
   "onsails/lspkind-nvim",
   "numToStr/Comment.nvim", -- For code comments
-  "srcery-colors/srcery-vim", -- Colorscheme
   -- {"Olical/conjure", tag = "v4.21.0"}; -- REPL for Clojure and other LISP"s
   "Olical/conjure",
   "tpope/vim-dispatch",
