@@ -33,8 +33,6 @@ require "paq" {
   "nvim-telescope/telescope-github.nvim",
   "hkupty/impromptu.nvim",
   "lewis6991/impatient.nvim",
-  "vim-test/vim-test",
-  {"rcarriga/vim-ultest", run = ":UpdateRemotePlugins"}
 }
 vim.opt.runtimepath:append("~/code/telescope-code-fence.nvim")
 vim.opt.runtimepath:append("~/code/telescope-software-licenses.nvim")
