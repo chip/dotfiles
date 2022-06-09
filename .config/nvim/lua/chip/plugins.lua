@@ -15,14 +15,12 @@ require "paq" {
   "kyazdani42/nvim-web-devicons", -- If you want to have icons in your statusline choose one of these
   "onsails/lspkind-nvim",
   "numToStr/Comment.nvim", -- For code comments
-  -- {"Olical/conjure", tag = "v4.21.0"}; -- REPL for Clojure and other LISP"s
   "Olical/conjure",
   "tpope/vim-dispatch",
   "clojure-vim/vim-jack-in",
   "radenling/vim-dispatch-neovim",
   "bhurlow/vim-parinfer", -- Parenthesis mgt for Clojure and other LISP"s
   "Leocardoso94/clojure-snippets", -- VS Code snippets for Clojure
-  -- "mhinz/vim-startify"; -- Fancy start screen
   "ryanoasis/vim-devicons", -- Add icons to start screen
   "nvim-lualine/lualine.nvim", -- Add status bar
   "rafcamlet/nvim-luapad", -- Lua REPL
