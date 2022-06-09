@@ -65,7 +65,7 @@ export PERL5LIB="/Users/chip/perl5/lib/perl5:$PERL5LIB";
 
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:./bin:/usr/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/bin:/usr/bin:/sbin:/usr/sbin:~/bin:/usr/local/opt/ruby/bin:~/.gem/ruby/2.6.0/cache:/opt/local/bin:/opt/local/sbin:$GOPATH
 export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-export PATH="/Users/chip/perl5/bin:$PATH";
+export PATH="/Users/chip/perl5/bin:$PATH"
 
 ## #Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -205,3 +205,5 @@ eval "$(zoxide init zsh)"
 [ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
 # Fix luaver install-luajit 2.1.0-beta3
 export MACOSX_DEPLOYMENT_TARGET=11.6.1
+
+export PATH="/Users/chip/.cargo/bin:$PATH"
