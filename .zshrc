@@ -1,16 +1,11 @@
-# zmodload zsh/zprof
-
 function cd {
   builtin cd "$@" && exa --long --git --icons -aa
 }
 
-now () {
-  echo `gdate +%s%3N`
-}
-# PREVIOUS="$(now)"
+PREVIOUS=`gdate +%s%3N`
 
 debugger () {
-  CURRENT="$(now)"
+  CURRENT=`gdate +%s%3N`
   DIFF="$(($CURRENT-$PREVIOUS))"
   PREVIOUS=$CURRENT
   echo $1 "difference: " $DIFF
@@ -70,23 +65,11 @@ export PATH="/Users/chip/perl5/bin:$PATH"
 ## #Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Android for Meteor
-export ANDROID_HOME=~/Library/Android/sdk
-export ANDROID_ROOT=${ANDROID_HOME}
-export PATH="$PATH:$ANDROID_HOME/platform-tools"
-export PATH="$PATH:$ANDROID_HOME/tools"
-
 # fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
-
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
-eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 export PYENV="/Users/chip/.pyenv"
@@ -98,18 +81,9 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
-# zprof
-eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
-
 # Aliases
-
-# Mail
-alias mi="tail -f /var/log/mail.log"
-
-# List files
 alias ll="ls -al"
 alias l="ls -al"
-
 # Git
 alias g="git"
 alias ga="git add ."
@@ -122,12 +96,9 @@ alias ca="git commit -a -m "
 alias undo="git reset --soft HEAD^"
 alias co="git checkout"
 alias coma="git checkout master"
-alias gm="git merge --no-ff"
-alias gr="git remote"
 alias prune="git remote prune origin" # remote branches were already deleted, so need to prune locals
 alias gd="git diff"
 alias gdc="git diff --cached"
-alias oneline="git log --pretty=oneline"
 alias ol="git log --pretty=oneline"
 alias ptags='git push --tags'
 alias tags='git tag -n'
@@ -136,8 +107,6 @@ alias gr="git restore --staged"
 alias stash="git stash"
 alias gtag="git tag -a `date -u \"+UTC_%Y%m%d%H%M%S\"`"
 alias gap="git add -p"
-alias gaf="git add -f"
-alias gapf="git add -fp"
 alias gf="git fetch"
 # yadm aliases
 alias y="yadm"
@@ -154,38 +123,32 @@ alias ydc="yadm diff --cached"
 alias yol="yadm log --pretty=oneline"
 alias yr="yadm restore --staged"
 alias yap="yadm add -p"
+# Searching
 alias a="ack"
 alias v=$EDITOR
-# Postfix Load on Startup
-alias postgres_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias postgres_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 # JDK home
 alias jdkhome="cd /System/Library/Frameworks/JavaVM.framework/Home"
 alias stuck="ps ax | sed '1p;/ [U] /!d'"
-alias mysqlgem='env ARCHFLAGS="-arch x86_64" gem install mysql2 --config-file bundler_config.yml'
 alias tree="tree -C"
-alias be='bundle exec'
 alias topten="history | commands | sort -rn | head"
-alias cores="sysctl -n hw.ncpu"
 # Vim plugins directory
 alias vp="cd ~/.local/share/nvim/site/pack/paqs/start"
 alias vc="cd ~/.config/nvim"
 alias vcl="cd ~/.config/nvim/lua"
-alias lr="luarocks --lua-dir=$(brew --prefix)/opt/lua@5.1 --lua-version=5.1 --local "
+alias lr="luarocks --lua-dir=/usr/local/opt/lua@5.1 --lua-version=5.1 --local "
 alias ppath="echo \$PATH | sed 's/:/\n/g'"
 alias nlua="/usr/local/bin/rlwrap /usr/local/bin/luajit"
+# Mongo
 alias mongo_start="brew services start mongodb/brew/mongodb-community"
 alias mongo_stop="brew services stop mongodb/brew/mongodb-community"
 alias mongo_log="cd /usr/local/var/log/mongodb"
 alias mongo_config="nvim /usr/local/etc/mongod.conf"
 alias mongo_plist="nvim ~/Library/LaunchAgents/homebrew.mxcl.mongodb-community.plist"
-
 # WARNING - THIS IS SLOW - CALL THIS MANUALLY IF YOU NEED IT
 # heroku autocomplete setup
 heroku-setup() {
   HEROKU_AC_ZSH_SETUP_PATH=/Users/chip/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 }
-
 # Prevent mongodb error
 ulimit -n 65536
 ulimit -u 2048
@@ -199,11 +162,11 @@ function load_nvm {
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 }
-
-eval "$(zoxide init zsh)"
-
-[ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
+function load_luaver {
+  [ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
+}
 # Fix luaver install-luajit 2.1.0-beta3
 export MACOSX_DEPLOYMENT_TARGET=11.6.1
-
 export PATH="/Users/chip/.cargo/bin:$PATH"
+
+alias luamake=/Users/chip/code/lua-language-server/3rd/luamake/luamake
