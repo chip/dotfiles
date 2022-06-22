@@ -1,6 +1,7 @@
 require "chip.options"
 require "chip.mappings"
 require "chip.plugins"
+require "chip.impatient"
 require "chip.treesitter"
 require "chip.comments"
 require "chip.autocomplete"
