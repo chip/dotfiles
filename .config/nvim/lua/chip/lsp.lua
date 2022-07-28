@@ -83,21 +83,6 @@ require'lspconfig'.sumneko_lua.setup {
   }
 }
 
-require"lspconfig".efm.setup {
-  init_options = {documentFormatting = true},
-  settings = {
-    rootMarkers = {".git/"},
-    languages = {
-      lua = {
-        {
-          formatCommand = "/usr/local/lib/luarocks/rocks-5.4/luaformatter/scm-1/bin/lua-format -i -c $HOME/.lua-format",
-          formatStdin = true
-        }
-      }
-    }
-  }
-}
-
 require'lspconfig'.bashls.setup {}
 require'lspconfig'.vuels.setup {}
 require'lspconfig'.tailwindcss.setup {}
