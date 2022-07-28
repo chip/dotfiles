@@ -1,3 +1,5 @@
+require("mason").setup()
+
 local lspconfig = require 'lspconfig'
 
 -- <OLD CONFIG>
