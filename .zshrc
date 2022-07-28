@@ -36,7 +36,7 @@ setopt autocd autopushd
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LD_LIBRARY_PATH="/usr/local/lib"
-export GOPATH=$HOME/code/go/bin
+export GOPATH=$HOME/code/go
 export EDITOR="/usr/local/bin/nvim"
 export GIT_EDITOR=${EDITOR}
 export ARCHFLAGS="-arch x86_64"
