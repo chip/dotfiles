@@ -32,7 +32,7 @@ require "paq" {
     "hkupty/impromptu.nvim",
     "lewis6991/impatient.nvim",
     "ckipp01/stylua-nvim",
-    "faith/vim-go",
+    "fatih/vim-go",
     "iamcco/markdown-preview.nvim",
 }
 vim.opt.runtimepath:append("~/code/telescope-code-fence.nvim")
