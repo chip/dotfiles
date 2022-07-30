@@ -69,7 +69,6 @@ export PYENV="/Users/chip/.pyenv"
 NPM_PACKAGES="${HOME}/.npm-packages"
 
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 # Aliases
 alias ll="ls -al"
