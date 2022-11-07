@@ -1,3 +1,64 @@
+[x] gg Move to the first line of the file
+[x] G Move to the last line
+[ ] gg=G Reindent the whole file
+[ ] gv Reselect the last visual selection
+[ ] `< Jump to beginning of last visual selection
+[ ] `> Jump to end of last visual selection
+[ ] ^ Move to first non-blank character of the line
+[ ] g_ Move the last non-blank character of the line (but you remove trailing whitespace, right)
+[ ] g_lD Delete all the trailing whitespace on the line
+[ ] ea Append to the end of the current word
+[x] gf Jump to the file name under the cursor
+[x] xp Swap character forward
+[ ] Xp Swap character backward
+[x] yyp Duplicate the current line
+[ ] yapP Duplicate the current paragraph
+[x] dat Delete around an HTML tag, including the tag
+[x] dit Delete inside an HTML tag, excluding the tag
+[x] w Move one word to the right
+[x] b Move one word to the left
+[x] dd Delete the current line
+[x] zc Close current fold
+[x] zo Open current fold
+[ ] za Toggle current fold
+[ ] zi Toggle folding entirely
+[x] << Outdent current line
+[x] >> Indent current line
+[ ] z= Show spelling corrections
+[ ] zg Add to spelling dictionary
+[ ] zw Remove from spelling dictionary
+[x] ~ Toggle case of current character
+[ ] gUw Uppercase until end of word (u for lower, ~ to toggle)
+[ ] gUiw Uppercase entire word (u for lower, ~ to toggle)
+[ ] gUU Uppercase entire line
+[ ] gu$ Lowercase until the end of the line
+[ ] da" Delete the next double-quoted string
+[ ] + Move to the first non-whitespace character of the next line
+[x] S Delete current line and go into insert mode
+[ ] I insert at the beginning of the line
+[x] ci" Change what’s inside the next double-quoted string
+[x] ca{ Change inside the curly braces (try [, (, etc.)
+[x] vaw Visually select word
+[x] dap Delete the whole paragraph
+[x] r Replace a character
+[ ] `[ Jump to beginning of last yanked text
+[ ] `] Jump to end of last yanked text
+[ ] g; Jump to the last change you made
+[ ] g, Jump back forward through the change list
+[ ] & Repeat last substitution on current line
+[ ] g& Repeat last substitution on all lines
+[x] ZZ Save the current file and quit Vim
+
+
+
+
+
+
+
+
+
+
+
 # Updates to environment
 
 See README for details
