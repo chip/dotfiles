@@ -1,4 +1,5 @@
 vim.g.mapleader = ","
+vim.g.maplocalleader = ","
 vim.wo.cursorline = true
 -- FIXME vim.wo.cursorline.ctermbg = 236
 vim.opt.clipboard = "unnamedplus"
