@@ -127,4 +127,6 @@ vim.cmd('autocmd BufWritePre *.go lua OrgImports(1000)')
 -- </golang>
 
 -- Racket
-require'lspconfig'.racket_langserver.setup{}
+require'lspconfig'.racket_langserver.setup{
+  on_attach = on_attach,
+}
