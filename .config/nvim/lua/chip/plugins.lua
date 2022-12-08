@@ -27,7 +27,6 @@ require "paq" {
     "rafcamlet/nvim-luapad", -- Lua REPL
     "sbulav/nredir.nvim", -- Redirect the output of a Vim or external command into a scratch buffer; in LUA
     "andrejlevkovitch/vim-lua-format", -- automatically format lua code
-    "williamboman/nvim-lsp-installer",
     "szw/vim-maximizer",
     "nvim-telescope/telescope-github.nvim",
     "hkupty/impromptu.nvim",
