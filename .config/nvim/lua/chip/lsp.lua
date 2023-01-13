@@ -130,3 +130,6 @@ vim.cmd('autocmd BufWritePre *.go lua OrgImports(1000)')
 require'lspconfig'.racket_langserver.setup{
   on_attach = on_attach,
 }
+
+
+require'lspconfig'.solargraph.setup {}
