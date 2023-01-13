@@ -22,6 +22,7 @@ require "paq" {
     "bhurlow/vim-parinfer", -- Parenthesis mgt for Clojure and other LISP"s
     "Leocardoso94/clojure-snippets", -- VS Code snippets for Clojure
     "wlangstroth/vim-racket",
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     "ryanoasis/vim-devicons", -- Add icons to start screen
     "nvim-lualine/lualine.nvim", -- Add status bar
     "rafcamlet/nvim-luapad", -- Lua REPL
