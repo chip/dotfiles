@@ -160,3 +160,5 @@ alias luamake=/Users/chip/code/lua-language-server/3rd/luamake/luamake
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 #eval "$(rbenv init -)"
+
+alias quitfinder=`defaults write com.apple.finder QuitMenuItem -bool true && killall Finder`
