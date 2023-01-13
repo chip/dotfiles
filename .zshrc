@@ -157,3 +157,6 @@ function load_luaver {
 export MACOSX_DEPLOYMENT_TARGET=11.6.1
 
 alias luamake=/Users/chip/code/lua-language-server/3rd/luamake/luamake
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
