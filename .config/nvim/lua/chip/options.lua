@@ -22,6 +22,9 @@ vim.o.showmode = false -- to get rid of thing like --INSERT--
 vim.o.showcmd = false -- to get rid of display of last command
 vim.o.shortmess = "F" -- to get rid of the file name displayed in the command line bar
 vim.o.termguicolors = true
+vim.o.hlsearch = false
+vim.o.breakindent = false
+vim.o.completeopt = 'menuone,noselect'
 
 vim.g.python_host_prog = "/usr/bin/python"
 vim.g.python3_host_prog = "/usr/local/bin/python3"
