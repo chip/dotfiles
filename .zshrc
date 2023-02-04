@@ -4,6 +4,9 @@ autoload -U promptinit; promptinit
 prompt pure
 # Change directories without cd
 setopt autocd autopushd
+# Corrections
+setopt CORRECT
+setopt CORRECT_ALL
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 # Aliases
