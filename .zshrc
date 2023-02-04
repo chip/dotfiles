@@ -68,6 +68,9 @@ alias mongo_stop="brew services stop mongodb/brew/mongodb-community"
 alias mongo_log="cd /usr/local/var/log/mongodb"
 alias mongo_config="nvim /usr/local/etc/mongod.conf"
 alias mongo_plist="nvim ~/Library/LaunchAgents/homebrew.mxcl.mongodb-community.plist"
+alias luamake=/Users/chip/code/lua-language-server/3rd/luamake/luamake
+alias quitfinder="defaults write com.apple.finder QuitMenuItem -bool true && killall Finder"
+
 # Prevent mongodb error
 ulimit -n 65536
 
@@ -79,5 +82,5 @@ function load_nvm {
 function load_luaver {
   [ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
 }
-alias luamake=/Users/chip/code/lua-language-server/3rd/luamake/luamake
-alias quitfinder="defaults write com.apple.finder QuitMenuItem -bool true && killall Finder"
+# Autosuggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
