@@ -7,7 +7,9 @@ setopt autocd autopushd
 # Corrections
 setopt CORRECT
 setopt CORRECT_ALL
+# Vi mode
 bindkey -v
+# Search commands
 bindkey '^R' history-incremental-search-backward
 # Aliases
 alias ll="ls -al"
