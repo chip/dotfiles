@@ -2,11 +2,6 @@ require("mason").setup()
 
 local lspconfig = require 'lspconfig'
 
--- <OLD CONFIG>
--- require "lspconfig".clojure_lsp.setup {}
--- require "lspconfig".sumneko_lua.setup {}
--- </OLD CONFIG>
---
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(_, bufnr)
@@ -52,17 +47,13 @@ require'lspconfig'.clojure_lsp.setup {
   flags = {debounce_text_changes = 500}
 }
 
--- local sumneko_binary_path = vim.fn.exepath('lua-language-server')
--- local sumneko_root_path = vim.fn.fnamemodify(sumneko_binary_path, ':h:h:h')
-
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
-require'lspconfig'.sumneko_lua.setup {
+require'lspconfig'.lua_ls.setup {
   on_attach = on_attach,
   flags = {debounce_text_changes = 150},
-  -- cmd = {sumneko_binary_path, "-E", sumneko_root_path .. "/main.lua"},
   settings = {
     Lua = {
       runtime = {
