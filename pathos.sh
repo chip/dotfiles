@@ -1,1 +1,1 @@
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/chip/.rbenv/bin:/Applications/Racket v8.6/bin:/Users/chip/code/go/bin"
+export PATH=~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/local/opt/python/libexec/bin:/Users/chip/.rbenv/bin:/Applications/Racket\ v8.6/bin:/Users/chip/code/go/bin
