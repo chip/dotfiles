@@ -23,6 +23,7 @@ require "paq" {
     "lewis6991/impatient.nvim",
     "ckipp01/stylua-nvim",
     "fatih/vim-go",
+    "hkupty/iron.nvim",
 }
 vim.opt.runtimepath:append("~/code/telescope-code-fence.nvim")
 vim.opt.runtimepath:append("~/code/telescope-software-licenses.nvim")
