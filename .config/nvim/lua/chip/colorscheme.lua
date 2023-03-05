@@ -1,7 +1,7 @@
 vim.cmd('set termguicolors')
 vim.cmd([[let g:oceanic_next_terminal_bold = 1]])
 vim.cmd([[let g:oceanic_next_terminal_italic = 1]])
-vim.cmd("colorscheme OceanicNext")
+vim.cmd("colorscheme spacegray")
 vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
 vim.cmd([[hi LineNr guibg=NONE ctermbg=NONE]])
 vim.cmd([[hi SignColumn guibg=NONE ctermbg=NONE]])
