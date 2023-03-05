@@ -24,7 +24,6 @@ require "paq" {
     "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     "ryanoasis/vim-devicons", -- Add icons to start screen
     "nvim-lualine/lualine.nvim", -- Add status bar
-    "rafcamlet/nvim-luapad", -- Lua REPL
     "sbulav/nredir.nvim", -- Redirect the output of a Vim or external command into a scratch buffer; in LUA
     "andrejlevkovitch/vim-lua-format", -- automatically format lua code
     "szw/vim-maximizer",
