@@ -52,7 +52,9 @@ alias yol="yadm log --pretty=oneline"
 alias yr="yadm restore --staged"
 alias yap="yadm add -p"
 alias a="ack"
-alias v=$EDITOR
+alias v=~/bin/chip-nvim.sh
+alias miniv=~/bin/mini-nvim.sh
+alias bv=~/bin/vim-bootstrap.sh
 alias jdkhome="cd /System/Library/Frameworks/JavaVM.framework/Home"
 alias stuck="ps ax | sed '1p;/ [U] /!d'"
 alias tree="tree -C"
