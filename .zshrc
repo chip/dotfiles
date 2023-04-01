@@ -86,3 +86,13 @@ function load_luaver {
 }
 # Autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# raco find package locations
+function rfc() {
+  cd `racket -l find-collection/run -- $@`
+}
+
+# interactive version
+function rfci() {
+  cd `racket -l find-collection/run -- -i $@`
+}
