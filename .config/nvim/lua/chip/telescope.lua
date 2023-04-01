@@ -7,8 +7,8 @@ utils.map('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
 utils.map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
 utils.map('n', '<leader>fi', '<cmd>Telescope file_browser<cr>')
 
-require('telescope').load_extension('telescope-code-fence')
-utils.map('n', '<leader>cf', '<cmd>Telescope telescope-code-fence find<cr>')
-
-require('telescope').load_extension('software-licenses');
-utils.map('n', '<leader>sl', '<cmd>Telescope software-licenses find<cr>')
+-- require('telescope').load_extension('telescope-code-fence')
+-- utils.map('n', '<leader>cf', '<cmd>Telescope telescope-code-fence find<cr>')
+--
+-- require('telescope').load_extension('software-licenses');
+-- utils.map('n', '<leader>sl', '<cmd>Telescope software-licenses find<cr>')

@@ -1,6 +1,6 @@
 local utils = require("chip.utils")
 
-vim.g.mapleader = ',' -- change the <leader> key to be comma
+vim.g.mapleader = ' ' -- change the <leader> key to be comma
 
 utils.map('n', '-', ':e.<CR>')
 utils.map('n', '<leader><leader>', ':e #<CR>')
