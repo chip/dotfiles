@@ -1,5 +1,5 @@
 # Prompt
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
+fpath+=/usr/local/share/zsh/site-functions
 autoload -U promptinit; promptinit
 prompt pure
 # Change directories without cd
