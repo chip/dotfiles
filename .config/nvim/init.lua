@@ -39,6 +39,7 @@ require("lazy").setup({
   { "ckipp01/stylua-nvim" },
   { "fatih/vim-go" },
   { "hkupty/iron.nvim" },
+  { "dstein64/vim-startuptime" },
   -- { "Olical/conjure" },
 })
 require "chip.options"
