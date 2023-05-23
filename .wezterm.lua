@@ -3,8 +3,8 @@ local wezterm = require 'wezterm'
 return {
   font = wezterm.font_with_fallback {
     {
-      family = 'Victor Mono',
-      weight = 'Bold',
+      family = 'Fira Code',
+      weight = 'Regular',
       style = 'Normal',
     },
     { family = 'Fira Code', weight = 'Bold' },
@@ -27,7 +27,7 @@ return {
     saturation = 1.0,
   },
 
-  window_background_opacity = 0.85,
+  window_background_opacity = 1.0,
   text_background_opacity = 0.2,
 
   window_frame = {
