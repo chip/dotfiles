@@ -40,6 +40,8 @@ require("lazy").setup({
   { "fatih/vim-go" },
   { "hkupty/iron.nvim" },
   { "dstein64/vim-startuptime" },
+  { "dstein64/vim-startuptime" },
+  { "chip/telescope-software-licenses.nvim" },
   -- { "Olical/conjure" },
 })
 require "chip.options"
@@ -56,3 +58,4 @@ require "chip.colorscheme"
 require "chip.lsp_lines"
 -- require "chip.conjure"
 -- require "chip.iron"
+require("telescope").load_extension("software-licenses");
