@@ -72,6 +72,8 @@ alias mongo_config="nvim /usr/local/etc/mongod.conf"
 alias mongo_plist="nvim ~/Library/LaunchAgents/homebrew.mxcl.mongodb-community.plist"
 alias luamake=/Users/chip/code/lua-language-server/3rd/luamake/luamake
 alias quitfinder="defaults write com.apple.finder QuitMenuItem -bool true && killall Finder"
+alias kitty-themes="kitty +kitten themes"
+alias open-ports="sudo lsof -i -n -P | grep TCP"
 
 # Prevent mongodb error
 ulimit -n 65536
