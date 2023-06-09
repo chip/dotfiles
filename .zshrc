@@ -64,8 +64,7 @@ alias open-ports="sudo lsof -i -n -P | grep TCP"
 ulimit -n 65536
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-# CUSTOM load nvm only when needed
+[ -s "$HOME/bin/nvm" ] && \. "$HOME/bin/nvm"  # This loads nvm bash_completion
 alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
 
 function load_luaver {
