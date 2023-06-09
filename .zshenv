@@ -23,8 +23,5 @@ export PERL5LIB="/Users/chip/perl5/lib/perl5:$PERL5LIB";
 export PYENV="/Users/chip/.pyenv"
 export NPM_PACKAGES="${HOME}/.npm-packages"
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-export NVM_DIR="$HOME/.nvm"
 export LUA_CPATH="/usr/local/lib/lua/5.1/?.so;./?.so;/Users/chip/.luarocks/lib/lua/5.1/?.so;"
 export LUA_PATH="/usr/local/Cellar/luarocks/3.8.0/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?/init.lua;/usr/local/lib/lua/5.1/?.lua;/usr/local/lib/lua/5.1/?/init.lua;./?.lua;./?/init.lua;/Users/chip/.luarocks/share/lua/5.1/?.lua;/Users/chip/.luarocks/share/lua/5.1/?/init.lua;"
-# Fix luaver install-luajit 2.1.0-beta3
-export MACOSX_DEPLOYMENT_TARGET=11.6.1
