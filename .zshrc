@@ -38,20 +38,7 @@ alias stash="git stash"
 alias gtag="git tag -a `date -u \"+UTC_%Y%m%d%H%M%S\"`"
 alias gap="git add -p"
 alias gf="git fetch"
-alias y="yadm"
-alias ya="yadm add ."
-alias ys="yadm status"
-alias ypull="yadm pull origin"
-alias ypullm='yadm pull --rebase origin master'
-alias ypush="yadm push origin"
-alias yc="yadm commit -m "
-alias yca="yadm commit -a -m "
-alias yundo="yadm reset --soft HEAD^"
-alias yd="yadm diff"
-alias ydc="yadm diff --cached"
-alias yol="yadm log --pretty=oneline"
-alias yr="yadm restore --staged"
-alias yap="yadm add -p"
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias a="ack"
 alias v=~/bin/chip-nvim.sh
 alias miniv=~/bin/mini-nvim.sh
