@@ -1,3 +1,4 @@
+source pathos.sh
 # Prompt
 fpath+=/usr/local/share/zsh/site-functions
 autoload -U promptinit; promptinit
