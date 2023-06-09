@@ -1,0 +1,3 @@
+#!/bin/bash
+
+"$(racket -e "(require setup/dirs) (display (find-user-console-bin-dir))")/racks" "$@"
