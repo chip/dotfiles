@@ -40,7 +40,6 @@ require("lazy").setup({
   { "fatih/vim-go" },
   { "hkupty/iron.nvim" },
   { "dstein64/vim-startuptime" },
-  { "dstein64/vim-startuptime" },
   { "chip/telescope-software-licenses.nvim" },
 })
 require "chip.options"
