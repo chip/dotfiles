@@ -42,12 +42,9 @@ require("lazy").setup({
   { "dstein64/vim-startuptime" },
   { "dstein64/vim-startuptime" },
   { "chip/telescope-software-licenses.nvim" },
-  -- { "Olical/conjure" },
 })
 require "chip.options"
 require "chip.mappings"
--- require "chip.plugins"
--- require "chip.impatient"
 require "chip.treesitter"
 require "chip.comments"
 require "chip.autocomplete"
@@ -56,6 +53,4 @@ require "chip.telescope"
 require "chip.lualine"
 require "chip.colorscheme"
 require "chip.lsp_lines"
--- require "chip.conjure"
--- require "chip.iron"
 require("telescope").load_extension("software-licenses");
