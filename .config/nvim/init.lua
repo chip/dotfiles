@@ -45,6 +45,7 @@ require("lazy").setup({
 })
 require "chip.options"
 require "chip.mappings"
+require "chip.impatient"
 require "chip.treesitter"
 require "chip.comments"
 require "chip.autocomplete"
@@ -53,4 +54,5 @@ require "chip.telescope"
 require "chip.lualine"
 require "chip.colorscheme"
 require "chip.lsp_lines"
+require "chip.iron"
 require("telescope").load_extension("software-licenses");
