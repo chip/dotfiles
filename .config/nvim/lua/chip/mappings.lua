@@ -6,18 +6,8 @@ utils.map('n', '-', ':e.<CR>')
 utils.map('n', '<leader><leader>', ':e #<CR>')
 utils.map('n', '<leader>q', ':bd!<CR>')
 utils.map('n', '<leader>w', ':w<CR>')
-utils.map('n', '<leader>R', ':Nredir <c-f>A')
 utils.map('n', '<leader>/', ':noh<CR>')
 utils.map('i', 'jk', '<esc>')
-
-utils.map('n', '<leader>dbl',
-          ":lua require('mongo-nvim.telescope.pickers').database_picker()<cr>")
-utils.map('n', '<leader>dbcl',
-          ":lua require('mongo-nvim.telescope.pickers').collection_picker()<cr>")
-utils.map('n', '<leader>dbdl',
-          ":lua require('mongo-nvim.telescope.pickers').document_picker()<cr>")
-
 utils.map('n', '<leader>bd', ':up | %bd | e#<CR>')
-
 utils.map('n', '<leader>tt', ':new term://npm run test<CR>')
 utils.map('n', '<leader>t', '<Plug>PlenaryTestFile', {noremap = false})
