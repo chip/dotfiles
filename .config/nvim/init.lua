@@ -41,6 +41,7 @@ require("lazy").setup({
   { "hkupty/iron.nvim" },
   { "dstein64/vim-startuptime" },
   { "chip/telescope-software-licenses.nvim" },
+  { "wlangstroth/vim-racket" },
 })
 require "chip.options"
 require "chip.mappings"
