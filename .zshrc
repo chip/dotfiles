@@ -1,6 +1,7 @@
 # Prompt
 fpath+=/opt/homebrew/share/zsh/site-functions
 autoload -U promptinit; promptinit
+PURE_PROMPT_SYMBOL=λ
 prompt pure
 # Change directories without cd
 setopt autocd autopushd
