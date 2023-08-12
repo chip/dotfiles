@@ -175,6 +175,13 @@ for _, lsp in ipairs(servers) do
   if lsp == 'lua_ls' then
     settings = lua_settings
   end
+  if lsp == 'racket_langserver' then
+    settings = {
+      cmd = { "racket", "--lib", "racket-langserver", "--", "--stdio" },
+      filetypes = { "racket", "scheme" },
+    }
+  end
+
   require'lspconfig'[lsp].setup {
     on_attach = on_attach,
     flags = {debounce_text_changes = 500},

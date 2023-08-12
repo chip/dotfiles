@@ -147,9 +147,3 @@ cmp.setup.cmdline('/', {sources = {{name = 'buffer'}}})
 cmp.setup.cmdline(':', {
   sources = cmp.config.sources({{name = 'path'}}, {{name = 'cmdline'}})
 })
-
--- Setup lspconfig.
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
--- require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
---   capabilities = capabilities
--- }
