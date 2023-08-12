@@ -57,7 +57,9 @@ alias mongo-log="cd /usr/local/var/log/mongodb"
 alias luamake=/Users/chip/code/lua-language-server/3rd/luamake/luamake
 alias quitfinder="defaults write com.apple.finder QuitMenuItem -bool true && killall Finder"
 alias kitty-themes="kitty +kitten themes"
+alias kt="kitty +kitten ssh kt" # ssh kt server with usable CLI
 alias open-ports="sudo lsof -i -n -P | grep TCP"
+alias docs="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents"
 
 # Prevent mongodb error
 ulimit -n 65536
