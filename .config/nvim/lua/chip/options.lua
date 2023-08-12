@@ -1,5 +1,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+vim.g.python_host_prog = "/usr/bin/python"
+vim.g.python3_host_prog = "/usr/local/bin/python3"
+
 vim.wo.cursorline = true
 -- FIXME vim.wo.cursorline.ctermbg = 236
 vim.o.clipboard = "unnamedplus"
@@ -25,6 +28,3 @@ vim.o.termguicolors = true
 vim.o.hlsearch = false
 vim.o.breakindent = false
 vim.o.completeopt = 'menuone,noselect'
-
-vim.g.python_host_prog = "/usr/bin/python"
-vim.g.python3_host_prog = "/usr/local/bin/python3"
