@@ -26,8 +26,6 @@ require("lazy").setup({
   { "williamboman/mason.nvim" },
   { "nvim-lua/plenary.nvim" }, -- For navigating files with nvim-telescope
   { "nvim-telescope/telescope.nvim" },
-  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" }, -- Optional plugins for nvim-telescope
-  { "kyazdani42/nvim-web-devicons" }, -- If you want to have icons in your statusline choose one of these
   { "onsails/lspkind-nvim" },
   { "numToStr/Comment.nvim" }, -- For code comments
   { "bhurlow/vim-parinfer" }, -- Parenthesis mgt for Clojure and other LISP"s
@@ -42,6 +40,15 @@ require("lazy").setup({
   { "dstein64/vim-startuptime" },
   { "chip/telescope-software-licenses.nvim" },
   { "wlangstroth/vim-racket" },
+  { "nvimdev/lspsaga.nvim",
+    config = function()
+        require('lspsaga').setup({})
+    end,
+    dependencies = {
+      { 'nvim-treesitter/nvim-treesitter', build = ":TSUpdate" }, -- optional
+      { 'nvim-tree/nvim-web-devicons' } -- optional
+    }
+  },
 })
 require "chip.options"
 require "chip.mappings"
