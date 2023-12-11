@@ -167,9 +167,9 @@ end
 
 vim.cmd('autocmd BufWritePre *.go lua OrgImports(1000)')
 -- </golang>
-
+vim.g.LanguageClient_serverCommands = { vue = { 'vls' } }
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'racket_langserver', 'eslint', 'tsserver', 'volar', 'bashls', 'lua_ls', 'solargraph', 'clojure_lsp' }
+local servers = { 'tsserver', 'volar', 'bashls', 'lua_ls', 'solargraph' }
 for _, lsp in ipairs(servers) do
   local settings = {}
   if lsp == 'lua_ls' then
