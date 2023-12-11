@@ -84,3 +84,17 @@ function rfci() {
   cd `racket -l find-collection/run -- -i $@`
 }
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias rom='cd ~/rubyonmac && ./rom-prime 2>&1 | tee ~/rubyonmac/logs/rom-prime-normal.log'
+
+alias romup='cd ~/Downloads/rubyonmac-prime && /bin/bash install'
+
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+
+eval "$(nodenv init -)"
+
+nodenv global 18.17.1
+
+chruby ruby-3.2.2
