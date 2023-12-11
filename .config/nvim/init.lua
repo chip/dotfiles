@@ -49,7 +49,8 @@ require("lazy").setup({
       { 'nvim-tree/nvim-web-devicons' } -- optional
     }
   },
-  { "tomasiser/vim-code-dark" }
+  { "tomasiser/vim-code-dark" },
+  { "olical/conjure" }
 })
 require "chip.options"
 require "chip.mappings"
