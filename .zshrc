@@ -40,7 +40,8 @@ alias gap="git add -p"
 alias gf="git fetch"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias a="ack"
-alias v=~/bin/chip-nvim.sh
+alias v=nvim
+alias chipv=~/bin/chip-nvim.sh
 alias miniv=~/bin/mini-nvim.sh
 alias bv=~/bin/vim-bootstrap.sh
 alias jdkhome="cd /System/Library/Frameworks/JavaVM.framework/Home"
