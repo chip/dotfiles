@@ -1,5 +1,42 @@
-local cmp = require'cmp'
+require("mason").setup()
+require("mason-lspconfig").setup({
+  ensure_installed = { "tsserver", "volar", "solargraph", "lua_ls" }
+})
+require("lspconfig").tsserver.setup {}
+require("lspconfig").volar.setup {}
+require("lspconfig").solargraph.setup {}
+require("lspconfig").lua_ls.setup {
+  on_init = function(client)
+    local path = client.workspace_folders[1].name
+    if not vim.loop.fs_stat(path..'/.luarc.json') and not vim.loop.fs_stat(path..'/.luarc.jsonc') then
+      client.config.settings = vim.tbl_deep_extend('force', client.config.settings, {
+        Lua = {
+          runtime = {
+            -- Tell the language server which version of Lua you're using
+            -- (most likely LuaJIT in the case of Neovim)
+            version = 'LuaJIT'
+          },
+          -- Make the server aware of Neovim runtime files
+          workspace = {
+            checkThirdParty = false,
+            library = {
+              vim.env.VIMRUNTIME
+              -- "${3rd}/luv/library"
+              -- "${3rd}/busted/library",
+            }
+            -- or pull in all of 'runtimepath'. NOTE: this is a lot slower
+            -- library = vim.api.nvim_get_runtime_file("", true)
+          }
+        }
+      })
 
+      client.notify("workspace/didChangeConfiguration", { settings = client.config.settings })
+    end
+    return true
+  end
+}
+
+local cmp = require'cmp'
 cmp.setup({
   snippet = {
     -- REQUIRED - you must specify a snippet engine
@@ -58,134 +95,3 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
-
--- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-require("mason").setup()
-
-local lspconfig = require 'lspconfig'
-
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
-local on_attach = function(_, bufnr)
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-  -- Enable completion triggered by <c-x><c-o>
-  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-  -- Mappings.
-  local opts = {noremap = true, silent = true}
-
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-  buf_set_keymap('n', '<space>wa',
-                 '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-  buf_set_keymap('n', '<space>wr',
-                 '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-  buf_set_keymap('n', '<space>wl',
-                 '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>',
-                 opts)
-  buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>',
-                 opts)
-  buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>',
-                 opts)
-  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  buf_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>',
-                 opts)
-  buf_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-  buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-  buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>',
-                 opts)
-  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-end
-
-local runtime_path = vim.split(package.path, ';')
-table.insert(runtime_path, "lua/?.lua")
-table.insert(runtime_path, "lua/?/init.lua")
-
-local lua_settings = {
-  Lua = {
-    runtime = {
-      -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-      version = 'LuaJIT',
-      -- Setup your lua path
-      path = runtime_path
-    },
-    diagnostics = {
-      -- Get the language server to recognize the `vim` global
-      globals = {'vim'}
-    },
-    workspace = {
-      -- Make the server aware of Neovim runtime files
-      library = vim.api.nvim_get_runtime_file("", true)
-    },
-    -- Do not send telemetry data containing a randomized but unique identifier
-    telemetry = {enable = false}
-  }
-}
-
--- <golang>
-local util = require "lspconfig/util"
-
-lspconfig.gopls.setup {
-  cmd = {"gopls", "serve"},
-  filetypes = {"go", "gomod"},
-  root_dir = util.root_pattern("go.work", "go.mod", ".git"),
-  settings = {
-    gopls = {
-      analyses = {
-        unusedparams = true,
-      },
-      staticcheck = true,
-    },
-  },
-  on_attach = on_attach,
-  flags = {debounce_text_changes = 500},
-  capabilities = capabilities,
-}
-
-function OrgImports(wait_ms)
-  local params = vim.lsp.util.make_range_params()
-  params.context = {only = {"source.organizeImports"}}
-  local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, wait_ms)
-  for _, res in pairs(result or {}) do
-    for _, r in pairs(res.result or {}) do
-      if r.edit then
-        vim.lsp.util.apply_workspace_edit(r.edit, "UTF-8")
-      else
-        vim.lsp.buf.execute_command(r.command)
-      end
-    end
-  end
-end
-
-vim.cmd('autocmd BufWritePre *.go lua OrgImports(1000)')
--- </golang>
-vim.g.LanguageClient_serverCommands = { vue = { 'vls' } }
--- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'tsserver', 'volar', 'bashls', 'lua_ls', 'solargraph' }
-for _, lsp in ipairs(servers) do
-  local settings = {}
-  if lsp == 'lua_ls' then
-    settings = lua_settings
-  end
-  if lsp == 'racket_langserver' then
-    settings = {
-      cmd = { "racket", "--lib", "racket-langserver", "--", "--stdio" },
-      filetypes = { "racket", "scheme" },
-    }
-  end
-
-  require'lspconfig'[lsp].setup {
-    on_attach = on_attach,
-    flags = {debounce_text_changes = 500},
-    capabilities = capabilities,
-    settings = settings,
-  }
-end

@@ -24,6 +24,7 @@ require("lazy").setup({
   { "hrsh7th/cmp-vsnip" }, -- For vsnip users.
   { "hrsh7th/vim-vsnip" },
   { "williamboman/mason.nvim" },
+  { "williamboman/mason-lspconfig.nvim" },
   { "nvim-lua/plenary.nvim" }, -- For navigating files with nvim-telescope
   { "nvim-telescope/telescope.nvim" },
   { "onsails/lspkind-nvim" },
