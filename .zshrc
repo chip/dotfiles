@@ -104,3 +104,4 @@ nodenv global 18.19.0
 
 chruby ruby-3.3.0
 
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
