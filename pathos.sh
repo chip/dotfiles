@@ -1,1 +1,0 @@
-export PATH=/opt/homebrew/bin:/Applications/kitty.app/Contents/MacOS:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:~/bin:/usr/local/opt/python/libexec/bin:/Users/chip/.rbenv/bin:/Applications/Racket\ v8.9/bin:/Users/chip/code/go/bin
