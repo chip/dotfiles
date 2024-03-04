@@ -101,3 +101,6 @@ nodenv global 18.17.1
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 nodenv global 18.19.0
+
+chruby ruby-3.3.0
+
