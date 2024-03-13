@@ -1,12 +1,12 @@
 return {
-	-- add gruvbox
-	{ "vim-scripts/Spacegray.vim" },
+  -- add Spacegray
+  { "vim-scripts/Spacegray.vim" },
 
-	-- Configure LazyVim to load gruvbox
-	{
-		"LazyVim/LazyVim",
-		opts = {
-			colorscheme = "Spacegray",
-		},
-	},
+  -- Configure LazyVim to load Spacegray
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "Spacegray",
+    },
+  },
 }
