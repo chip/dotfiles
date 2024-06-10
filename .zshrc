@@ -12,6 +12,9 @@ setopt CORRECT_ALL
 bindkey -v
 # Search commands
 bindkey '^R' history-incremental-search-backward
+# Custom PATH
+# source ~/.pathos.env
+export PATH=/bin:/usr/bin:/usr/local/bin:/opt/homebrew/bin:/usr/sbin:/sbin:/Applications/kitty.app/Contents/MacOS:~/bin
 # Aliases
 alias ll="ls -al"
 alias l="ls -al"

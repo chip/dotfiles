@@ -1,5 +1,3 @@
-# Custom PATH
-# source ~/.pathos.env
 # Environment
 export ARCHFLAGS="-arch arm64"
 export CLICOLOR=1
