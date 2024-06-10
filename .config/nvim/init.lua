@@ -1,1 +1,2 @@
-/Users/chip/Library/Mobile Documents/com~apple~CloudDocs/backup/.config/nvim/init.lua
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
