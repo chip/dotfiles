@@ -97,12 +97,6 @@ source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 
 source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 
-eval "$(nodenv init -)"
-
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-nodenv global 18.19.0
-
 chruby ruby-3.2.2
 
 eval "$(zellij setup --generate-auto-start zsh)"
