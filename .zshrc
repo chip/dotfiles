@@ -100,6 +100,7 @@ alias kt="kitty +kitten ssh kt" # ssh kt server with usable CLI
 alias open-ports="sudo lsof -i -n -P | grep TCP"
 alias docs="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents"
 # alias brew="arch -arm64 brew"
+alias km="bat ~/.kitty-map"
 
 # Prevent mongodb error
 ulimit -n 65536
