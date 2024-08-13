@@ -1,3 +1,3 @@
 return {
-	"chip/telescope-software-licenses.nvim",
+  "chip/telescope-software-licenses.nvim",
 }
